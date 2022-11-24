@@ -10,7 +10,7 @@ const Sidebar = (props: Props) => {
     (state: RootState) => state.auth
   );
   const handleResize = () => {
-    if (window.innerWidth < 720) {
+    if (window.innerWidth < 768) {
       dispatch(setSideBarMobile(true));
     } else {
       dispatch(setSideBarMobile(false));

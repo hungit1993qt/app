@@ -57,22 +57,33 @@ const TopMenu = (props: Props) => {
           ref={refBell}
         >
           <i className="fa fa-bell text-gray-500 text-3xl cursor-pointer"></i>
+
           <div
-            className={`bg-slate-50 w-36 shadow-lg absolute top-12 -right-1 p-3 duration-300 border-colorBorder border border-solid ${
+            className={`bg-slate-50 overflow-y-scroll w-80 shadow-lg absolute top-12 -left-36  p-3 duration-300 border-colorBorder border border-solid ${
               dropBell ? "scale-1 translate-y-1" : "scale-0 -translate-y-5"
             } `}
           >
-            <ul className="">
-              <li className=" text-md cursor-pointer rounded hover:bg-blue-100 mt-0">
+            <ul className="h-40">
+              <div className="sticky flex justify-between font-semibold">
+                <span>Notification</span>
+                <span>Clear All</span>
+              </div>
+              <li className=" text-md cursor-pointer rounded hover:bg-blue-100 mt-2 p-2">
                 Profile
               </li>
-              <li className=" text-md cursor-pointer rounded hover:bg-blue-100 mt-2">
+              <li className=" text-md cursor-pointer rounded hover:bg-blue-100 mt-4 p-2">
                 Your apps
               </li>
-              <li className=" text-md cursor-pointer rounded hover:bg-blue-100 mt-2">
+              <li className=" text-md cursor-pointer rounded hover:bg-blue-100 mt-4 p-2">
                 Settings
               </li>
-              <li className=" text-md cursor-pointer rounded hover:bg-blue-100 mt-2">
+              <li className=" text-md cursor-pointer rounded hover:bg-blue-100 mt-4 mb-2 p-2">
+                Logout
+              </li>
+              <li className=" text-md cursor-pointer rounded hover:bg-blue-100 mt-4 mb-2 p-2">
+                Logout
+              </li>
+              <li className=" text-md cursor-pointer rounded hover:bg-blue-100 mt-4 mb-2 p-2">
                 Logout
               </li>
             </ul>
