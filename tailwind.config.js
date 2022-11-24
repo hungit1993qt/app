@@ -1,0 +1,30 @@
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],
+  mode: "jit",
+  theme: {
+    extend: {
+      colors: {
+        dark: "#313a46",
+        purple: "#727cf5",
+        "light-white": "rgba(255,255,255,0.17)",
+        colorBorder: "#e7ebf0",
+      },
+    },
+    screens: {
+      sm: "480px",
+      // => @media (min-width: 480px) { ... }
+
+      md: "547px",
+      // => @media (min-width: 547px) { ... }
+
+      lg: "768px",
+      // => @media (min-width: 768px) { ... }
+      xl: "1024px",
+      // => @media (min-width: 1024px) { ... }
+      "2xl": "1680px",
+      // => @media (min-width: 1680px) { ... }
+    },
+  },
+  plugins: [],
+};
