@@ -9,7 +9,7 @@ function HomeTemplate({}: Props) {
   return (
     <div className="flex ">
       <Sidebar />
-      <div className="flex w-full h-screen bg-gray-200 flex-col">
+      <div className="flex w-full h-screen flex-col">
         <TopMenu />
         <Outlet />
       </div>

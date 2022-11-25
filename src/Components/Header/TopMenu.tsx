@@ -29,7 +29,7 @@ const TopMenu = (props: Props) => {
   const dispatch = useDispatch<AppDispatch>();
   const { darkMode } = useSelector((state: RootState) => state.auth);
   return (
-    <div className="w-full h-16 bg-light-white flex items-center justify-end lg:justify-between pl-10 pr-10">
+    <div className="w-full h-16 bg-light-white flex items-center justify-end lg:justify-between pl-10 pr-10 text-text-number">
       <form className="hidden lg:block">
         <div className="flex items-center relative">
           <input
@@ -61,35 +61,7 @@ const TopMenu = (props: Props) => {
             className={`bg-slate-50 overflow-y-scroll w-80 h-60 shadow-lg absolute top-12 -left-36  p-3 duration-300 border-colorBorder border border-solid ${dropBell ? "scale-1 translate-y-1" : "scale-0 -translate-y-5"
               } `}
           >
-            {/* <ul className="h-40">
-              <div className="flex justify-between font-semibold">
-                <span>Notification</span>
-                <span>Clear All</span>
-              </div>
-              <li className=" text-md cursor-pointer rounded hover:bg-blue-100 mt-2 p-2 flex items-center">
-                <img src="./img/avatar/hung.jpg" alt="" className="mr-2 w-8" />
-                <span className="text-sm">rqiwru iu riqwu riqwu riqwu riqwu rioqwu roiqw</span>
-              </li>
-              <li className=" text-md cursor-pointer rounded hover:bg-blue-100 mt-2 p-2 flex items-center">
-                <img src="./img/avatar/hung.jpg" alt="" className="mr-2 w-8" />
-                <span className="text-sm">rqiwru iu riqwu riqwu riqwu riqwu rioqwu roiqw</span>
-              </li>
-              <li className=" text-md cursor-pointer rounded hover:bg-blue-100 mt-2 p-2 flex items-center">
-                <img src="./img/avatar/hung.jpg" alt="" className="mr-2 w-8" />
-                <span className="text-sm">rqiwru iu riqwu riqwu riqwu riqwu rioqwu roiqw</span>
-              </li>
-              <li className=" text-md cursor-pointer rounded hover:bg-blue-100 mt-2 p-2 flex items-center">
-                <img src="./img/avatar/hung.jpg" alt="" className="mr-2 w-8" />
-                <span className="text-sm">rqiwru iu riqwu riqwu riqwu riqwu rioqwu roiqw</span>
-              </li>
-              <li className=" text-md cursor-pointer rounded hover:bg-blue-100 mt-2 p-2 flex items-center">
-                <img src="./img/avatar/hung.jpg" alt="" className="mr-2 w-8" />
-                <span className="text-sm">rqiwru iu riqwu riqwu riqwu riqwu rioqwu roiqw</span>
-              </li>
-              <div className="flex justify-center font-semibold p-2">
-                <span>Show more</span>
-              </div>
-            </ul> */}
+           
             <table className="relative w-full ">
               <thead>
                 <tr>
