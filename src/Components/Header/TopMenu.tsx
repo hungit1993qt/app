@@ -46,9 +46,8 @@ const TopMenu = (props: Props) => {
 
       <div className="flex items-center gap-x-14">
         <i
-          className={`fa ${
-            darkMode ? "fa-sun text-yellow-400" : "fa-moon"
-          } text-3xl cursor-pointer`}
+          className={`fa ${darkMode ? "fa-sun text-yellow-400" : "fa-moon"
+            } text-3xl cursor-pointer`}
           onClick={() => dispatch(setDarkMode())}
         ></i>
         <div
@@ -59,34 +58,106 @@ const TopMenu = (props: Props) => {
           <i className="fa fa-bell text-gray-500 text-3xl cursor-pointer"></i>
 
           <div
-            className={`bg-slate-50 overflow-y-scroll w-80 shadow-lg absolute top-12 -left-36  p-3 duration-300 border-colorBorder border border-solid ${
-              dropBell ? "scale-1 translate-y-1" : "scale-0 -translate-y-5"
-            } `}
+            className={`bg-slate-50 overflow-y-scroll w-80 h-60 shadow-lg absolute top-12 -left-36  p-3 duration-300 border-colorBorder border border-solid ${dropBell ? "scale-1 translate-y-1" : "scale-0 -translate-y-5"
+              } `}
           >
-            <ul className="h-40">
-              <div className="sticky flex justify-between font-semibold">
+            {/* <ul className="h-40">
+              <div className="flex justify-between font-semibold">
                 <span>Notification</span>
                 <span>Clear All</span>
               </div>
-              <li className=" text-md cursor-pointer rounded hover:bg-blue-100 mt-2 p-2">
-                Profile
+              <li className=" text-md cursor-pointer rounded hover:bg-blue-100 mt-2 p-2 flex items-center">
+                <img src="./img/avatar/hung.jpg" alt="" className="mr-2 w-8" />
+                <span className="text-sm">rqiwru iu riqwu riqwu riqwu riqwu rioqwu roiqw</span>
               </li>
-              <li className=" text-md cursor-pointer rounded hover:bg-blue-100 mt-4 p-2">
-                Your apps
+              <li className=" text-md cursor-pointer rounded hover:bg-blue-100 mt-2 p-2 flex items-center">
+                <img src="./img/avatar/hung.jpg" alt="" className="mr-2 w-8" />
+                <span className="text-sm">rqiwru iu riqwu riqwu riqwu riqwu rioqwu roiqw</span>
               </li>
-              <li className=" text-md cursor-pointer rounded hover:bg-blue-100 mt-4 p-2">
-                Settings
+              <li className=" text-md cursor-pointer rounded hover:bg-blue-100 mt-2 p-2 flex items-center">
+                <img src="./img/avatar/hung.jpg" alt="" className="mr-2 w-8" />
+                <span className="text-sm">rqiwru iu riqwu riqwu riqwu riqwu rioqwu roiqw</span>
               </li>
-              <li className=" text-md cursor-pointer rounded hover:bg-blue-100 mt-4 mb-2 p-2">
-                Logout
+              <li className=" text-md cursor-pointer rounded hover:bg-blue-100 mt-2 p-2 flex items-center">
+                <img src="./img/avatar/hung.jpg" alt="" className="mr-2 w-8" />
+                <span className="text-sm">rqiwru iu riqwu riqwu riqwu riqwu rioqwu roiqw</span>
               </li>
-              <li className=" text-md cursor-pointer rounded hover:bg-blue-100 mt-4 mb-2 p-2">
-                Logout
+              <li className=" text-md cursor-pointer rounded hover:bg-blue-100 mt-2 p-2 flex items-center">
+                <img src="./img/avatar/hung.jpg" alt="" className="mr-2 w-8" />
+                <span className="text-sm">rqiwru iu riqwu riqwu riqwu riqwu rioqwu roiqw</span>
               </li>
-              <li className=" text-md cursor-pointer rounded hover:bg-blue-100 mt-4 mb-2 p-2">
-                Logout
-              </li>
-            </ul>
+              <div className="flex justify-center font-semibold p-2">
+                <span>Show more</span>
+              </div>
+            </ul> */}
+            <table className="relative w-full ">
+              <thead>
+                <tr>
+                  <th className="sticky -top-3 border-0 px-6 py-3 bg-gray-50">
+                    <div className="flex justify-between font-semibold">
+                      <span>Notification</span>
+                      <span>Clear All</span>
+                    </div>
+                  </th>
+
+                </tr>
+              </thead>
+              <tbody className="divide-y overflow-y-scroll">
+
+                <tr>
+                  <td className=" text-md cursor-pointer rounded hover:bg-blue-100 mt-2 p-2 flex items-center">
+                    <img src="./img/avatar/hung.jpg" alt="" className="mr-2 w-8" />
+                    <span className="text-sm">rqiwru iu riqwu riqwu riqwu riqwu rioqwu roiqw</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td className=" text-md cursor-pointer rounded hover:bg-blue-100 mt-2 p-2 flex items-center">
+                    <img src="./img/avatar/hung.jpg" alt="" className="mr-2 w-8" />
+                    <span className="text-sm">rqiwru iu riqwu riqwu riqwu riqwu rioqwu roiqw</span>
+                  </td>
+                </tr><tr>
+                  <td className=" text-md cursor-pointer rounded hover:bg-blue-100 mt-2 p-2 flex items-center">
+                    <img src="./img/avatar/hung.jpg" alt="" className="mr-2 w-8" />
+                    <span className="text-sm">rqiwru iu riqwu riqwu riqwu riqwu rioqwu roiqw</span>
+                  </td>
+                </tr><tr>
+                  <td className=" text-md cursor-pointer rounded hover:bg-blue-100 mt-2 p-2 flex items-center">
+                    <img src="./img/avatar/hung.jpg" alt="" className="mr-2 w-8" />
+                    <span className="text-sm">rqiwru iu riqwu riqwu riqwu riqwu rioqwu roiqw</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td className=" text-md cursor-pointer rounded hover:bg-blue-100 mt-2 p-2 flex items-center">
+                    <img src="./img/avatar/hung.jpg" alt="" className="mr-2 w-8" />
+                    <span className="text-sm">rqiwru iu riqwu riqwu riqwu riqwu rioqwu roiqw</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td className=" text-md cursor-pointer rounded hover:bg-blue-100 mt-2 p-2 flex items-center">
+                    <img src="./img/avatar/hung.jpg" alt="" className="mr-2 w-8" />
+                    <span className="text-sm">rqiwru iu riqwu riqwu riqwu riqwu rioqwu roiqw</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td className=" text-md cursor-pointer rounded hover:bg-blue-100 mt-2 p-2 flex items-center">
+                    <img src="./img/avatar/hung.jpg" alt="" className="mr-2 w-8" />
+                    <span className="text-sm">rqiwru iu riqwu riqwu riqwu riqwu rioqwu roiqw</span>
+                  </td>
+                </tr>
+
+              </tbody>
+              <thead>
+                <tr>
+                  <th className="sticky -bottom-3 border-0 px-6 py-2 bg-gray-50">
+                    <div className="flex justify-center font-semibold">
+                      <span>Show more...</span>
+                    </div>
+                  </th>
+
+                </tr>
+              </thead>
+            </table>
+
           </div>
         </div>
 
@@ -107,9 +178,8 @@ const TopMenu = (props: Props) => {
             </div>
           </div>
           <div
-            className={`bg-slate-50 w-36 shadow-lg absolute top-12 p-3 duration-300 border-colorBorder border border-solid ${
-              dropMenu ? "scale-1 translate-y-1" : "scale-0 -translate-y-5"
-            } `}
+            className={`bg-slate-50 w-36 shadow-lg absolute top-12 p-3 duration-300 border-colorBorder border border-solid ${dropMenu ? "scale-1 translate-y-1" : "scale-0 -translate-y-5"
+              } `}
           >
             <ul className="">
               <li className=" text-md cursor-pointer rounded hover:bg-blue-100 mt-0">
