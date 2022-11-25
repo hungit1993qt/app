@@ -37,7 +37,7 @@ const Sidebar = (props: Props) => {
     <div
       className={`${
         openSideBar ? "w-60" : "w-24"
-      } duration-300 h-screen bg-dark relative pt-8 p-5 ${
+      } hidden lg:block duration-300 h-screen bg-dark relative pt-8 p-5 ${
         hiddenSideBar ? "hidden" : "block"
       }`}
     >
