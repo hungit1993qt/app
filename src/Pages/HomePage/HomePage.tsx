@@ -12,11 +12,10 @@ const HomePage = (props: Props) => {
     { name: "Group E", value: 200 },
   ];
 
-  const radius = "120";
   return (
-    <div className="font-semibold flex flex-start flex-wrap lg:flex-nowrap h-screen w-full bg-gray-100">
+    <div className="font-semibold flex content-start flex-wrap lg:flex-nowrap h-screen w-full bg-gray-100">
       <div className=" bg-gray-700 h-72 lg:w-1/2 w-full ">
-        <PieChartDashboard data={data} radius={radius} />
+        <PieChartDashboard data={data} radius={"110"} />
       </div>
       <div className=" bg-gray-700 h-72 lg:w-1/2 w-full ">
         <ResponsiveContainer>
