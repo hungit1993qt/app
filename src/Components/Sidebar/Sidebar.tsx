@@ -6,19 +6,18 @@ type Props = {};
 
 const Sidebar = (props: Props) => {
   const dispatch = useDispatch<AppDispatch>();
-  const { openSideBar, hiddenSideBar } = useSelector(
+  const { openSideBar, openSideMobile } = useSelector(
     (state: RootState) => state.auth
   );
   const handleResize = () => {
     if (window.innerWidth < 768) {
-      dispatch(setSideBarMobile(true));
+      dispatch(setSideBar(true));
     } else {
-      dispatch(setSideBarMobile(false));
+      dispatch(setSideBar(false));
     }
   };
   useEffect(() => {
     window.addEventListener("resize", handleResize);
-
     return () => {
       window.removeEventListener("resize", handleResize);
     };
@@ -30,23 +29,24 @@ const Sidebar = (props: Props) => {
     { title: "Schedule ", src: "Calendar" },
     { title: "Search", src: "Search" },
     { title: "Analytics", src: "Chart" },
-    { title: "Files ", src: "Folder", gap: false},
+    { title: "Files ", src: "Folder", gap: false },
     { title: "Setting", src: "Setting" },
   ];
   return (
     <div
       className={`${
         openSideBar ? "w-60" : "w-24"
-      } hidden lg:block duration-300 h-screen bg-dark relative pt-8 p-5 ${
-        hiddenSideBar ? "hidden" : "block"
+      } duration-300  h-screen bg-dark  pt-8 p-5 fixed lg:relative  lg:translate-x-0 z-20 ${
+        openSideMobile ? null : "-translate-x-60"
       }`}
     >
       <i
         className={`${
-          openSideBar ? "fa fa-angle-left" : "fa fa-angle-right"
-        } absolute cursor-pointer bg-white text-base -right-3 top-5 w-7 border-2 border-dark-purple text-center rounded-full`}
-        onClick={() => dispatch(setSideBar())}
+          openSideBar ? "rotate-[180deg]" : ""
+        } fa fa-angle-right hidden lg:block absolute cursor-pointer bg-white text-base -right-3 top-5 w-7 border-2 border-dark-purple text-center rounded-full`}
+        onClick={() => dispatch(setSideBar(!openSideBar))}
       ></i>
+
       <div className="flex gap-x-4 items-center">
         <i
           className={`fa fa-cog text-5xl text-white duration-500 ${
@@ -60,6 +60,11 @@ const Sidebar = (props: Props) => {
         >
           Admin
         </h1>
+        <i
+          className={`fa fa-arrow-left lg:hidden block cursor-pointer  text-white ml-5 text-2xl
+          `}
+          onClick={() => dispatch(setSideBarMobile())}
+        ></i>
       </div>
       <ul className="pt-6">
         {menu.map((menu, index: number) => {
@@ -70,7 +75,7 @@ const Sidebar = (props: Props) => {
               } ${index === 0 && "bg-light-white"}`}
               key={index}
             >
-              <img src={`./icon-menu/${menu.src}.png`}></img>
+              <img src={`./icon-menu/${menu.src}.png`} alt=""></img>
               <span
                 className={`${
                   !openSideBar && "scale-0 "

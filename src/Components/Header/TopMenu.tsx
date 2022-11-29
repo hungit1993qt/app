@@ -1,6 +1,6 @@
 import { AppDispatch, RootState } from "configStore";
 import { useDispatch, useSelector } from "react-redux";
-import { setDarkMode } from "Slices/auth";
+import { setDarkMode, setSideBarMobile } from "Slices/auth";
 import { useState, useRef } from "react";
 import { useOnClickOutside } from "usehooks-ts";
 //tsrafce
@@ -29,7 +29,12 @@ const TopMenu = (props: Props) => {
   const dispatch = useDispatch<AppDispatch>();
   const { darkMode } = useSelector((state: RootState) => state.auth);
   return (
-    <div className="w-full h-16 bg-light-white flex items-center justify-end lg:justify-between pl-10 pr-10 text-text-number">
+    <div className="w-full z-10 h-16 bg-light-white flex items-center justify-between lg:justify-between pl-10 pr-10 text-text-number">
+      <i
+        className={`fa fa-align-justify lg:hidden block cursor-pointer z-0 
+          `}
+        onClick={() => dispatch(setSideBarMobile())}
+      ></i>
       <form className="hidden lg:block">
         <div className="flex items-center relative">
           <input
@@ -43,11 +48,11 @@ const TopMenu = (props: Props) => {
           </button>
         </div>
       </form>
-
       <div className="flex items-center gap-x-14">
         <i
-          className={`fa ${darkMode ? "fa-sun text-yellow-400" : "fa-moon"
-            } text-3xl cursor-pointer`}
+          className={`fa ${
+            darkMode ? "fa-sun text-yellow-400" : "fa-moon"
+          } text-3xl cursor-pointer`}
           onClick={() => dispatch(setDarkMode())}
         ></i>
         <div
@@ -58,10 +63,10 @@ const TopMenu = (props: Props) => {
           <i className="fa fa-bell text-gray-500 text-3xl cursor-pointer"></i>
 
           <div
-            className={`bg-slate-50 overflow-y-scroll w-80 h-60 shadow-lg absolute top-12 -left-36  p-3 duration-300 border-colorBorder border border-solid ${dropBell ? "scale-1 translate-y-1" : "scale-0 -translate-y-5"
-              } `}
+            className={`bg-box overflow-y-scroll w-80 h-60 shadow-lg absolute top-12 -left-36  p-3 duration-300 border-colorBorder border border-solid ${
+              dropBell ? "scale-1 translate-y-1" : "scale-0 -translate-y-5"
+            } `}
           >
-           
             <table className="relative w-full ">
               <thead>
                 <tr>
@@ -71,52 +76,93 @@ const TopMenu = (props: Props) => {
                       <span>Clear All</span>
                     </div>
                   </th>
-
                 </tr>
               </thead>
               <tbody className="divide-y overflow-y-scroll">
-
                 <tr>
                   <td className=" text-md cursor-pointer rounded hover:bg-blue-100 mt-2 p-2 flex items-center">
-                    <img src="./img/avatar/hung.jpg" alt="" className="mr-2 w-8" />
-                    <span className="text-sm">rqiwru iu riqwu riqwu riqwu riqwu rioqwu roiqw</span>
+                    <img
+                      src="./img/avatar/hung.jpg"
+                      alt=""
+                      className="mr-2 w-8"
+                    />
+                    <span className="text-sm">
+                      rqiwru iu riqwu riqwu riqwu riqwu rioqwu roiqw
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td className=" text-md cursor-pointer rounded hover:bg-slate-50 mt-2 p-2 flex items-center">
+                    <img
+                      src="./img/avatar/hung.jpg"
+                      alt=""
+                      className="mr-2 w-8"
+                    />
+                    <span className="text-sm">
+                      rqiwru iu riqwu riqwu riqwu riqwu rioqwu roiqw
+                    </span>
                   </td>
                 </tr>
                 <tr>
                   <td className=" text-md cursor-pointer rounded hover:bg-blue-100 mt-2 p-2 flex items-center">
-                    <img src="./img/avatar/hung.jpg" alt="" className="mr-2 w-8" />
-                    <span className="text-sm">rqiwru iu riqwu riqwu riqwu riqwu rioqwu roiqw</span>
-                  </td>
-                </tr><tr>
-                  <td className=" text-md cursor-pointer rounded hover:bg-blue-100 mt-2 p-2 flex items-center">
-                    <img src="./img/avatar/hung.jpg" alt="" className="mr-2 w-8" />
-                    <span className="text-sm">rqiwru iu riqwu riqwu riqwu riqwu rioqwu roiqw</span>
-                  </td>
-                </tr><tr>
-                  <td className=" text-md cursor-pointer rounded hover:bg-blue-100 mt-2 p-2 flex items-center">
-                    <img src="./img/avatar/hung.jpg" alt="" className="mr-2 w-8" />
-                    <span className="text-sm">rqiwru iu riqwu riqwu riqwu riqwu rioqwu roiqw</span>
+                    <img
+                      src="./img/avatar/hung.jpg"
+                      alt=""
+                      className="mr-2 w-8"
+                    />
+                    <span className="text-sm">
+                      rqiwru iu riqwu riqwu riqwu riqwu rioqwu roiqw
+                    </span>
                   </td>
                 </tr>
                 <tr>
                   <td className=" text-md cursor-pointer rounded hover:bg-blue-100 mt-2 p-2 flex items-center">
-                    <img src="./img/avatar/hung.jpg" alt="" className="mr-2 w-8" />
-                    <span className="text-sm">rqiwru iu riqwu riqwu riqwu riqwu rioqwu roiqw</span>
+                    <img
+                      src="./img/avatar/hung.jpg"
+                      alt=""
+                      className="mr-2 w-8"
+                    />
+                    <span className="text-sm">
+                      rqiwru iu riqwu riqwu riqwu riqwu rioqwu roiqw
+                    </span>
                   </td>
                 </tr>
                 <tr>
                   <td className=" text-md cursor-pointer rounded hover:bg-blue-100 mt-2 p-2 flex items-center">
-                    <img src="./img/avatar/hung.jpg" alt="" className="mr-2 w-8" />
-                    <span className="text-sm">rqiwru iu riqwu riqwu riqwu riqwu rioqwu roiqw</span>
+                    <img
+                      src="./img/avatar/hung.jpg"
+                      alt=""
+                      className="mr-2 w-8"
+                    />
+                    <span className="text-sm">
+                      rqiwru iu riqwu riqwu riqwu riqwu rioqwu roiqw
+                    </span>
                   </td>
                 </tr>
                 <tr>
                   <td className=" text-md cursor-pointer rounded hover:bg-blue-100 mt-2 p-2 flex items-center">
-                    <img src="./img/avatar/hung.jpg" alt="" className="mr-2 w-8" />
-                    <span className="text-sm">rqiwru iu riqwu riqwu riqwu riqwu rioqwu roiqw</span>
+                    <img
+                      src="./img/avatar/hung.jpg"
+                      alt=""
+                      className="mr-2 w-8"
+                    />
+                    <span className="text-sm">
+                      rqiwru iu riqwu riqwu riqwu riqwu rioqwu roiqw
+                    </span>
                   </td>
                 </tr>
-
+                <tr>
+                  <td className=" text-md cursor-pointer rounded hover:bg-blue-100 mt-2 p-2 flex items-center">
+                    <img
+                      src="./img/avatar/hung.jpg"
+                      alt=""
+                      className="mr-2 w-8"
+                    />
+                    <span className="text-sm">
+                      rqiwru iu riqwu riqwu riqwu riqwu rioqwu roiqw
+                    </span>
+                  </td>
+                </tr>
               </tbody>
               <thead>
                 <tr>
@@ -125,11 +171,9 @@ const TopMenu = (props: Props) => {
                       <span>Show more...</span>
                     </div>
                   </th>
-
                 </tr>
               </thead>
             </table>
-
           </div>
         </div>
 
@@ -150,8 +194,9 @@ const TopMenu = (props: Props) => {
             </div>
           </div>
           <div
-            className={`bg-slate-50 w-36 shadow-lg absolute top-12 p-3 duration-300 border-colorBorder border border-solid ${dropMenu ? "scale-1 translate-y-1" : "scale-0 -translate-y-5"
-              } `}
+            className={`bg-slate-50 w-36 shadow-lg absolute top-12 p-3 duration-300 border-colorBorder border border-solid ${
+              dropMenu ? "scale-1 translate-y-1" : "scale-0 -translate-y-5"
+            } `}
           >
             <ul className="">
               <li className=" text-md cursor-pointer rounded hover:bg-blue-100 mt-0">

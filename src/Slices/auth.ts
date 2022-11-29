@@ -2,7 +2,7 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
 interface State {
   openSideBar: boolean;
-  hiddenSideBar: boolean;
+  openSideMobile: boolean;
   darkMode: boolean;
   user: any;
 }
@@ -14,8 +14,8 @@ const initialState: State = {
   //   accessToken: "abc123",
   // },
   openSideBar: true,
+  openSideMobile: false,
   darkMode: false,
-  hiddenSideBar: false,
   user: JSON.parse(localStorage.getItem("user") as string) || null,
 };
 
@@ -36,11 +36,11 @@ const authSlice = createSlice({
   name: "auth",
   initialState,
   reducers: {
-    setSideBar: (state) => {
-      state.openSideBar = !state.openSideBar;
+    setSideBar: (state, actions) => {
+      state.openSideBar = actions.payload;
     },
-    setSideBarMobile: (state, actions) => {
-      state.hiddenSideBar = actions.payload;
+    setSideBarMobile: (state) => {
+      state.openSideMobile = !state.openSideMobile;
     },
     setDarkMode: (state) => {
       state.darkMode = !state.darkMode;
