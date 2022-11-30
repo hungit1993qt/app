@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
+  darkMode: "class",
   mode: "jit",
   theme: {
     extend: {
@@ -11,13 +12,14 @@ module.exports = {
         colorBorder: "#e7ebf0",
         content: "#fafbfe",
         box: "#fff",
-        descript: "#98a6ad",
+        "descript-light": "#98a6ad",
         piecolor1: "#0088FE",
         piecolor2: "#00C49F",
         piecolor3: "#FFBB28",
         piecolor4: "#FF8042",
         "text-number": "#6c757d",
-        "border-color": "#f1f3fa",
+        "content-light": "#f1f3fa",
+        "content-dark":"#343a40"
       },
     },
     screens: {

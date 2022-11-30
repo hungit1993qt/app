@@ -16,7 +16,7 @@ const TopSales = (props: Props) => {
   ];
 
   return (
-    <div className=" bg-box  lg:w-1/3 w-full p-6 shadow box-border border ">
+    <div className=" bg-box dark:bg-dark  lg:w-1/3 w-full p-6 shadow box-border border ">
       <div className="flex justify-between items-center ">
         <span className="uppercase font-bold">total sales</span>
         <i className="fa fa-ellipsis-v cursor-pointer"></i>

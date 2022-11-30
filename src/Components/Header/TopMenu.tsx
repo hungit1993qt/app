@@ -1,8 +1,10 @@
 import { AppDispatch, RootState } from "configStore";
 import { useDispatch, useSelector } from "react-redux";
-import { setDarkMode, setSideBarMobile } from "Slices/auth";
+import { setDarkModes, setSideBarMobile } from "Slices/auth";
 import { useState, useRef } from "react";
 import { useOnClickOutside } from "usehooks-ts";
+import useDarkModes from "Hook/useDarkMode";
+
 //tsrafce
 type Props = {};
 const data = [
@@ -36,6 +38,8 @@ const data = [
   },
 ];
 const TopMenu = (props: Props) => {
+  const { isDarkModes, toggleDarkModes } = useDarkModes();
+  console.log(isDarkModes);
   const [dropMenu, setDropMenu] = useState(false);
   const [dropBell, setDropBell] = useState(false);
   const refMenu = useRef(null);
@@ -56,14 +60,14 @@ const TopMenu = (props: Props) => {
   useOnClickOutside(refMenu, handleClickOutsideMenu);
   useOnClickOutside(refBell, handleClickOutsideBell); //
   const dispatch = useDispatch<AppDispatch>();
-  const { darkMode, openSideBar,openSideMobile } = useSelector(
+  const { darkMode, openSideBar, openSideMobile } = useSelector(
     (state: RootState) => state.auth
   );
   return (
     <div
       className={` ${
         openSideBar ? "lg:left-60" : "lg:left-24 "
-      } duration-300 lg:right-0 z-10 bg-white flex items-center justify-between lg:justify-between box-border lg:px-10 px-6 text-text-number fixed w-full lg:w-auto `}
+      } duration-300 lg:right-0 z-10 bg-white dark:bg-dark flex items-center justify-between lg:justify-between box-border lg:px-10 px-6 text-text-number fixed w-full lg:w-auto `}
     >
       <i
         className={`fa fa-align-justify lg:hidden block cursor-pointer z-0 ml-0 text-lg
@@ -73,7 +77,7 @@ const TopMenu = (props: Props) => {
       <form className="hidden lg:block">
         <div className="flex items-center relative">
           <input
-            className="p-2 pl-8 rounded-l-lg bg-border-color border"
+            className="p-2 pl-8 rounded-l-lg bg-content-light dark:bg-content-dark border"
             placeholder="Search..."
             type="text"
           />
@@ -87,9 +91,11 @@ const TopMenu = (props: Props) => {
         <i className="fa fa-search font-bold text-3xl lg:hidden block cursor-pointer"></i>
         <i
           className={`fa ${
-            darkMode ? "fa-sun text-yellow-400" : "fa-moon"
+            isDarkModes ? "fa-sun text-yellow-400" : "fa-moon"
           } text-3xl cursor-pointer`}
-          onClick={() => dispatch(setDarkMode())}
+          onClick={() => {
+            toggleDarkModes(isDarkModes);
+          }}
         ></i>
         <div
           className=" relative"
@@ -135,7 +141,7 @@ const TopMenu = (props: Props) => {
         </div>
 
         <div
-          className=" relative bg-white lg:bg-border-color p-2"
+          className=" relative bg-white dark:bg-content-dark lg:bg-border-color p-2"
           onClick={handleClickInsideMenu}
           ref={refMenu}
         >

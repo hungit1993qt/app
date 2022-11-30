@@ -39,7 +39,7 @@ const TopSalesProducts = (props: Props) => {
     },
   ];
   return (
-    <div className=" bg-box  lg:w-2/3 w-full p-6 shadow border ">
+    <div className=" bg-box dark:bg-dark lg:w-2/3 w-full p-6 shadow border ">
       <div className="flex justify-between items-center ">
         <span className="uppercase font-bold">total sales</span>
         <div>
@@ -55,25 +55,25 @@ const TopSalesProducts = (props: Props) => {
                 <tr key={index} className=" border-b hover:bg-blue-100 ">
                   <td className=" text-sm py-6 px-1 whitespace-nowrap ">
                     <span>{datas.title}</span>
-                    <p className=" font-normal text-sm pt-2 text-descript whitespace-nowrap">
+                    <p className=" font-normal text-sm pt-2 text-descript-light whitespace-nowrap">
                       {datas.date}
                     </p>
                   </td>
                   <td className="text-sm py-6 px-3 whitespace-nowrap">
                     <span className="">${datas.price}</span>
-                    <p className=" font-normal text-sm pt-2 text-descript whitespace-nowrap">
+                    <p className=" font-normal text-sm pt-2 text-descript-light whitespace-nowrap">
                       Price
                     </p>
                   </td>
                   <td className=" text-sm py-6 px-3 whitespace-nowrap">
                     <span className="">{datas.quantity}</span>
-                    <p className=" font-normal text-sm pt-2 text-descript whitespace-nowrap">
+                    <p className=" font-normal text-sm pt-2 text-descript-light whitespace-nowrap">
                       Quantity
                     </p>
                   </td>
                   <td className=" text-sm py-6 px-3 whitespace-nowrap">
                     <span className="">${datas.amount}</span>
-                    <p className=" font-normal text-sm pt-2 text-descript whitespace-nowrap">
+                    <p className=" font-normal text-sm pt-2 text-descript-light whitespace-nowrap">
                       Amount
                     </p>
                   </td>

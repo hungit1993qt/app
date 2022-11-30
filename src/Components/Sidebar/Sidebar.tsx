@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import { setSideBar, setSideBarMobile } from "Slices/auth";
 import { useDispatch, useSelector } from "react-redux";
 import { AppDispatch, RootState } from "configStore";
@@ -6,7 +6,6 @@ import { useOnClickOutside } from "usehooks-ts";
 type Props = {};
 
 const Sidebar = (props: Props) => {
-  const [showSiderBar, setShowSiderBar] = useState(false);
   const refSiderBar = useRef(null);
 
   const dispatch = useDispatch<AppDispatch>();
@@ -43,7 +42,7 @@ const Sidebar = (props: Props) => {
   ];
   return (
     <div
-    ref={refSiderBar}
+      ref={refSiderBar}
       className={`${
         openSideBar ? "w-60" : "w-24"
       } duration-300  h-screen bg-dark  pt-8 p-5 fixed  lg:translate-x-0 z-20 ${

@@ -42,7 +42,7 @@ const authSlice = createSlice({
     setSideBarMobile: (state,actions) => {
       state.openSideMobile = actions.payload;
     },
-    setDarkMode: (state) => {
+    setDarkModes: (state) => {
       state.darkMode = !state.darkMode;
     },
   },
@@ -52,5 +52,5 @@ const authSlice = createSlice({
     });
   },
 });
-export const { setSideBar, setSideBarMobile, setDarkMode } = authSlice.actions;
+export const { setSideBar, setSideBarMobile, setDarkModes } = authSlice.actions;
 export default authSlice.reducer;
