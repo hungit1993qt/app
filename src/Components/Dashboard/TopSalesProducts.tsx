@@ -52,19 +52,19 @@ const TopSalesProducts = (props: Props) => {
                 <tr key={index} className=" border-b hover:bg-blue-100 ">
                   <td className=" text-sm py-6 px-1 whitespace-nowrap ">
                     <span>{datas.title}</span>
-                    <p className=" font-normal text-xs pt-2">{datas.date}</p>
+                    <p className=" font-normal text-sm pt-2 text-descript whitespace-nowrap">{datas.date}</p>
                   </td>
-                  <td className="text-sm py-6 px-3">
+                  <td className="text-sm py-6 px-3 whitespace-nowrap">
                     <span className="">${datas.price}</span>
-                    <p className=" font-normal text-xs pt-2">Price</p>
+                    <p className=" font-normal text-sm pt-2 text-descript whitespace-nowrap">Price</p>
                   </td>
-                  <td className=" text-sm py-6 px-3">
+                  <td className=" text-sm py-6 px-3 whitespace-nowrap">
                     <span className="">{datas.quantity}</span>
-                    <p className=" font-normal text-xs pt-2">Quantity</p>
+                    <p className=" font-normal text-sm pt-2 text-descript whitespace-nowrap">Quantity</p>
                   </td>
-                  <td className=" text-sm py-6 px-3">
+                  <td className=" text-sm py-6 px-3 whitespace-nowrap">
                     <span className="">${datas.amount}</span>
-                    <p className=" font-normal text-xs pt-2">Amount</p>
+                    <p className=" font-normal text-sm pt-2 text-descript whitespace-nowrap">Amount</p>
                   </td>
                 </tr>
               );

@@ -38,8 +38,8 @@ const renderCustomizedLabel = ({
 const PieChartDashboard = (props: Props) => {
   const { data, radius } = props;
   return (
-    <ResponsiveContainer width="100%" height="100%">
-      <PieChart>
+    <ResponsiveContainer >
+      <PieChart >
         <Pie
           data={data}
           cx="50%"

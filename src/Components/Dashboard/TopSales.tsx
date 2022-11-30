@@ -19,7 +19,7 @@ const TopSales = (props: Props) => {
     <div className=" bg-box  lg:w-1/3 w-full p-6 shadow box-border border ">
       <div className="flex justify-between items-center ">
         <span className="uppercase font-bold">total sales</span>
-        <i className="fa fa-ellipsis-v"></i>
+        <i className="fa fa-ellipsis-v cursor-pointer"></i>
       </div>
       <div className="h-60 z-0 mt-9 ">
         <PieChartDashboard data={data} radius={"120"} />

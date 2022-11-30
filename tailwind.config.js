@@ -11,6 +11,7 @@ module.exports = {
         colorBorder: "#e7ebf0",
         content: "#fafbfe",
         box: "#fff",
+        descript: "#98a6ad",
         piecolor1: "#0088FE",
         piecolor2: "#00C49F",
         piecolor3: "#FFBB28",
