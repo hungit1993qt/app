@@ -29,7 +29,7 @@ const TopMenu = (props: Props) => {
   const dispatch = useDispatch<AppDispatch>();
   const { darkMode } = useSelector((state: RootState) => state.auth);
   return (
-    <div className="w-full z-10 h-16 bg-light-white flex items-center justify-between lg:justify-between pl-10 pr-10 text-text-number">
+    <div className="w-full z-10 h-16 bg-light-white flex items-center justify-between lg:justify-between lg:px-10 px-6 text-text-number">
       <i
         className={`fa fa-align-justify lg:hidden block cursor-pointer z-0 
           `}
