@@ -98,39 +98,38 @@ const TopMenu = (props: Props) => {
           <i className="fa fa-bell text-gray-500 text-3xl cursor-pointer"></i>
 
           <div
-            className={`bg-box overflow-auto w-80 h-60 shadow-lg absolute top-11 -right-40 lg:right-0 px-1 duration-300 border-colorBorder border border-solid ${
+            className={`bg-box  w-80 shadow-lg absolute top-11 -right-40 lg:right-0 px-1 duration-300 border-colorBorder border border-solid ${
               dropBell ? "scale-1 translate-y-1" : "scale-0 -translate-y-5"
             } `}
           >
-            <table className="relative w-full">
-              <tr>
-                <th className="sticky top-0 border-0 px-6 py-3 bg-white">
-                  <div className="flex justify-between font-semibold">
-                    <span>Notification</span>
-                    <span>Clear all</span>
-                  </div>
-                </th>
-              </tr>
+            <div className="flex justify-between font-semibold px-6 py-3 bg-white">
+              <span>Notification</span>
+              <span>Clear all</span>
+            </div>
+            <div className="overflow-auto w-full h-60">
+              <table className="relative w-full ">
+                <tbody>
+                  {data.map((datas, index) => {
+                    return (
+                      <tr key={index}>
+                        <td className="text-md cursor-pointer rounded hover:bg-blue-100 px-5 py-2 bg-white flex items-center">
+                          <img
+                            src={`${datas.src}`}
+                            alt=""
+                            className="mr-2 w-8"
+                          />
+                          <span className="text-sm">{datas.title}</span>
+                        </td>
+                      </tr>
+                    );
+                  })}
+                </tbody>
+              </table>
+            </div>
 
-              {data.map((datas, index) => {
-                return (
-                  <tr key={index}>
-                    <td className="text-md cursor-pointer rounded hover:bg-blue-100 mt-1 p-2 flex items-center">
-                      <img src={`${datas.src}`} alt="" className="mr-2 w-8" />
-                      <span className="text-sm">{datas.title}</span>
-                    </td>
-                  </tr>
-                );
-              })}
-
-              <tr>
-                <th className="sticky bottom-0 border-0 px-6 py-3 bg-white">
-                  <div className="flex justify-center font-semibold">
-                    <span>Show more...</span>
-                  </div>
-                </th>
-              </tr>
-            </table>
+            <div className="flex justify-center font-semibold px-6 py-3 bg-white">
+              <span>Show more...</span>
+            </div>
           </div>
         </div>
 
