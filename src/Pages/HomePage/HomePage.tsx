@@ -10,7 +10,7 @@ const HomePage = (props: Props) => {
     <div
       className={`
       
-       font-semibold overflow-hidden text-text-number flex content-start flex-wrap lg:flex-nowrap bg-content p-2`}
+       font-semibold overflow-hidden text-text-number flex content-start gap-5 p-5 box-border flex-wrap lg:flex-nowrap bg-content`}
     >
       <TopSales />
       <TopSalesProducts />
