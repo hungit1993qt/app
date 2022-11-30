@@ -66,7 +66,7 @@ const TopMenu = (props: Props) => {
       } duration-300 lg:right-0 z-10 bg-white flex items-center justify-between lg:justify-between box-border lg:px-10 px-6 text-text-number fixed w-full lg:w-auto `}
     >
       <i
-        className={`fa fa-align-justify lg:hidden block cursor-pointer z-0 ml-2 text-lg
+        className={`fa fa-align-justify lg:hidden block cursor-pointer z-0 ml-0 text-lg
           `}
         onClick={() => dispatch(setSideBarMobile())}
       ></i>
@@ -83,7 +83,7 @@ const TopMenu = (props: Props) => {
           </button>
         </div>
       </form>
-      <div className="flex items-center lg:gap-x-16 gap-x-10">
+      <div className="flex items-center lg:gap-x-16 gap-x-6 sm:gap-x-10">
         <i className="fa fa-search font-bold text-3xl lg:hidden block cursor-pointer"></i>
         <i
           className={`fa ${
