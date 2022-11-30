@@ -125,7 +125,7 @@ const TopMenu = (props: Props) => {
                   );
                 })}
               </tbody>
-              <thead>
+              <tbody>
                 <tr>
                   <th className="sticky bottom-0 border-0 px-6 py-3 bg-white">
                     <div className="flex justify-center font-semibold">
@@ -133,7 +133,7 @@ const TopMenu = (props: Props) => {
                     </div>
                   </th>
                 </tr>
-              </thead>
+              </tbody>
             </table>
           </div>
         </div>
