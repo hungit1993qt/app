@@ -34,7 +34,7 @@ const TopMenu = (props: Props) => {
     <div
       className={` ${
         openSideBar ? "lg:left-60" : "lg:left-24 "
-      } duration-300 lg:right-0 z-10 py-4 bg-white flex items-center justify-between lg:justify-between box-border lg:px-10 px-6 text-text-number fixed w-full lg:w-auto `}
+      } duration-300 lg:right-0 z-10  bg-white flex items-center justify-between lg:justify-between box-border lg:px-10 px-6 text-text-number fixed w-full lg:w-auto `}
     >
       <i
         className={`fa fa-align-justify lg:hidden block cursor-pointer z-0 
@@ -44,7 +44,7 @@ const TopMenu = (props: Props) => {
       <form className="hidden lg:block">
         <div className="flex items-center relative">
           <input
-            className="p-2 pl-8 rounded-l-lg"
+            className="p-2 pl-8 rounded-l-lg bg-border-color border"
             placeholder="Search..."
             type="text"
           />
@@ -86,7 +86,7 @@ const TopMenu = (props: Props) => {
               </thead>
               <tbody className="divide-y overflow-y-scroll">
                 <tr>
-                  <td className=" text-md cursor-pointer rounded hover:bg-blue-100 mt-2 p-2 flex items-center">
+                  <td className=" text-md cursor-pointer  rounded hover:bg-blue-100 mt-2 p-2 flex items-center">
                     <img
                       src="./img/avatar/hung.jpg"
                       alt=""
@@ -184,7 +184,7 @@ const TopMenu = (props: Props) => {
         </div>
 
         <div
-          className=" relative"
+          className=" relative bg-border-color p-2"
           onClick={handleClickInsideMenu}
           ref={refMenu}
         >

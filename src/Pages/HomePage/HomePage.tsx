@@ -9,7 +9,7 @@ const HomePage = (props: Props) => {
   return (
     <div
       className={`${openSideBar ? "lg:ml-60" : "lg:ml-24"} duration-300     
-       font-semibold  text-text-number flex content-start gap-5 p-5 box-border flex-wrap lg:flex-nowrap bg-white  mt-20`}
+       font-semibold  text-text-number flex content-start gap-5 p-5 box-border flex-wrap lg:flex-nowrap bg-border-color  mt-14`}
     >
       <TopSales />
       <TopSalesProducts />
