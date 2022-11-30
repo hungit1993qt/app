@@ -108,7 +108,7 @@ const TopMenu = (props: Props) => {
                   <th className="sticky top-0 border-0 px-6 py-3 bg-white">
                     <div className="flex justify-between font-semibold">
                       <span>Notification</span>
-                      <span>Clear All</span>
+                      <span>Clear all</span>
                     </div>
                   </th>
                 </tr>
