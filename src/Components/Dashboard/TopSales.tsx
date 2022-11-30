@@ -21,8 +21,8 @@ const TopSales = (props: Props) => {
         <span className="uppercase font-bold">total sales</span>
         <i className="fa fa-ellipsis-v"></i>
       </div>
-      <div className="h-60 z-0 ">
-        <PieChartDashboard data={data} radius={"100"} />
+      <div className="h-60 z-0 mt-9 ">
+        <PieChartDashboard data={data} radius={"120"} />
       </div>
       {data.map((data, index) => {
         return (
