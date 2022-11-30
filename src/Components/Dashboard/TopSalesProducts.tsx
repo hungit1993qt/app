@@ -50,19 +50,19 @@ const TopSalesProducts = (props: Props) => {
             {data.map((datas, index) => {
               return (
                 <tr key={index} className=" border-b hover:bg-blue-100">
-                  <td className=" text-sm py-5 px-1">
+                  <td className=" text-sm py-5 px-1 whitespace-nowrap">
                     <span>{datas.title}</span>
                     <p className=" font-normal text-xs mt-1">{datas.date}</p>
                   </td>
-                  <td className="text-sm py-5  px-2">
+                  <td className="text-sm py-5  px-3">
                     <span className="">${datas.price}</span>
                     <p className=" font-normal text-xs mt-1">Price</p>
                   </td>
-                  <td className=" text-sm py-5 px-2">
+                  <td className=" text-sm py-5 px-3">
                     <span className="">{datas.quantity}</span>
                     <p className=" font-normal text-xs mt-1">Quantity</p>
                   </td>
-                  <td className=" text-sm py-5 px-2">
+                  <td className=" text-sm py-5 px-3">
                     <span className="">${datas.amount}</span>
                     <p className=" font-normal text-xs mt-1">Amount</p>
                   </td>
