@@ -44,24 +44,24 @@ const TopSalesProducts = (props: Props) => {
         <span className="uppercase font-bold">total sales</span>
         <i className="fa fa-download cursor-pointer"></i>
       </div>
-      <table className="w-full">
+      <table className="w-full overflow-auto mt-2">
         <tbody>
           {data.map((datas, index) => {
             return (
-              <tr key={index} className=" border-b hover:bg-blue-100 h-50">
-                <td className=" text-sm py-4 px-6 ">
+              <tr key={index} className=" border-b hover:bg-blue-100">
+                <td className=" text-sm py-5 ">
                   <span>{datas.title}</span>
                   <p className=" font-normal text-xs mt-1">{datas.date}</p>
                 </td>
-                <td className="text-sm  ">
+                <td className="text-sm py-5 ">
                   <span className="">${datas.price}</span>
                   <p className=" font-normal text-xs mt-1">Price</p>
                 </td>
-                <td className=" text-sm ">
+                <td className=" text-sm py-5">
                   <span className="">{datas.quantity}</span>
                   <p className=" font-normal text-xs mt-1">Quantity</p>
                 </td>
-                <td className=" text-sm ">
+                <td className=" text-sm py-5">
                   <span className="">${datas.amount}</span>
                   <p className=" font-normal text-xs mt-1">Amount</p>
                 </td>
