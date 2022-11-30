@@ -41,8 +41,8 @@ const TopSalesProducts = (props: Props) => {
   return (
     <div className=" bg-box dark:bg-dark lg:w-2/3 w-full p-6 shadow border ">
       <div className="flex justify-between items-center ">
-        <span className="uppercase font-bold">total sales</span>
-        <div>
+        <span className="uppercase font-bold dark:text-white">total sales</span>
+        <div className="dark:text-white">
           Export
           <i className="fa fa-download cursor-pointer ml-2"></i>
         </div>
@@ -53,25 +53,25 @@ const TopSalesProducts = (props: Props) => {
             {data.map((datas, index) => {
               return (
                 <tr key={index} className=" border-b hover:bg-blue-100 ">
-                  <td className=" text-sm py-6 px-1 whitespace-nowrap ">
+                  <td className=" text-sm py-6 px-1 whitespace-nowrap dark:text-white">
                     <span>{datas.title}</span>
                     <p className=" font-normal text-sm pt-2 text-descript-light whitespace-nowrap">
                       {datas.date}
                     </p>
                   </td>
-                  <td className="text-sm py-6 px-3 whitespace-nowrap">
+                  <td className="text-sm py-6 px-3 whitespace-nowrap dark:text-white">
                     <span className="">${datas.price}</span>
                     <p className=" font-normal text-sm pt-2 text-descript-light whitespace-nowrap">
                       Price
                     </p>
                   </td>
-                  <td className=" text-sm py-6 px-3 whitespace-nowrap">
+                  <td className=" text-sm py-6 px-3 whitespace-nowrap dark:text-white">
                     <span className="">{datas.quantity}</span>
                     <p className=" font-normal text-sm pt-2 text-descript-light whitespace-nowrap">
                       Quantity
                     </p>
                   </td>
-                  <td className=" text-sm py-6 px-3 whitespace-nowrap">
+                  <td className=" text-sm py-6 px-3 whitespace-nowrap dark:text-white">
                     <span className="">${datas.amount}</span>
                     <p className=" font-normal text-sm pt-2 text-descript-light whitespace-nowrap">
                       Amount

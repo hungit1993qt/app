@@ -18,8 +18,8 @@ const TopSales = (props: Props) => {
   return (
     <div className=" bg-box dark:bg-dark  lg:w-1/3 w-full p-6 shadow box-border border ">
       <div className="flex justify-between items-center ">
-        <span className="uppercase font-bold">total sales</span>
-        <i className="fa fa-ellipsis-v cursor-pointer"></i>
+        <span className="uppercase font-bold dark:text-white">total sales</span>
+        <i className="fa fa-ellipsis-v cursor-pointer dark:text-white"></i>
       </div>
       <div className="h-60 z-0 mt-9 ">
         <PieChartDashboard data={data} radius={"120"} />
@@ -30,11 +30,11 @@ const TopSales = (props: Props) => {
             key={index}
             className="flex justify-between items-center border-b-border-color border-b"
           >
-            <span className="flex items-center py-3">
+            <span className="flex items-center py-3 dark:text-white">
               <i className={`fa fa-square ${colorpie[index]} mr-2`}></i>
               {data.name}
             </span>
-            <span>{data.value}$</span>
+            <span className="dark:text-white">{data.value}$</span>
           </div>
         );
       })}

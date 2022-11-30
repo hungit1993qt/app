@@ -70,7 +70,7 @@ const TopMenu = (props: Props) => {
       } duration-300 lg:right-0 z-10 bg-white dark:bg-dark flex items-center justify-between lg:justify-between box-border lg:px-10 px-6 text-text-number fixed w-full lg:w-auto `}
     >
       <i
-        className={`fa fa-align-justify lg:hidden block cursor-pointer z-0 ml-0 text-lg
+        className={`fa fa-align-justify lg:hidden block cursor-pointer z-0 ml-0 text-lg text-gray-500 dark:text-white
           `}
         onClick={() => dispatch(setSideBarMobile(!openSideMobile))}
       ></i>
@@ -88,7 +88,7 @@ const TopMenu = (props: Props) => {
         </div>
       </form>
       <div className="flex items-center lg:gap-x-14 gap-x-6 sm:gap-x-10">
-        <i className="fa fa-search font-bold text-3xl lg:hidden block cursor-pointer"></i>
+        <i className="fa fa-search text-gray-500 dark:text-white font-bold text-3xl lg:hidden block cursor-pointer"></i>
         <i
           className={`fa ${
             isDarkModes ? "fa-sun text-yellow-400" : "fa-moon"
@@ -102,7 +102,7 @@ const TopMenu = (props: Props) => {
           onClick={handleClickInsideBell}
           ref={refBell}
         >
-          <i className="fa fa-bell text-gray-500 text-3xl cursor-pointer"></i>
+          <i className="fa fa-bell text-gray-500 dark:text-white text-3xl cursor-pointer"></i>
 
           <div
             className={`bg-box  w-80 shadow-lg absolute top-11 right-1/2 translate-x-1/2 lg:right-0 px-1 duration-300 border-colorBorder border border-solid ${
@@ -152,8 +152,8 @@ const TopMenu = (props: Props) => {
               className=" rounded-full w-10 h-10 object-contain mr-2 border-gray-600 border-2"
             />
             <div className="flex flex-col items-center leading-4 ">
-              <span className="text-purple font-medium">Mr.Hung</span>
-              <span className="text-xs text-gray-600 font-semibold">Admin</span>
+              <span className="text-purple dark:text-white font-medium">Mr.Hung</span>
+              <span className="text-xs text-gray-600 dark:text-gray-400 font-semibold">Admin</span>
             </div>
           </div>
           <div
