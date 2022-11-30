@@ -83,7 +83,7 @@ const TopMenu = (props: Props) => {
           </button>
         </div>
       </form>
-      <div className="flex items-center lg:gap-x-16 gap-x-6 sm:gap-x-10">
+      <div className="flex items-center lg:gap-x-14 gap-x-6 sm:gap-x-10">
         <i className="fa fa-search font-bold text-3xl lg:hidden block cursor-pointer"></i>
         <i
           className={`fa ${
@@ -99,7 +99,7 @@ const TopMenu = (props: Props) => {
           <i className="fa fa-bell text-gray-500 text-3xl cursor-pointer"></i>
 
           <div
-            className={`bg-box  w-80 shadow-lg absolute top-11 -right-40 lg:right-0 px-1 duration-300 border-colorBorder border border-solid ${
+            className={`bg-box  w-80 shadow-lg absolute top-11 right-1/2 translate-x-1/2 lg:right-0 px-1 duration-300 border-colorBorder border border-solid ${
               dropBell ? "scale-1 translate-y-1" : "scale-0 -translate-y-5"
             } `}
           >
