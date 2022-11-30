@@ -83,7 +83,8 @@ const TopMenu = (props: Props) => {
           </button>
         </div>
       </form>
-      <div className="flex items-center lg:gap-x-16 gap-x-12">
+      <div className="flex items-center lg:gap-x-16 gap-x-10">
+        <i className="fa fa-search font-bold text-3xl lg:hidden block cursor-pointer"></i>
         <i
           className={`fa ${
             darkMode ? "fa-sun text-yellow-400" : "fa-moon"
