@@ -49,22 +49,22 @@ const TopSalesProducts = (props: Props) => {
           <tbody>
             {data.map((datas, index) => {
               return (
-                <tr key={index} className=" border-b hover:bg-blue-100">
-                  <td className=" text-sm py-5 px-1 whitespace-nowrap">
+                <tr key={index} className=" border-b hover:bg-blue-100 ">
+                  <td className=" text-sm py-5 px-1 whitespace-nowrap ">
                     <span>{datas.title}</span>
-                    <p className=" font-normal text-xs mt-1">{datas.date}</p>
+                    <p className=" font-normal text-xs pt-2">{datas.date}</p>
                   </td>
-                  <td className="text-sm py-5  px-3">
+                  <td className="text-sm py-5 px-3">
                     <span className="">${datas.price}</span>
-                    <p className=" font-normal text-xs mt-1">Price</p>
+                    <p className=" font-normal text-xs pt-2">Price</p>
                   </td>
                   <td className=" text-sm py-5 px-3">
                     <span className="">{datas.quantity}</span>
-                    <p className=" font-normal text-xs mt-1">Quantity</p>
+                    <p className=" font-normal text-xs pt-2">Quantity</p>
                   </td>
                   <td className=" text-sm py-5 px-3">
                     <span className="">${datas.amount}</span>
-                    <p className=" font-normal text-xs mt-1">Amount</p>
+                    <p className=" font-normal text-xs pt-2">Amount</p>
                   </td>
                 </tr>
               );

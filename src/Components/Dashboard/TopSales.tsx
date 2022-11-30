@@ -28,9 +28,9 @@ const TopSales = (props: Props) => {
         return (
           <div
             key={index}
-            className="flex justify-between items-center border-b-border-color border-b mb-2"
+            className="flex justify-between items-center border-b-border-color border-b"
           >
-            <span className="flex items-center mb-2">
+            <span className="flex items-center py-3">
               <i className={`fa fa-square ${colorpie[index]} mr-2`}></i>
               {data.name}
             </span>
