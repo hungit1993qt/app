@@ -113,7 +113,7 @@ const TopMenu = (props: Props) => {
                   </th>
                 </tr>
               </thead>
-              <tbody className="divide-y overflow-auto">
+              <tbody className=" overflow-auto">
                 {data.map((datas, index) => {
                   return (
                     <tr key={index}>
