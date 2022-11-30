@@ -103,28 +103,25 @@ const TopMenu = (props: Props) => {
             } `}
           >
             <table className="relative w-full">
-              <thead>
-                <tr>
-                  <th className="sticky top-0 border-0 px-6 py-3 bg-white">
-                    <div className="flex justify-between font-semibold">
-                      <span>Notification</span>
-                      <span>Clear all</span>
-                    </div>
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                {data.map((datas, index) => {
-                  return (
-                    <tr key={index}>
-                      <td className="text-md cursor-pointer rounded hover:bg-blue-100 mt-1 p-2 flex items-center">
-                        <img src={`${datas.src}`} alt="" className="mr-2 w-8" />
-                        <span className="text-sm">{datas.title}</span>
-                      </td>
-                    </tr>
-                  );
-                })}
-              </tbody>
+              <tr>
+                <th className="sticky top-0 border-0 px-6 py-3 bg-white">
+                  <div className="flex justify-between font-semibold">
+                    <span>Notification</span>
+                    <span>Clear all</span>
+                  </div>
+                </th>
+              </tr>
+
+              {data.map((datas, index) => {
+                return (
+                  <tr key={index}>
+                    <td className="text-md cursor-pointer rounded hover:bg-blue-100 mt-1 p-2 flex items-center">
+                      <img src={`${datas.src}`} alt="" className="mr-2 w-8" />
+                      <span className="text-sm">{datas.title}</span>
+                    </td>
+                  </tr>
+                );
+              })}
 
               <tr>
                 <th className="sticky bottom-0 border-0 px-6 py-3 bg-white">
