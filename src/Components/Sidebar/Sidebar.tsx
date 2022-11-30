@@ -11,16 +11,14 @@ const Sidebar = (props: Props) => {
   );
   const handleResize = () => {
     if (window.innerWidth < 768) {
-      dispatch(setSideBar(true));
+      return dispatch(setSideBar(true));
     } else {
-      dispatch(setSideBar(false));
+      return dispatch(setSideBar(false));
     }
   };
   useEffect(() => {
     window.addEventListener("resize", handleResize);
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
   const menu = [
     { title: "Dashboard", src: "Chart_fill" },

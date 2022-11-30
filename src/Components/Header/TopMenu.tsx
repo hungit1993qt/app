@@ -66,7 +66,7 @@ const TopMenu = (props: Props) => {
       } duration-300 lg:right-0 z-10 bg-white flex items-center justify-between lg:justify-between box-border lg:px-10 px-6 text-text-number fixed w-full lg:w-auto `}
     >
       <i
-        className={`fa fa-align-justify lg:hidden block cursor-pointer z-0 
+        className={`fa fa-align-justify lg:hidden block cursor-pointer z-0 ml-2 text-lg
           `}
         onClick={() => dispatch(setSideBarMobile())}
       ></i>
@@ -83,7 +83,7 @@ const TopMenu = (props: Props) => {
           </button>
         </div>
       </form>
-      <div className="flex items-center gap-x-14">
+      <div className="flex items-center lg:gap-x-16 gap-x-12">
         <i
           className={`fa ${
             darkMode ? "fa-sun text-yellow-400" : "fa-moon"
@@ -150,7 +150,7 @@ const TopMenu = (props: Props) => {
             </div>
           </div>
           <div
-            className={`bg-white w-32 shadow-lg absolute right-0 lg:right-0 p-3 top-14 duration-300 border-colorBorder border border-solid ${
+            className={`bg-white w-32 shadow-lg absolute right-0 lg:right-0 p-3 top-14 -mt-1 duration-300 border-colorBorder border border-solid ${
               dropMenu ? "scale-1 translate-y-1" : "scale-0 -translate-y-5"
             } `}
           >

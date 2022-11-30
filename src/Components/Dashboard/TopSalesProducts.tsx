@@ -42,7 +42,10 @@ const TopSalesProducts = (props: Props) => {
     <div className=" bg-box  lg:w-2/3 w-full p-6 shadow border ">
       <div className="flex justify-between items-center ">
         <span className="uppercase font-bold">total sales</span>
-        <i className="fa fa-download cursor-pointer"></i>
+        <div>
+          Export
+          <i className="fa fa-download cursor-pointer ml-2"></i>
+        </div>
       </div>
       <div className="overflow-auto">
         <table className="w-full mt-2">
@@ -52,19 +55,27 @@ const TopSalesProducts = (props: Props) => {
                 <tr key={index} className=" border-b hover:bg-blue-100 ">
                   <td className=" text-sm py-6 px-1 whitespace-nowrap ">
                     <span>{datas.title}</span>
-                    <p className=" font-normal text-sm pt-2 text-descript whitespace-nowrap">{datas.date}</p>
+                    <p className=" font-normal text-sm pt-2 text-descript whitespace-nowrap">
+                      {datas.date}
+                    </p>
                   </td>
                   <td className="text-sm py-6 px-3 whitespace-nowrap">
                     <span className="">${datas.price}</span>
-                    <p className=" font-normal text-sm pt-2 text-descript whitespace-nowrap">Price</p>
+                    <p className=" font-normal text-sm pt-2 text-descript whitespace-nowrap">
+                      Price
+                    </p>
                   </td>
                   <td className=" text-sm py-6 px-3 whitespace-nowrap">
                     <span className="">{datas.quantity}</span>
-                    <p className=" font-normal text-sm pt-2 text-descript whitespace-nowrap">Quantity</p>
+                    <p className=" font-normal text-sm pt-2 text-descript whitespace-nowrap">
+                      Quantity
+                    </p>
                   </td>
                   <td className=" text-sm py-6 px-3 whitespace-nowrap">
                     <span className="">${datas.amount}</span>
-                    <p className=" font-normal text-sm pt-2 text-descript whitespace-nowrap">Amount</p>
+                    <p className=" font-normal text-sm pt-2 text-descript whitespace-nowrap">
+                      Amount
+                    </p>
                   </td>
                 </tr>
               );

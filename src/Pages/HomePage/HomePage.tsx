@@ -1,10 +1,9 @@
 import TopSales from "Components/Dashboard/TopSales";
 import TopSalesProducts from "Components/Dashboard/TopSalesProducts";
 import { RootState } from "configStore";
-import { useDispatch, useSelector } from "react-redux";
-type Props = {};
+import { useSelector } from "react-redux";
 
-const HomePage = (props: Props) => {
+const HomePage = () => {
   const { openSideBar } = useSelector((state: RootState) => state.auth);
   return (
     <div
