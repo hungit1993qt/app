@@ -134,7 +134,7 @@ const TopMenu = (props: Props) => {
         </div>
 
         <div
-          className=" relative bg-border-color p-2"
+          className=" relative bg-white lg:bg-border-color p-2"
           onClick={handleClickInsideMenu}
           ref={refMenu}
         >
