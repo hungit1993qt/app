@@ -3,8 +3,8 @@ type Props = {};
 
 const TopSales = (props: Props) => {
   const data = [
-    { name: "Direct", value: 500 },
-    { name: "Affilliate", value: 300 },
+    { name: "Direct", value: 400 },
+    { name: "Affilliate", value: 600 },
     { name: "Sponsored", value: 900 },
     { name: "E-mail", value: 400 },
   ];
