@@ -36,7 +36,7 @@ const Sidebar = (props: Props) => {
     <div
       className={`${
         openSideBar ? "w-60" : "w-24"
-      } duration-300  h-screen bg-dark  pt-8 p-5 fixed lg:relative  lg:translate-x-0 z-20 ${
+      } duration-300  h-screen bg-dark  pt-8 p-5 fixed  lg:translate-x-0 z-20 ${
         openSideMobile ? null : "-translate-x-60"
       }`}
     >

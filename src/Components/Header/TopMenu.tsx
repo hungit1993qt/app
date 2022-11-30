@@ -27,9 +27,15 @@ const TopMenu = (props: Props) => {
   useOnClickOutside(refMenu, handleClickOutsideMenu);
   useOnClickOutside(refBell, handleClickOutsideBell); //
   const dispatch = useDispatch<AppDispatch>();
-  const { darkMode } = useSelector((state: RootState) => state.auth);
+  const { darkMode, openSideBar } = useSelector(
+    (state: RootState) => state.auth
+  );
   return (
-    <div className="w-full z-10 py-4 bg-light-white flex items-center justify-between lg:justify-between box-border lg:px-10 px-6 text-text-number">
+    <div
+      className={` ${
+        openSideBar ? "lg:left-60" : "lg:left-24 "
+      } duration-300 lg:right-0 z-10 py-4 bg-white flex items-center justify-between lg:justify-between box-border lg:px-10 px-6 text-text-number fixed w-full lg:w-auto `}
+    >
       <i
         className={`fa fa-align-justify lg:hidden block cursor-pointer z-0 
           `}
