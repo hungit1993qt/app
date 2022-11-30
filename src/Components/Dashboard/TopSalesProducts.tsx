@@ -10,7 +10,7 @@ const TopSalesProducts = (props: Props) => {
       date: "07 April 2018",
     },
     {
-      title: "Marco Lightweight Shirt",
+      title: "Marco Light weight Shirt",
       price: "128.50",
       quantity: "37",
       amount: "4,754.50",
@@ -32,7 +32,7 @@ const TopSalesProducts = (props: Props) => {
     },
     {
       title: "Marco Shoes",
-      price: "$28.49",
+      price: "28.49",
       quantity: "69",
       amount: "1,965.81",
       date: "05 March 2018",
@@ -44,32 +44,34 @@ const TopSalesProducts = (props: Props) => {
         <span className="uppercase font-bold">total sales</span>
         <i className="fa fa-download cursor-pointer"></i>
       </div>
-      <table className="w-full overflow-auto mt-2">
-        <tbody>
-          {data.map((datas, index) => {
-            return (
-              <tr key={index} className=" border-b hover:bg-blue-100">
-                <td className=" text-sm py-5 ">
-                  <span>{datas.title}</span>
-                  <p className=" font-normal text-xs mt-1">{datas.date}</p>
-                </td>
-                <td className="text-sm py-5 ">
-                  <span className="">${datas.price}</span>
-                  <p className=" font-normal text-xs mt-1">Price</p>
-                </td>
-                <td className=" text-sm py-5">
-                  <span className="">{datas.quantity}</span>
-                  <p className=" font-normal text-xs mt-1">Quantity</p>
-                </td>
-                <td className=" text-sm py-5">
-                  <span className="">${datas.amount}</span>
-                  <p className=" font-normal text-xs mt-1">Amount</p>
-                </td>
-              </tr>
-            );
-          })}
-        </tbody>
-      </table>
+      <div className="overflow-auto">
+        <table className="w-full mt-2">
+          <tbody>
+            {data.map((datas, index) => {
+              return (
+                <tr key={index} className=" border-b hover:bg-blue-100">
+                  <td className=" text-sm py-5 px-1">
+                    <span>{datas.title}</span>
+                    <p className=" font-normal text-xs mt-1">{datas.date}</p>
+                  </td>
+                  <td className="text-sm py-5  px-2">
+                    <span className="">${datas.price}</span>
+                    <p className=" font-normal text-xs mt-1">Price</p>
+                  </td>
+                  <td className=" text-sm py-5 px-2">
+                    <span className="">{datas.quantity}</span>
+                    <p className=" font-normal text-xs mt-1">Quantity</p>
+                  </td>
+                  <td className=" text-sm py-5 px-2">
+                    <span className="">${datas.amount}</span>
+                    <p className=" font-normal text-xs mt-1">Amount</p>
+                  </td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 };
