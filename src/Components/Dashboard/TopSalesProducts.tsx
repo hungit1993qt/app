@@ -52,8 +52,11 @@ const TopSalesProducts = (props: Props) => {
           <tbody>
             {data.map((datas, index) => {
               return (
-                <tr key={index} className=" border-b hover:bg-blue-100 ">
-                  <td className=" text-sm py-6 px-1 whitespace-nowrap dark:text-white">
+                <tr
+                  key={index}
+                  className=" border-b hover:bg-blue-100 dark:hover:bg-gray-600  "
+                >
+                  <td className=" text-sm py-6 px-1 whitespace-nowrap dark:text-white  ">
                     <span>{datas.title}</span>
                     <p className=" font-normal text-sm pt-2 text-descript-light whitespace-nowrap">
                       {datas.date}
