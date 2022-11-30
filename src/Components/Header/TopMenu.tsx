@@ -98,7 +98,7 @@ const TopMenu = (props: Props) => {
           <i className="fa fa-bell text-gray-500 text-3xl cursor-pointer"></i>
 
           <div
-            className={`bg-box overflow-y-scroll w-80 h-60 shadow-lg absolute top-11 -right-40 lg:right-0  px-1 duration-300 border-colorBorder border border-solid ${
+            className={`bg-box overflow-auto w-80 h-60 shadow-lg absolute top-11 -right-40 lg:right-0  px-1 duration-300 border-colorBorder border border-solid ${
               dropBell ? "scale-1 translate-y-1" : "scale-0 -translate-y-5"
             } `}
           >
@@ -113,7 +113,7 @@ const TopMenu = (props: Props) => {
                   </th>
                 </tr>
               </thead>
-              <tbody className=" overflow-auto">
+              <tbody>
                 {data.map((datas, index) => {
                   return (
                     <tr key={index}>
