@@ -39,8 +39,8 @@ const authSlice = createSlice({
     setSideBar: (state, actions) => {
       state.openSideBar = actions.payload;
     },
-    setSideBarMobile: (state) => {
-      state.openSideMobile = !state.openSideMobile;
+    setSideBarMobile: (state,actions) => {
+      state.openSideMobile = actions.payload;
     },
     setDarkMode: (state) => {
       state.darkMode = !state.darkMode;

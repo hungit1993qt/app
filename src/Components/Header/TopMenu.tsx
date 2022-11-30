@@ -56,7 +56,7 @@ const TopMenu = (props: Props) => {
   useOnClickOutside(refMenu, handleClickOutsideMenu);
   useOnClickOutside(refBell, handleClickOutsideBell); //
   const dispatch = useDispatch<AppDispatch>();
-  const { darkMode, openSideBar } = useSelector(
+  const { darkMode, openSideBar,openSideMobile } = useSelector(
     (state: RootState) => state.auth
   );
   return (
@@ -68,7 +68,7 @@ const TopMenu = (props: Props) => {
       <i
         className={`fa fa-align-justify lg:hidden block cursor-pointer z-0 ml-0 text-lg
           `}
-        onClick={() => dispatch(setSideBarMobile())}
+        onClick={() => dispatch(setSideBarMobile(!openSideMobile))}
       ></i>
       <form className="hidden lg:block">
         <div className="flex items-center relative">

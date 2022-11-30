@@ -1,14 +1,25 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { setSideBar, setSideBarMobile } from "Slices/auth";
 import { useDispatch, useSelector } from "react-redux";
 import { AppDispatch, RootState } from "configStore";
+import { useOnClickOutside } from "usehooks-ts";
 type Props = {};
 
 const Sidebar = (props: Props) => {
+  const [showSiderBar, setShowSiderBar] = useState(false);
+  const refSiderBar = useRef(null);
+
   const dispatch = useDispatch<AppDispatch>();
   const { openSideBar, openSideMobile } = useSelector(
     (state: RootState) => state.auth
   );
+  const handleClickOutsideSiderBar = () => {
+    dispatch(setSideBarMobile(false));
+  };
+  // const handleClickInsideSiderBar = () => {
+  //   dispatch(setSideBarMobile());
+  // };
+  useOnClickOutside(refSiderBar, handleClickOutsideSiderBar);
   const handleResize = () => {
     if (window.innerWidth < 768) {
       return dispatch(setSideBar(true));
@@ -32,6 +43,7 @@ const Sidebar = (props: Props) => {
   ];
   return (
     <div
+    ref={refSiderBar}
       className={`${
         openSideBar ? "w-60" : "w-24"
       } duration-300  h-screen bg-dark  pt-8 p-5 fixed  lg:translate-x-0 z-20 ${
@@ -61,7 +73,7 @@ const Sidebar = (props: Props) => {
         <i
           className={`fa fa-arrow-left lg:hidden block cursor-pointer  text-white ml-5 text-2xl
           `}
-          onClick={() => dispatch(setSideBarMobile())}
+          onClick={() => dispatch(setSideBarMobile(false))}
         ></i>
       </div>
       <ul className="pt-6">
