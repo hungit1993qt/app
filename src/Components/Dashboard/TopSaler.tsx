@@ -54,6 +54,7 @@ const TopSaler = (props: Props) => {
           <i className="fa fa-ellipsis-v cursor-pointer dark:text-white"></i>
         </div>
         <div className=" z-0 mt-8 text-xs ">
+          {/* gitpush */}
           <ResponsiveContainer width="100%" height="100%">
             <BarChart
               width={600}
