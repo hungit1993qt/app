@@ -39,7 +39,7 @@ const TopSalesProducts = (props: Props) => {
     },
   ];
   return (
-    <div className=" bg-box dark:bg-dark lg:w-2/3 w-full p-6 shadow border ">
+    <div className=" bg-box dark:bg-dark flex-initial lg:w-[full-80] w-full p-6 shadow border ">
       <div className="flex justify-between items-center ">
         <span className="uppercase font-bold dark:text-white">total sales</span>
         <div className="dark:text-white">
