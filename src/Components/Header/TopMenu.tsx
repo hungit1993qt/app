@@ -39,7 +39,7 @@ const data = [
 ];
 const TopMenu = (props: Props) => {
   const { isDarkModes, toggleDarkModes } = useDarkModes();
-  console.log(isDarkModes);
+
   const [dropMenu, setDropMenu] = useState(false);
   const [dropBell, setDropBell] = useState(false);
   const refMenu = useRef(null);

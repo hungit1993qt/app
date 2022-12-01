@@ -1,6 +1,7 @@
 type Props = {};
 
 const TopSalesProducts = (props: Props) => {
+  
   const data = [
     {
       title: "ASOS Ridley High Waist",
@@ -39,16 +40,18 @@ const TopSalesProducts = (props: Props) => {
     },
   ];
   return (
-    <div className=" bg-box dark:bg-dark flex-initial lg:w-[full-80] w-full p-6 shadow border ">
+    <div className=" bg-box dark:bg-dark  lg:w-2/3 w-full p-6 shadow border ">
       <div className="flex justify-between items-center ">
-        <span className="uppercase font-bold dark:text-white">total sales</span>
+        <span className="uppercase font-bold dark:text-white text-sm">
+          total sales
+        </span>
         <div className="dark:text-white">
           Export
           <i className="fa fa-download cursor-pointer ml-2"></i>
         </div>
       </div>
       <div className="overflow-auto">
-        <table className="w-full mt-2">
+        <table className="w-full mt-7 ">
           <tbody>
             {data.map((datas, index) => {
               return (
@@ -56,27 +59,27 @@ const TopSalesProducts = (props: Props) => {
                   key={index}
                   className=" border-b hover:bg-blue-100 dark:hover:bg-gray-600  "
                 >
-                  <td className=" text-sm py-6 px-1 whitespace-nowrap dark:text-white  ">
+                  <td className=" text-xs py-4 px-1 whitespace-nowrap dark:text-white  ">
                     <span>{datas.title}</span>
-                    <p className=" font-normal text-sm pt-2 text-descript-light whitespace-nowrap">
+                    <p className=" font-normal pt-2 text-descript-light whitespace-nowrap">
                       {datas.date}
                     </p>
                   </td>
-                  <td className="text-sm py-6 px-3 whitespace-nowrap dark:text-white">
+                  <td className="text-sm py-4 px-3 whitespace-nowrap dark:text-white">
                     <span className="">${datas.price}</span>
-                    <p className=" font-normal text-sm pt-2 text-descript-light whitespace-nowrap">
+                    <p className=" font-normal  pt-2 text-descript-light whitespace-nowrap">
                       Price
                     </p>
                   </td>
-                  <td className=" text-sm py-6 px-3 whitespace-nowrap dark:text-white">
+                  <td className=" text-sm py-4 px-3 whitespace-nowrap dark:text-white">
                     <span className="">{datas.quantity}</span>
-                    <p className=" font-normal text-sm pt-2 text-descript-light whitespace-nowrap">
+                    <p className=" font-normal pt-2 text-descript-light whitespace-nowrap">
                       Quantity
                     </p>
                   </td>
-                  <td className=" text-sm py-6 px-3 whitespace-nowrap dark:text-white">
+                  <td className=" text-sm py-4 px-3 whitespace-nowrap dark:text-white">
                     <span className="">${datas.amount}</span>
-                    <p className=" font-normal text-sm pt-2 text-descript-light whitespace-nowrap">
+                    <p className=" font-normal pt-2 text-descript-light whitespace-nowrap">
                       Amount
                     </p>
                   </td>
