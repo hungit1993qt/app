@@ -1,3 +1,4 @@
+import TopSaler from "Components/Dashboard/TopSaler";
 import TopSales from "Components/Dashboard/TopSales";
 import TopSalesProducts from "Components/Dashboard/TopSalesProducts";
 import { RootState } from "configStore";
@@ -8,9 +9,12 @@ const HomePage = () => {
   return (
     <div
       className={`${openSideBar ? "lg:ml-60" : "lg:ml-24"} duration-300     
-       font-semibold text-text-number flex content-start gap-5 p-5 box-border flex-wrap lg:flex-nowrap bg-content-light dark:bg-content-dark  mt-14`}
+       font-semibold text-text-number flex content-start  p-5 box-border flex-wrap xl:flex-nowrap bg-content-light dark:bg-content-dark mt-14`}
     >
       <TopSales />
+
+      <TopSaler />
+
       <TopSalesProducts />
     </div>
   );

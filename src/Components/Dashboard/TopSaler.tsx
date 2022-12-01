@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 type Props = {};
 
-const TopSales = (props: Props) => {
+const TopSaler = (props: Props) => {
   const [radius, setRadius] = useState("");
   const { openSideBar } = useSelector((state: RootState) => state.auth);
   console.log(openSideBar);
@@ -55,4 +55,4 @@ const TopSales = (props: Props) => {
   );
 };
 
-export default TopSales;
+export default TopSaler;

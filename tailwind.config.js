@@ -19,7 +19,7 @@ module.exports = {
         piecolor4: "#FF8042",
         "text-number": "#6c757d",
         "content-light": "#f1f3fa",
-        "content-dark":"#343a40"
+        "content-dark": "#343a40",
       },
     },
     screens: {
@@ -31,10 +31,10 @@ module.exports = {
 
       lg: "768px",
       // => @media (min-width: 768px) { ... }
-      xl: "1024px",
-      // => @media (min-width: 1024px) { ... }
-      "2xl": "1680px",
-      // => @media (min-width: 1680px) { ... }
+      xl: "960px",
+      // => @media (min-width: 960px) { ... }
+      "2xl": "1080px",
+      // => @media (min-width: 1080px) { ... }
     },
   },
   plugins: [],
