@@ -37,10 +37,17 @@ const TopSalesProducts = (props: Props) => {
       amount: "1,965.81",
       date: "05 March 2018",
     },
+    {
+      title: "Marco Shoes",
+      price: "28.49",
+      quantity: "69",
+      amount: "1,965.81",
+      date: "05 March 2018",
+    },
   ];
   return (
     <div className="xl:w-1/2  w-full p-2 ">
-      <div className="shadow box-border border p-4 bg-box dark:bg-dark">
+      <div className="shadow box-border border p-4 bg-box dark:bg-dark h-full">
         <div className="flex justify-between items-center ">
           <span className="uppercase font-bold dark:text-white text-sm">
             total sales

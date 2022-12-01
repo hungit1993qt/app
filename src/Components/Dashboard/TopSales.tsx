@@ -26,7 +26,7 @@ const TopSales = (props: Props) => {
   console.log(radius);
   return (
     <div className="xl:w-1/4 lg:w-1/2 w-full p-2 ">
-      <div className="shadow box-border border p-4 bg-box dark:bg-dark">
+      <div className="shadow box-border border p-4 bg-box dark:bg-dark h-full">
         <div className="flex justify-between items-center ">
           <span className="uppercase font-bold dark:text-white text-sm">
             total sales
@@ -42,7 +42,7 @@ const TopSales = (props: Props) => {
               key={index}
               className="flex justify-between text-xs items-center border-b-border-color border-b"
             >
-              <span className="flex items-center py-3 dark:text-white">
+              <span className="flex items-center py-5 dark:text-white">
                 <i className={`fa fa-square ${colorpie[index]} mr-2`}></i>
                 {data.name}
               </span>

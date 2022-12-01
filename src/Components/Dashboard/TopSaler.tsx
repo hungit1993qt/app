@@ -1,7 +1,19 @@
-import PieChartDashboard from "Components/Dashboard/PieChartDashboard";
+import {
+  BarChart,
+  Bar,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  Legend,
+  ResponsiveContainer,
+  Line,
+  LineChart,
+} from "recharts";
 import { RootState } from "configStore";
-import { useEffect, useState } from "react";
+import { useEffect, useState, PureComponent } from "react";
 import { useSelector } from "react-redux";
+import { Brush } from "@mui/icons-material";
 type Props = {};
 
 const TopSaler = (props: Props) => {
@@ -12,44 +24,86 @@ const TopSaler = (props: Props) => {
     openSideBar ? setRadius("120") : setRadius("90");
   }, [openSideBar]);
   const data = [
-    { name: "Direct", value: 400 },
-    { name: "Affilliate", value: 600 },
-    { name: "Sponsored", value: 900 },
-    { name: "E-mail", value: 400 },
+    {
+      name: "Mr.Nguyen",
+      uv: 4000,
+      pv: 2400,
+      amt: 2400,
+    },
+    {
+      name: "Ms.Hoang",
+      uv: 2780,
+      pv: 3908,
+      amt: 2000,
+    },
+    {
+      name: "Ms.Quynh",
+      uv: 1890,
+      pv: 4800,
+      amt: 2181,
+    },
   ];
-  const colorpie = [
-    "text-piecolor1",
-    "text-piecolor2",
-    "text-piecolor3",
-    "text-piecolor4",
-  ];
-  console.log(radius);
+
   return (
     <div className="xl:w-1/4 lg:w-1/2 w-full p-2 ">
-      <div className="shadow box-border border p-4 bg-box dark:bg-dark">
+      <div className="shadow box-border border p-4 bg-box dark:bg-dark h-full">
         <div className="flex justify-between items-center ">
           <span className="uppercase font-bold dark:text-white text-sm">
             total sales
           </span>
           <i className="fa fa-ellipsis-v cursor-pointer dark:text-white"></i>
         </div>
-        <div className="h-60 z-0 mt-8 ">
-          <PieChartDashboard data={data} radius={radius} />
-        </div>
-        {data.map((data, index) => {
-          return (
-            <div
-              key={index}
-              className="flex justify-between text-xs items-center border-b-border-color border-b"
+        <div className=" z-0 mt-8 text-xs ">
+          <ResponsiveContainer width="100%" height="100%">
+            <BarChart
+              width={600}
+              height={500}
+              data={data}
+              margin={{
+                top: 5,
+                right: 0,
+                left: -25,
+                bottom: 5,
+              }}
             >
-              <span className="flex items-center py-3 dark:text-white">
-                <i className={`fa fa-square ${colorpie[index]} mr-2`}></i>
-                {data.name}
-              </span>
-              <span className="dark:text-white">{data.value}$</span>
-            </div>
-          );
-        })}
+              <CartesianGrid strokeDasharray="3 3" />
+              <XAxis dataKey="name" />
+              <YAxis />
+              <Tooltip />
+              <Legend />
+              <Bar dataKey="pv" fill="#8884d8" />
+              <Bar dataKey="uv" fill="#82ca9d" />
+            </BarChart>
+          </ResponsiveContainer>
+          <ResponsiveContainer className="mt-3 xl:mt-5" width="100%" height="100%">
+            <ResponsiveContainer width="100%" height={200}>
+              <LineChart
+                width={500}
+                height={200}
+                data={data}
+                syncId="anyId"
+                margin={{
+                  top: 5,
+                  right: 0,
+                  left: -25,
+                  bottom: 5,
+                }}
+              >
+                <CartesianGrid strokeDasharray="3 3" />
+                <XAxis dataKey="name" />
+                <YAxis />
+                <Tooltip />
+                <Line
+                  type="monotone"
+                  dataKey="pv"
+                  stroke="#82ca9d"
+                  fill="#82ca9d"
+                />
+                <Brush />
+              </LineChart>
+            </ResponsiveContainer>
+          </ResponsiveContainer>
+        </div>
       </div>
     </div>
   );
