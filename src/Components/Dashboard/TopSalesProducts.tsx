@@ -58,7 +58,7 @@ const TopSalesProducts = (props: Props) => {
           </div>
         </div>
         <div className="overflow-auto">
-          <table className="w-full mt-7 ">
+          <table className="w-full mt-3 ">
             <tbody>
               {data.map((datas, index) => {
                 return (

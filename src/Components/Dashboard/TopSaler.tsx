@@ -19,7 +19,7 @@ type Props = {};
 const TopSaler = (props: Props) => {
   const [radius, setRadius] = useState("");
   const { openSideBar } = useSelector((state: RootState) => state.auth);
-  
+
   useEffect(() => {
     openSideBar ? setRadius("120") : setRadius("90");
   }, [openSideBar]);
@@ -46,24 +46,24 @@ const TopSaler = (props: Props) => {
 
   return (
     <div className="xl:w-1/4 lg:w-1/2 w-full p-2 ">
-      <div className="shadow box-border border p-4 bg-box dark:bg-dark h-full">
+      <div className="shadow box-border border px-4 py-2 bg-box dark:bg-dark h-full">
         <div className="flex justify-between items-center ">
-          <span className="uppercase font-bold dark:text-white text-sm">
+          <span className="uppercase font-bold dark:text-white text-sm mt-2">
             total sales
           </span>
           <i className="fa fa-ellipsis-v cursor-pointer dark:text-white"></i>
         </div>
-        <div className="h-60 z-0 mt-8 text-xs ">
+        <div className="h-60 z-0 mt-8 text-xs dark:text-white">
           <ResponsiveContainer width="100%" height="100%">
             <BarChart
               width={600}
               height={500}
               data={data}
               margin={{
-                top: 5,
+                top: 0,
                 right: 0,
                 left: -25,
-                bottom: 5,
+                bottom: 0,
               }}
             >
               <CartesianGrid strokeDasharray="3 3" />
@@ -76,22 +76,18 @@ const TopSaler = (props: Props) => {
             </BarChart>
           </ResponsiveContainer>
         </div>
-        <div className="h-60 z-0 mt-8 text-xs ">
-          <ResponsiveContainer
-            className="mt-3 xl:mt-5"
-            width="100%"
-            height="100%"
-          >
+        <div className="h-60 z-0 mt-1 text-xs dark:text-white">
+          <ResponsiveContainer className="" width="100%" height="100%">
             <LineChart
               width={500}
               height={200}
               data={data}
               syncId="anyId"
               margin={{
-                top: 5,
+                top: 0,
                 right: 0,
                 left: -25,
-                bottom: 5,
+                bottom: -5,
               }}
             >
               <CartesianGrid strokeDasharray="3 3" />

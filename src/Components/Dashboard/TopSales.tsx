@@ -32,16 +32,16 @@ const TopSales = (props: Props) => {
           </span>
           <i className="fa fa-ellipsis-v cursor-pointer dark:text-white"></i>
         </div>
-        <div className="h-60 z-0 mt-8 ">
+        <div className="h-60 z-0 mt-4 ">
           <PieChartDashboard data={data} radius={radius} />
         </div>
         {data.map((data, index) => {
           return (
             <div
               key={index}
-              className="flex justify-between text-xs items-center border-b-border-color border-b"
+              className="flex justify-between mt-3 text-xs items-center border-b-border-color border-b"
             >
-              <span className="flex items-center py-5 dark:text-white">
+              <span className="flex items-center py-4 dark:text-white">
                 <i className={`fa fa-square ${colorpie[index]} mr-2`}></i>
                 {data.name}
               </span>
