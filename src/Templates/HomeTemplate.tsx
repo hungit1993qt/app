@@ -7,7 +7,7 @@ function HomeTemplate() {
   return (
     <div className="flex ">
       <Sidebar />
-      <div className="flex w-full h-screen flex-col">
+      <div className="flex w-full h-screen dark:bg-content-dark bg-content-light flex-col">
         <TopMenu />
         <Outlet />
       </div>

@@ -105,11 +105,11 @@ const TopMenu = (props: Props) => {
           <i className="fa fa-bell text-gray-500 dark:text-white text-3xl cursor-pointer"></i>
 
           <div
-            className={`bg-box  w-80 shadow-lg absolute top-11 right-1/2 translate-x-1/2 lg:right-0 px-1 duration-300 border-colorBorder border border-solid ${
+            className={`bg-content-light dark:bg-content-dark dark:text-white  w-80 shadow-lg absolute top-11 right-1/2 translate-x-1/2 lg:right-0 px-1 duration-300 border-colorBorder border border-solid ${
               dropBell ? "scale-1 translate-y-1" : "scale-0 -translate-y-5"
             } `}
           >
-            <div className="flex justify-between font-semibold px-6 py-3 bg-white">
+            <div className="flex justify-between font-semibold px-6 py-3 ">
               <span>Notification</span>
               <span>Clear all</span>
             </div>
@@ -119,7 +119,7 @@ const TopMenu = (props: Props) => {
                   {data.map((datas, index) => {
                     return (
                       <tr key={index}>
-                        <td className="text-md cursor-pointer rounded hover:bg-blue-100 px-5 py-2 bg-white flex items-center">
+                        <td className="text-md cursor-pointer rounded hover:bg-blue-100 px-5 py-2  flex items-center">
                           <img
                             src={`${datas.src}`}
                             alt=""
@@ -134,7 +134,7 @@ const TopMenu = (props: Props) => {
               </table>
             </div>
 
-            <div className="flex justify-center font-semibold px-6 py-3 bg-white">
+            <div className="flex justify-center font-semibold px-6 py-3 ">
               <span>Show more...</span>
             </div>
           </div>
@@ -161,7 +161,7 @@ const TopMenu = (props: Props) => {
             </div>
           </div>
           <div
-            className={`bg-white w-32 shadow-lg absolute right-0 lg:right-0 p-3 top-14 -mt-1 duration-300 border-colorBorder border border-solid ${
+            className={`bg-content-light dark:bg-content-dark dark:text-white w-32 shadow-lg absolute right-0 lg:right-0 p-3 top-14 -mt-1 duration-300 border-colorBorder border border-solid ${
               dropMenu ? "scale-1 translate-y-1" : "scale-0 -translate-y-5"
             } `}
           >
