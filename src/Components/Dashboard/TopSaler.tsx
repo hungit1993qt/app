@@ -67,8 +67,8 @@ const TopSaler = (props: Props) => {
               }}
             >
               <CartesianGrid strokeDasharray="3 3" />
-              <XAxis dataKey="name" />
-              <YAxis />
+              <XAxis dataKey="name" stroke="#98a6ad" />
+              <YAxis stroke="#98a6ad" />
               <Tooltip />
               <Legend />
               <Bar dataKey="pv" fill="#8884d8" />
@@ -91,14 +91,15 @@ const TopSaler = (props: Props) => {
               }}
             >
               <CartesianGrid strokeDasharray="3 3" />
-              <XAxis dataKey="name" />
-              <YAxis />
+              <XAxis dataKey="name" stroke="#98a6ad" />
+              <YAxis stroke="#98a6ad" />
               <Tooltip />
               <Line
                 type="monotone"
                 dataKey="pv"
                 stroke="#82ca9d"
                 fill="#82ca9d"
+                color="#82ca9d"
               />
               <Brush />
             </LineChart>
