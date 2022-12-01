@@ -7,7 +7,7 @@ type Props = {};
 const TopSales = (props: Props) => {
   const [radius, setRadius] = useState("");
   const { openSideBar } = useSelector((state: RootState) => state.auth);
-  console.log(openSideBar);
+
   useEffect(() => {
     openSideBar ? setRadius("120") : setRadius("90");
   }, [openSideBar]);
@@ -23,7 +23,6 @@ const TopSales = (props: Props) => {
     "text-piecolor3",
     "text-piecolor4",
   ];
-  console.log(radius);
   return (
     <div className="xl:w-1/4 lg:w-1/2 w-full p-2 ">
       <div className="shadow box-border border p-4 bg-box dark:bg-dark h-full">

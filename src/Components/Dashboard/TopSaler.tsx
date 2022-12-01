@@ -19,7 +19,7 @@ type Props = {};
 const TopSaler = (props: Props) => {
   const [radius, setRadius] = useState("");
   const { openSideBar } = useSelector((state: RootState) => state.auth);
-  console.log(openSideBar);
+  
   useEffect(() => {
     openSideBar ? setRadius("120") : setRadius("90");
   }, [openSideBar]);
@@ -53,8 +53,7 @@ const TopSaler = (props: Props) => {
           </span>
           <i className="fa fa-ellipsis-v cursor-pointer dark:text-white"></i>
         </div>
-        <div className=" z-0 mt-8 text-xs ">
-          {/* gitpush */}
+        <div className="h-60 z-0 mt-8 text-xs ">
           <ResponsiveContainer width="100%" height="100%">
             <BarChart
               width={600}
@@ -76,33 +75,37 @@ const TopSaler = (props: Props) => {
               <Bar dataKey="uv" fill="#82ca9d" />
             </BarChart>
           </ResponsiveContainer>
-          <ResponsiveContainer className="mt-3 xl:mt-5" width="100%" height="100%">
-            <ResponsiveContainer width="100%" height={200}>
-              <LineChart
-                width={500}
-                height={200}
-                data={data}
-                syncId="anyId"
-                margin={{
-                  top: 5,
-                  right: 0,
-                  left: -25,
-                  bottom: 5,
-                }}
-              >
-                <CartesianGrid strokeDasharray="3 3" />
-                <XAxis dataKey="name" />
-                <YAxis />
-                <Tooltip />
-                <Line
-                  type="monotone"
-                  dataKey="pv"
-                  stroke="#82ca9d"
-                  fill="#82ca9d"
-                />
-                <Brush />
-              </LineChart>
-            </ResponsiveContainer>
+        </div>
+        <div className="h-60 z-0 mt-8 text-xs ">
+          <ResponsiveContainer
+            className="mt-3 xl:mt-5"
+            width="100%"
+            height="100%"
+          >
+            <LineChart
+              width={500}
+              height={200}
+              data={data}
+              syncId="anyId"
+              margin={{
+                top: 5,
+                right: 0,
+                left: -25,
+                bottom: 5,
+              }}
+            >
+              <CartesianGrid strokeDasharray="3 3" />
+              <XAxis dataKey="name" />
+              <YAxis />
+              <Tooltip />
+              <Line
+                type="monotone"
+                dataKey="pv"
+                stroke="#82ca9d"
+                fill="#82ca9d"
+              />
+              <Brush />
+            </LineChart>
           </ResponsiveContainer>
         </div>
       </div>
