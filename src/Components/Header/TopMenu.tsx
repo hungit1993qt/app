@@ -141,7 +141,7 @@ const TopMenu = (props: Props) => {
         </div>
 
         <div
-          className=" relative bg-white dark:bg-content-dark lg:bg-border-color p-2"
+          className=" relative dark:bg-dark lg:bg-content-light p-2"
           onClick={handleClickInsideMenu}
           ref={refMenu}
         >
@@ -152,8 +152,12 @@ const TopMenu = (props: Props) => {
               className=" rounded-full w-10 h-10 object-contain mr-2 border-gray-600 border-2"
             />
             <div className="flex flex-col items-center leading-4 ">
-              <span className="text-purple dark:text-white font-medium">Mr.Hung</span>
-              <span className="text-xs text-gray-600 dark:text-gray-400 font-semibold">Admin</span>
+              <span className="text-purple dark:text-white font-medium">
+                Mr.Hung
+              </span>
+              <span className="text-xs text-gray-600 dark:text-gray-400 font-semibold">
+                Admin
+              </span>
             </div>
           </div>
           <div
