@@ -33,11 +33,11 @@ const Sidebar = (props: Props) => {
   const menu = [
     { title: "Tổng quan", src: "Chart_fill" },
     { title: "Tin nhắn", src: "Chat" },
-    { title: "Tài khoản", src: "User", gap: false },
-    { title: "Lịch ", src: "Calendar" },
+    { title: "Tài khoản", src: "User", gap: false},
+    { title: "Lịch họp", src: "Calendar" },
     { title: "Tìm kiếm", src: "Search" },
     { title: "Phân tích", src: "Chart" },
-    { title: "Quản Lý file ", src: "Folder", gap: false },
+    { title: "Quản Lý ", src: "Folder", gap: false },
     { title: "Cài đặt", src: "Setting" },
   ];
   return (
@@ -56,21 +56,21 @@ const Sidebar = (props: Props) => {
         onClick={() => dispatch(setSideBar(!openSideBar))}
       ></i>
 
-      <div className="flex gap-x-4 items-center mb-4">
+      <div className="flex gap-x-4 items-center ">
         <i
           className={`fa fa-cog text-5xl text-white duration-500 ${
             !openSideBar && "rotate-[360deg]"
           }`}
         ></i>
         <h1
-          className={`text-white origin-left font-medium text-3xl duration-300 ${
+          className={`text-white origin-left font-medium text-3xl duration-300 whitespace-nowrap ${
             !openSideBar && "scale-0"
           }`}
         >
-          Admin
+          Quản lý
         </h1>
         <i
-          className={`fa fa-arrow-left lg:hidden block cursor-pointer  text-white ml-5 text-2xl
+          className={`fa fa-arrow-left lg:hidden block cursor-pointer text-white ml-5 text-2xl
           `}
           onClick={() => dispatch(setSideBarMobile(false))}
         ></i>
@@ -80,7 +80,7 @@ const Sidebar = (props: Props) => {
           {menu.map((menu, index: number) => {
             return (
               <li
-                className={`text-gray-300 text-sm flex items-center gap-x-4 cursor-pointer p-4 -ml-1  hover:bg-light-white rounded-md ${
+                className={`text-gray-300 text-sm flex  items-center gap-x-4 cursor-pointer p-4 hover:bg-light-white rounded-md ${
                   menu.gap ? "mt-9" : "mt-2"
                 } ${index === 0 && "bg-light-white"}`}
                 key={index}
@@ -89,7 +89,7 @@ const Sidebar = (props: Props) => {
                 <span
                   className={`${
                     !openSideBar && "scale-0 "
-                  } origin-left duration-300 }`}
+                  } origin-left duration-300 } whitespace-nowrap`}
                 >
                   {menu.title}
                 </span>
@@ -97,14 +97,14 @@ const Sidebar = (props: Props) => {
             );
           })}
           <li
-            className={`text-gray-300 text-sm flex items-center gap-x-4 cursor-pointer p-4 -ml-1 mb-8 hover:bg-light-white rounded-md 
+            className={`text-gray-300 text-sm flex items-center gap-x-4 cursor-pointer px-4 py-3 hover:bg-light-white rounded-md 
                `}
           >
             <i className="fa fa-sign-out-alt text-2xl text-red-600"></i>
             <span
               className={`${
                 !openSideBar && "scale-0 "
-              }  text-red-600 origin-left duration-300`}
+              }  text-red-600 origin-left duration-300 whitespace-nowrap`}
             >
               Đăng xuất
             </span>
