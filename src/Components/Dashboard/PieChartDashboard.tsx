@@ -1,5 +1,5 @@
 import { PieCharts } from "Interface/PieChart";
-import { PieChart, Pie, Cell, ResponsiveContainer } from "recharts";
+import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip } from "recharts";
 
 type Props = {
   data: PieCharts[];
@@ -38,8 +38,8 @@ const renderCustomizedLabel = ({
 const PieChartDashboard = (props: Props) => {
   const { data, radius } = props;
   return (
-    <ResponsiveContainer >
-      <PieChart >
+    <ResponsiveContainer>
+      <PieChart>
         <Pie
           data={data}
           cx="50%"
@@ -54,6 +54,7 @@ const PieChartDashboard = (props: Props) => {
             <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
           ))}
         </Pie>
+        <Tooltip />
       </PieChart>
     </ResponsiveContainer>
   );

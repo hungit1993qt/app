@@ -38,6 +38,7 @@ const TopSales = (props: Props) => {
         <div className="h-60 z-0 mt-4 ">
           <ResponsiveContainer width="100%" height="100%">
             <PieChartDashboard data={data} radius={radius} />
+            
           </ResponsiveContainer>
         </div>
         {data.map((data, index) => {
