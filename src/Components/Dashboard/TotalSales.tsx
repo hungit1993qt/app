@@ -23,7 +23,7 @@ const TotalSales = () => {
     {
       name: "T3",
 
-      pv: 9800,
+      pv: 6700,
     },
     {
       name: "T4",
@@ -43,12 +43,12 @@ const TotalSales = () => {
     {
       name: "T7",
 
-      pv: 4300,
+      pv: 5300,
     },
     {
       name: "T8",
 
-      pv: 4300,
+      pv: 6300,
     },
     {
       name: "T9",
@@ -58,17 +58,17 @@ const TotalSales = () => {
     {
       name: "T10",
 
-      pv: 4300,
+      pv: 7300,
     },
     {
       name: "T11",
 
-      pv: 4300,
+      pv: 3300,
     },
     {
       name: "T2",
 
-      pv: 4300,
+      pv: 1300,
     },
 
   ];

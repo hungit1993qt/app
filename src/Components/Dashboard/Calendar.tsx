@@ -28,35 +28,35 @@ const meetings = [
   },
   {
     id: 2,
-    name: "Michael Foster",
+    name: "Nguyễn Đình Hoàng",
     imageUrl:
       "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-    startDatetime: "2022-05-20T09:00",
-    endDatetime: "2022-05-20T11:30",
+    startDatetime: "2022-12-02T14:30",
+    endDatetime: "2022-12-02T16:30",
   },
   {
     id: 3,
-    name: "Dries Vincent",
+    name: "Ngô Thị Quỳnh",
     imageUrl:
       "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-    startDatetime: "2022-05-20T17:00",
-    endDatetime: "2022-05-20T18:30",
+    startDatetime: "2022-12-02T16:45",
+    endDatetime: "2022-12-02T18:45",
   },
   {
     id: 4,
-    name: "Leslie Alexander",
+    name: "Nguyễn Hoàng Nam",
     imageUrl:
       "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-    startDatetime: "2022-06-09T13:00",
-    endDatetime: "2022-06-09T14:30",
+    startDatetime: "2022-12-02T08:00",
+    endDatetime: "2022-12-02T10:00",
   },
   {
     id: 5,
-    name: "Michael Foster",
+    name: "Văn Như Ái",
     imageUrl:
       "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-    startDatetime: "2022-05-13T14:00",
-    endDatetime: "2022-05-13T14:30",
+    startDatetime: "2022-12-02T10:45",
+    endDatetime: "2022-12-02T12:45",
   },
 ];
 
@@ -213,7 +213,7 @@ function Meeting({ meeting }: any) {
   let endDateTime = parseISO(meeting.endDatetime);
 
   return (
-    <li className="flex items-center px-4 py-2 space-x-4 group border rounded-xl dark:hover:bg-gray-600">
+    <li className="flex items-center px-4 py-2 space-x-4 group border rounded-xl dark:hover:bg-gray-600 hover:bg-blue-100">
       <img
         src={meeting.imageUrl}
         alt=""
@@ -273,7 +273,7 @@ function Meeting({ meeting }: any) {
                       "block px-4 py-2 text-sm dark:text-white dark:hover:bg-gray-600"
                     )}
                   >
-                    Thoát
+                    Xóa lịch
                   </a>
                 )}
               </Menu.Item>

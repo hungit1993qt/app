@@ -78,12 +78,12 @@ const TopMenu = (props: Props) => {
         <div className="flex items-center relative">
           <input
             className="p-2 pl-8 rounded-l-lg bg-content-light dark:bg-content-dark border"
-            placeholder="Search..."
+            placeholder="Tìm kiếm..."
             type="text"
           />
           <i className="fa fa-search absolute top-3 left-2 text-gray-300"></i>
           <button className=" bg-purple text-gray-50 rounded-r-lg p-2">
-            Search
+            Tìm kiếm
           </button>
         </div>
       </form>
@@ -110,8 +110,8 @@ const TopMenu = (props: Props) => {
             } `}
           >
             <div className="flex justify-between font-semibold px-6 py-3 ">
-              <span>Notification</span>
-              <span>Clear all</span>
+              <span>Thông báo</span>
+              <span>Xóa tất cả</span>
             </div>
             <div className="overflow-auto w-full h-60">
               <table className="relative w-full ">
@@ -135,7 +135,7 @@ const TopMenu = (props: Props) => {
             </div>
 
             <div className="flex justify-center font-semibold px-6 py-3 ">
-              <span>Show more...</span>
+              <span>Hiễn thị thêm...</span>
             </div>
           </div>
         </div>
@@ -161,22 +161,22 @@ const TopMenu = (props: Props) => {
             </div>
           </div>
           <div
-            className={`bg-content-light dark:bg-content-dark dark:text-white w-32 shadow-lg absolute right-0 lg:right-0 p-3 top-14 -mt-1 duration-300 border-colorBorder border border-solid ${
+            className={`bg-content-light dark:bg-content-dark dark:text-white w-32 shadow-lg absolute right-0 lg:right-0 p-3 top-14 mt-0 duration-300 border-colorBorder border border-solid ${
               dropMenu ? "scale-1 translate-y-1" : "scale-0 -translate-y-5"
             } `}
           >
             <ul className="">
               <li className=" text-md cursor-pointer rounded hover:bg-blue-100 mt-0">
-                Profile
+                Hồ sơ
               </li>
               <li className=" text-md cursor-pointer rounded hover:bg-blue-100 mt-2">
-                Your apps
+                Ứng dụng 
               </li>
               <li className=" text-md cursor-pointer rounded hover:bg-blue-100 mt-2">
-                Settings
+                Cài đặt
               </li>
               <li className=" text-md cursor-pointer rounded hover:bg-blue-100 mt-2">
-                Logout
+                Đăng xuất
               </li>
             </ul>
           </div>
