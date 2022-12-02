@@ -2,6 +2,7 @@ import PieChartDashboard from "Components/Dashboard/PieChartDashboard";
 import { RootState } from "configStore";
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
+import { ResponsiveContainer } from "recharts";
 type Props = {};
 
 const TopSales = (props: Props) => {
@@ -9,7 +10,7 @@ const TopSales = (props: Props) => {
   const { openSideBar } = useSelector((state: RootState) => state.auth);
 
   useEffect(() => {
-    openSideBar ? setRadius("120") : setRadius("90");
+    openSideBar ? setRadius("120") : setRadius("80");
   }, [openSideBar]);
   const data = [
     { name: "Liên kết qua kênh Trực tiếp", value: 400 },
@@ -25,16 +26,17 @@ const TopSales = (props: Props) => {
   ];
   return (
     <div className="xl:w-1/4 lg:w-1/2 w-full p-2 ">
-   
       <div className="shadow box-border border p-4 bg-box dark:bg-dark h-full">
         <div className="flex justify-between items-center ">
           <span className="uppercase font-bold dark:text-white text-sm">
-           xếp hạng kênh maketing
+            xếp hạng kênh maketing
           </span>
           <i className="fa fa-ellipsis-v cursor-pointer dark:text-white"></i>
         </div>
         <div className="h-60 z-0 mt-4 ">
-          <PieChartDashboard data={data} radius={radius} />
+          <ResponsiveContainer width="100%" height="100%">
+            <PieChartDashboard data={data} radius={radius} />
+          </ResponsiveContainer>
         </div>
         {data.map((data, index) => {
           return (
