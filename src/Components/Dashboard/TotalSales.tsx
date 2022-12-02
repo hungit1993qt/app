@@ -80,7 +80,7 @@ const TotalSales = () => {
   const CustomTooltip = ({ active, payload, label }: any) => {
     if (active && payload && payload.length) {
       return (
-        <div className="custom-tooltip bg-content-light dark:bg-content-dark rounded-lg p-4 outline-none outline-transparent">
+        <div className="custom-tooltip bg-content-light dark:bg-content-dark rounded-lg p-4 outline-none">
           <p className="label text-green-500">{`${label} : ${payload[0].value}`}</p>
           <p className="desc text-yellow-500">Danh số tháng {label}.</p>
         </div>
@@ -99,7 +99,7 @@ const TotalSales = () => {
           {/* <i className="fa fa-ellipsis-v cursor-pointer dark:text-white"></i> */}
          <Option />
         </div>
-        <div className="h-60 z-0 mt-4 w-full outline-transparent outline-none">
+        <div className="h-60 z-0 mt-4 w-full  outline-none">
           <ResponsiveContainer width="100%" height="100%">
             <BarChart
               width={1000}
