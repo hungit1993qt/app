@@ -249,14 +249,14 @@ function Meeting({ meeting }: any) {
           leaveFrom="transform opacity-100 scale-100"
           leaveTo="transform opacity-0 scale-95"
         >
-          <Menu.Items className="absolute right-0 z-10 mt-2 origin-top-right bg-white dark:text-white dark:bg-dark rounded-md shadow-lg w-36 border">
-            <div className="py-1">
+          <Menu.Items className="absolute right-2 z-10 top-4 bg-white dark:text-white dark:bg-drop-modal-dark dark:border-boder-drop-modal-dark rounded-md shadow-lg w-36 border">
+            <div className="py-0">
               <Menu.Item>
                 {({ active }: any) => (
                   <a
                     href="#"
                     className={classNames(
-                      active ? "bg-gray-100 text-gray-900" : "text-gray-700",
+                      active ? "bg-gray-100 text-gray-900" : " text-descript-light",
                       "block px-4 py-2 text-sm dark:text-white dark:hover:bg-gray-600"
                     )}
                   >
@@ -269,7 +269,7 @@ function Meeting({ meeting }: any) {
                   <a
                     href="#"
                     className={classNames(
-                      active ? "bg-gray-100 text-gray-900" : "text-gray-700",
+                      active ? "bg-gray-100 text-gray-900" : "text-descript-light",
                       "block px-4 py-2 text-sm dark:text-white dark:hover:bg-gray-600"
                     )}
                   >

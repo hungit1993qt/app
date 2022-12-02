@@ -161,22 +161,22 @@ const TopMenu = (props: Props) => {
             </div>
           </div>
           <div
-            className={`bg-content-light dark:bg-drop-modal-dark dark:text-white shadow-lg absolute right-0 lg:right-0 top-14 mt-0 duration-300 border-colorBorder rounded-md dark:border-boder-drop-modal-dark border-solid ${
+            className={`bg-content-light  dark:text-white shadow-lg absolute right-0 lg:right-0 top-14 mt-0 duration-300 border-colorBorder rounded-md dark:bg-drop-modal-dark dark:border-boder-drop-modal-dark border-solid ${
               dropMenu ? "scale-1 translate-y-1" : "scale-0 -translate-y-5"
             } `}
           >
-            <h1 className="text-md pl-3  py-3 whitespace-nowrap dark:text-descript-light">Xin chào!</h1>
+            <h1 className="text-md pl-6  py-3 whitespace-nowrap dark:text-descript-light">Xin chào!</h1>
             <ul className="">
-              <li className="text-sm cursor-pointer hover:bg-blue-100 mt-0 dark:hover:bg-gray-500 pl-6 pr-12 py-2 whitespace-nowrap dark:text-descript-light">
+              <li className="text-sm cursor-pointer hover:bg-blue-100 mt-0 dark:hover:bg-gray-500 pl-8 pr-14 py-2 whitespace-nowrap dark:text-descript-light">
                 <i className="fa fa-user-circle mr-2"></i>Tài khoản
               </li>
-              <li className=" text-sm cursor-pointer  hover:bg-blue-100 mt-2 dark:hover:bg-gray-500 pl-6 pr-12 py-2 whitespace-nowrap dark:text-descript-light">
+              <li className=" text-sm cursor-pointer  hover:bg-blue-100 mt-2 dark:hover:bg-gray-500 pl-8 pr-14 py-2 whitespace-nowrap dark:text-descript-light">
                 <i className="fa fa-tablet-alt mr-2"></i>Ứng dụng
               </li>
-              <li className=" text-sm cursor-pointer  hover:bg-blue-100 mt-2 dark:hover:bg-gray-500 pl-6 pr-12 py-2 whitespace-nowrap dark:text-descript-light">
+              <li className=" text-sm cursor-pointer  hover:bg-blue-100 mt-2 dark:hover:bg-gray-500 pl-8 pr-14 py-2 whitespace-nowrap dark:text-descript-light">
                 <i className="fa fa-cog mr-2"></i> Cài đặt
               </li>
-              <li className=" text-sm cursor-pointer  hover:bg-blue-100 mt-2 dark:hover:bg-gray-500 pl-6 pr-12 py-2 whitespace-nowrap dark:text-descript-light">
+              <li className=" text-sm cursor-pointer  hover:bg-blue-100 mt-2 dark:hover:bg-gray-500 pl-8 pr-14 py-2 whitespace-nowrap dark:text-descript-light">
                 <i className="fa fa-sign-out-alt mr-2"></i>Đăng xuất
               </li>
             </ul>
