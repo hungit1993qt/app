@@ -39,9 +39,12 @@ const TopSaler = (props: Props) => {
     if (active && payload && payload.length) {
       return (
         <div className="bg-white dark:bg-content-dark rounded-lg p-4 outline-none dark:border-boder-drop-modal-dark border">
-          <p className=" text-green-500 outline-none">{`${label}`}</p>
-          <p className=" text-yellow-500 outline-none">
-            Danh số tháng {payload[0].value}.
+          <p className=" text-descript-light text-lg outline-none">{`${label}`}</p>
+          <p className=" text-purple outline-none">
+            Mục tiêu tháng {payload[0].value}.
+          </p>
+          <p className=" text-green-500 outline-none">
+            Doanh số tháng {payload[1].value}.
           </p>
         </div>
       );
@@ -109,6 +112,13 @@ const TopSaler = (props: Props) => {
               <Line
                 type="monotone"
                 dataKey="pv"
+                stroke="#8884d8"
+                fill="#8884d8"
+                color="#8884d8"
+              />
+              <Line
+                type="monotone"
+                dataKey="uv"
                 stroke="#82ca9d"
                 fill="#82ca9d"
                 color="#82ca9d"
