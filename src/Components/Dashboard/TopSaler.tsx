@@ -62,7 +62,7 @@ const TopSaler = (props: Props) => {
               margin={{
                 top: 0,
                 right: 0,
-                left: -25,
+                left: -20,
                 bottom: 0,
               }}
             >
@@ -86,7 +86,7 @@ const TopSaler = (props: Props) => {
               margin={{
                 top: 0,
                 right: 0,
-                left: -25,
+                left: -20,
                 bottom: -5,
               }}
             >
