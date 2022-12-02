@@ -25,7 +25,7 @@ const Option = (props: Props) => {
           leaveFrom="transform opacity-100 scale-100"
           leaveTo="transform opacity-0 scale-95"
         >
-          <Menu.Items className="absolute right-2 z-10 top-4 bg-white dark:text-white dark:bg-drop-modal-dark dark:border-boder-drop-modal-dark border-descript-light rounded-md shadow-lg w-36 ">
+          <Menu.Items className="border-transparent absolute right-2 z-10 top-4 bg-white dark:text-white dark:bg-drop-modal-dark dark:border-boder-drop-modal-dark border-descript-light rounded-md shadow-lg w-36 ">
             <div className="py-0 border-0">
               <Menu.Item>
                 {({ active }: any) => (
