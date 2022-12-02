@@ -96,7 +96,7 @@ const Sidebar = (props: Props) => {
                 <span
                   className={`${
                     openSideBar && "hidden"
-                  } absolute left-48 font-bold drop-shadow-lg border-0 text-gray-600 text-sm p-0 w-0 rounded-md flex whitespace-pre dark:text-white bg-content-light dark:bg-content-dark overflow-hidden group-hover:duration-300 group-hover:p-3 group-hover:border group-hover:left-24 group-hover:w-fit`}
+                  } absolute left-48 font-bold drop-shadow-lg border-0 text-gray-600 text-sm p-0 w-0 rounded-md flex whitespace-pre dark:text-descript-light bg-content-light dark:bg-drop-modal-dark dark:border-boder-drop-modal-dark border-solid overflow-hidden group-hover:duration-300 group-hover:p-3 group-hover:border group-hover:left-24 group-hover:w-fit`}
                 >
                   {menu.title}
                 </span>
@@ -118,7 +118,7 @@ const Sidebar = (props: Props) => {
             <span
                   className={`${
                     openSideBar && "hidden"
-                  } absolute left-48 font-bold drop-shadow-lg  border-0 text-gray-600 text-sm p-0 w-0 rounded-md flex whitespace-pre dark:text-white bg-content-light dark:bg-content-dark overflow-hidden group-hover:duration-300 group-hover:p-3 group-hover:border group-hover:left-24 group-hover:w-fit group-hover:text-red-500`}
+                  } absolute left-48 font-bold drop-shadow-lg  border-0 text-gray-600 text-sm p-0 w-0 rounded-md flex whitespace-pre  bg-content-light dark:bg-drop-modal-dark dark:border-boder-drop-modal-dark border-solid overflow-hidden group-hover:duration-300 group-hover:p-3 group-hover:border group-hover:left-24 group-hover:w-fit group-hover:text-red-500`}
                 >
                   Đăng xuất
                 </span>
