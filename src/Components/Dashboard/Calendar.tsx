@@ -220,7 +220,7 @@ function Meeting({ meeting }: any) {
         className="flex-none w-10 h-10 rounded-full"
       />
       <div className="flex-auto">
-        <p className="text-gray-900 dark:text-white">{meeting.name}</p>
+        <p className="text-gray-600 dark:text-white">{meeting.name}</p>
         <p className="mt-0.5 dark:text-descript-light">
           <time dateTime={meeting.startDatetime}>
             {format(startDateTime, "h:mm a")}

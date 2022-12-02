@@ -105,7 +105,7 @@ const TopMenu = (props: Props) => {
           <i className="fa fa-bell text-gray-500 dark:text-white text-3xl cursor-pointer"></i>
 
           <div
-            className={`bg-content-light dark:bg-drop-modal-dark dark:text-white  w-80 shadow-lg absolute top-11 right-1/2 translate-x-1/2 lg:right-0 px-1 duration-300 border-colorBorder dark:border-boder-drop-modal-dark border border-solid ${
+            className={`bg-white dark:bg-drop-modal-dark dark:text-white  w-80 shadow-lg absolute top-11 right-1/2 translate-x-1/2 lg:right-0 px-1 duration-300 border-colorBorder dark:border-boder-drop-modal-dark border border-solid ${
               dropBell ? "scale-1 translate-y-1" : "scale-0 -translate-y-5"
             } `}
           >
@@ -161,7 +161,7 @@ const TopMenu = (props: Props) => {
             </div>
           </div>
           <div
-            className={`bg-content-light  dark:text-white shadow-lg absolute right-0 lg:right-0 top-14 mt-0 duration-300 border-colorBorder rounded-md dark:bg-drop-modal-dark dark:border-boder-drop-modal-dark border-solid ${
+            className={`bg-white  dark:text-white shadow-lg absolute right-0 lg:right-0 top-14 mt-0 duration-300 border-colorBorder rounded-md dark:bg-drop-modal-dark dark:border-boder-drop-modal-dark border-solid ${
               dropMenu ? "scale-1 translate-y-1" : "scale-0 -translate-y-5"
             } `}
           >
