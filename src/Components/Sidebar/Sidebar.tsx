@@ -56,7 +56,7 @@ const Sidebar = (props: Props) => {
         onClick={() => dispatch(setSideBar(!openSideBar))}
       ></i>
 
-      <div className="flex gap-x-4 items-center ">
+      <div className="flex gap-x-4 items-center pb-3 ">
         <i
           className={`fa fa-cog text-5xl text-white duration-500 ${
             !openSideBar && "rotate-[360deg]"
@@ -97,7 +97,7 @@ const Sidebar = (props: Props) => {
             );
           })}
           <li
-            className={`text-gray-300 text-sm flex items-center gap-x-4 cursor-pointer px-4 py-3 hover:bg-light-white rounded-md 
+            className={`text-gray-300 text-sm flex items-center gap-x-4 mb-8 cursor-pointer px-4 py-3 hover:bg-light-white rounded-md 
                `}
           >
             <i className="fa fa-sign-out-alt text-2xl text-red-600"></i>
