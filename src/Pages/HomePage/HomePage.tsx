@@ -13,7 +13,6 @@ const HomePage = () => {
        `}
     >
       <div className="font-semibold text-text-number flex content-start  px-5 box-border flex-wrap xl:flex-nowrap bg-content-light dark:bg-content-dark mt-14">
-     
         <TopSales />
 
         <TopSaler />

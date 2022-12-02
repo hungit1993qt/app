@@ -118,7 +118,7 @@ export default function Calendar() {
                 <i className="fa fa-arrow-right w-5 h-5"></i>
               </button>
             </div>
-            <div className="grid grid-cols-7 mt-10 text-xs leading-6 text-center text-gray-500">
+            <div className="grid grid-cols-7 mt-10 text-xs leading-6 text-center dark:text-white text-gray-500 ">
               <div>S</div>
               <div>M</div>
               <div>T</div>
@@ -127,7 +127,7 @@ export default function Calendar() {
               <div>F</div>
               <div>S</div>
             </div>
-            <div className="grid grid-cols-7 mt-2 text-sm">
+            <div className="grid grid-cols-7 mt-2 text-sm ">
               {days.map((day, dayIdx) => (
                 <div
                   key={day.toString()}
@@ -139,28 +139,33 @@ export default function Calendar() {
                   <button
                     type="button"
                     onClick={() => setSelectedDay(day)}
-                    className={classNames(
-                      isEqual(day, selectedDay) && "text-white",
-                      !isEqual(day, selectedDay) &&
-                        isToday(day) &&
-                        "text-red-500",
-                      !isEqual(day, selectedDay) &&
-                        !isToday(day) &&
-                        isSameMonth(day, firstDayCurrentMonth) &&
-                        "text-gray-900",
-                      !isEqual(day, selectedDay) &&
-                        !isToday(day) &&
-                        !isSameMonth(day, firstDayCurrentMonth) &&
-                        "text-gray-400",
-                      isEqual(day, selectedDay) && isToday(day) && "bg-red-500",
-                      isEqual(day, selectedDay) &&
-                        !isToday(day) &&
-                        "bg-gray-900",
-                      !isEqual(day, selectedDay) && "hover:bg-gray-200",
-                      (isEqual(day, selectedDay) || isToday(day)) &&
-                        "font-semibold",
-                      "mx-auto flex h-8 w-8 items-center justify-center rounded-full"
-                    )}
+                    className={
+                      "" +
+                      classNames(
+                        isEqual(day, selectedDay) && "text-white",
+                        !isEqual(day, selectedDay) &&
+                          isToday(day) &&
+                          "text-white bg-red-500 dark:bg-green-500",
+                        !isEqual(day, selectedDay) &&
+                          !isToday(day) &&
+                          isSameMonth(day, firstDayCurrentMonth) &&
+                          "text-descript-light dark:text-descript-light",
+                        !isEqual(day, selectedDay) &&
+                          !isToday(day) &&
+                          !isSameMonth(day, firstDayCurrentMonth) &&
+                          "text-white",
+                        isEqual(day, selectedDay) &&
+                          isToday(day) &&
+                          "bg-red-500 dark:bg-green-500 text-white",
+                        isEqual(day, selectedDay) &&
+                          !isToday(day) &&
+                          "bg-gray-900 text-white",
+                        !isEqual(day, selectedDay) && "hover:bg-gray-200",
+                        (isEqual(day, selectedDay) || isToday(day)) &&
+                          "font-semibold",
+                        "mx-auto flex h-8 w-8 items-center justify-center rounded-full dark:text-white"
+                      )
+                    }
                   >
                     <time dateTime={format(day, "yyyy-MM-dd")}>
                       {format(day, "d")}
@@ -191,7 +196,9 @@ export default function Calendar() {
                   <Meeting meeting={meeting} key={meeting.id} />
                 ))
               ) : (
-                <p>No meetings for today.</p>
+                <p className="dark:text-descript-light">
+                  No meetings for today.
+                </p>
               )}
             </ol>
           </section>
@@ -206,15 +213,15 @@ function Meeting({ meeting }: any) {
   let endDateTime = parseISO(meeting.endDatetime);
 
   return (
-    <li className="flex items-center px-4 py-2 space-x-4 group rounded-xl focus-within:bg-gray-100 hover:bg-gray-100">
+    <li className="flex items-center px-4 py-2 space-x-4 group border rounded-xl dark:hover:bg-gray-600">
       <img
         src={meeting.imageUrl}
         alt=""
         className="flex-none w-10 h-10 rounded-full"
       />
       <div className="flex-auto">
-        <p className="text-gray-900">{meeting.name}</p>
-        <p className="mt-0.5">
+        <p className="text-gray-900 dark:text-white">{meeting.name}</p>
+        <p className="mt-0.5 dark:text-descript-light">
           <time dateTime={meeting.startDatetime}>
             {format(startDateTime, "h:mm a")}
           </time>{" "}
@@ -224,12 +231,9 @@ function Meeting({ meeting }: any) {
           </time>
         </p>
       </div>
-      <Menu
-        as="div"
-        className="relative opacity-0 focus-within:opacity-100 group-hover:opacity-100"
-      >
+      <Menu as="div" className="relative opacity-1 ">
         <div>
-          <Menu.Button className="-m-2 flex items-center rounded-full p-1.5 text-gray-500 hover:text-gray-600">
+          <Menu.Button className="-m-2 flex items-center rounded-full p-1.5 text-gray-500 dark:text-white">
             <span className="sr-only">Open options</span>
 
             <i className="fa fa-ellipsis-v w-6 h-6"></i>
@@ -245,7 +249,7 @@ function Meeting({ meeting }: any) {
           leaveFrom="transform opacity-100 scale-100"
           leaveTo="transform opacity-0 scale-95"
         >
-          <Menu.Items className="absolute right-0 z-10 mt-2 origin-top-right bg-white rounded-md shadow-lg w-36 ring-1 ring-black ring-opacity-5 focus:outline-none">
+          <Menu.Items className="absolute right-0 z-10 mt-2 origin-top-right bg-white dark:text-white dark:bg-dark rounded-md shadow-lg w-36 border">
             <div className="py-1">
               <Menu.Item>
                 {({ active }: any) => (
@@ -253,7 +257,7 @@ function Meeting({ meeting }: any) {
                     href="#"
                     className={classNames(
                       active ? "bg-gray-100 text-gray-900" : "text-gray-700",
-                      "block px-4 py-2 text-sm"
+                      "block px-4 py-2 text-sm dark:text-white dark:hover:bg-gray-600"
                     )}
                   >
                     Edit
@@ -266,7 +270,7 @@ function Meeting({ meeting }: any) {
                     href="#"
                     className={classNames(
                       active ? "bg-gray-100 text-gray-900" : "text-gray-700",
-                      "block px-4 py-2 text-sm"
+                      "block px-4 py-2 text-sm dark:text-white dark:hover:bg-gray-600"
                     )}
                   >
                     Cancel
