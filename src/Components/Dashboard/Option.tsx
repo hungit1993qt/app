@@ -10,7 +10,7 @@ const Option = (props: Props) => {
     <>
       <Menu as="div" className="relative opacity-1 border-0">
         <div>
-          <Menu.Button className="flex items-center rounded-full text-gray-500 dark:text-white">
+          <Menu.Button className="flex border-0 items-center rounded-full text-gray-500 dark:text-white">
             <span className="sr-only">Open options</span>
             <i className="fa fa-ellipsis-v"></i>
           </Menu.Button>
