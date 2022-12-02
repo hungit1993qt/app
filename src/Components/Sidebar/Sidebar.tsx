@@ -33,7 +33,7 @@ const Sidebar = (props: Props) => {
   const menu = [
     { title: "Tổng quan", src: "Chart_fill" },
     { title: "Tin nhắn", src: "Chat" },
-    { title: "Tài khoản", src: "User", gap: false},
+    { title: "Tài khoản", src: "User", gap: false },
     { title: "Lịch họp", src: "Calendar" },
     { title: "Tìm kiếm", src: "Search" },
     { title: "Phân tích", src: "Chart" },
@@ -80,7 +80,7 @@ const Sidebar = (props: Props) => {
           {menu.map((menu, index: number) => {
             return (
               <li
-                className={`text-gray-300 text-sm flex  items-center gap-x-4 cursor-pointer p-4 hover:bg-light-white rounded-md ${
+                className={`group text-gray-300 text-sm flex  items-center gap-x-4 cursor-pointer p-4 hover:bg-light-white rounded-md ${
                   menu.gap ? "mt-9" : "mt-2"
                 } ${index === 0 && "bg-light-white"}`}
                 key={index}
@@ -90,6 +90,13 @@ const Sidebar = (props: Props) => {
                   className={`${
                     !openSideBar && "scale-0 "
                   } origin-left duration-300 } whitespace-nowrap`}
+                >
+                  {menu.title}
+                </span>
+                <span
+                  className={`${
+                    openSideBar && "hidden"
+                  } absolute left-48 font-bold drop-shadow-lg border-0 text-gray-600 text-sm p-0 w-0 rounded-md flex whitespace-pre dark:text-white bg-content-light dark:bg-content-dark overflow-hidden group-hover:duration-300 group-hover:p-3 group-hover:border group-hover:left-24 group-hover:w-fit`}
                 >
                   {menu.title}
                 </span>
