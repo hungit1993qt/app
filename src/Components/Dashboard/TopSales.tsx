@@ -10,7 +10,7 @@ const TopSales = (props: Props) => {
   const { openSideBar } = useSelector((state: RootState) => state.auth);
 
   useEffect(() => {
-    openSideBar ? setRadius("120") : setRadius("80");
+    openSideBar ? setRadius("110") : setRadius("80");
   }, [openSideBar]);
   const data = [
     { name: "Liên kết qua kênh Trực tiếp", value: 400 },
