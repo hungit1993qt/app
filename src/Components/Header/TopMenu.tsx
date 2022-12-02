@@ -165,17 +165,18 @@ const TopMenu = (props: Props) => {
               dropMenu ? "scale-1 translate-y-1" : "scale-0 -translate-y-5"
             } `}
           >
+            <h1 className="text-md pl-3  py-3 whitespace-nowrap dark:text-descript-light">Xin chào!</h1>
             <ul className="">
-              <li className="text-md cursor-pointer hover:bg-blue-100 mt-0 dark:hover:bg-gray-500 pl-4 pr-12 py-2 whitespace-nowrap dark:text-descript-light">
+              <li className="text-sm cursor-pointer hover:bg-blue-100 mt-0 dark:hover:bg-gray-500 pl-6 pr-12 py-2 whitespace-nowrap dark:text-descript-light">
                 <i className="fa fa-user-circle mr-2"></i>Tài khoản
               </li>
-              <li className=" text-md cursor-pointer  hover:bg-blue-100 mt-2 dark:hover:bg-gray-500 pl-4 pr-12 py-2 whitespace-nowrap dark:text-descript-light">
+              <li className=" text-sm cursor-pointer  hover:bg-blue-100 mt-2 dark:hover:bg-gray-500 pl-6 pr-12 py-2 whitespace-nowrap dark:text-descript-light">
                 <i className="fa fa-tablet-alt mr-2"></i>Ứng dụng
               </li>
-              <li className=" text-md cursor-pointer  hover:bg-blue-100 mt-2 dark:hover:bg-gray-500 pl-4 pr-12 py-2 whitespace-nowrap dark:text-descript-light">
+              <li className=" text-sm cursor-pointer  hover:bg-blue-100 mt-2 dark:hover:bg-gray-500 pl-6 pr-12 py-2 whitespace-nowrap dark:text-descript-light">
                 <i className="fa fa-cog mr-2"></i> Cài đặt
               </li>
-              <li className=" text-md cursor-pointer  hover:bg-blue-100 mt-2 dark:hover:bg-gray-500 pl-4 pr-12 py-2 whitespace-nowrap dark:text-descript-light">
+              <li className=" text-sm cursor-pointer  hover:bg-blue-100 mt-2 dark:hover:bg-gray-500 pl-6 pr-12 py-2 whitespace-nowrap dark:text-descript-light">
                 <i className="fa fa-sign-out-alt mr-2"></i>Đăng xuất
               </li>
             </ul>
