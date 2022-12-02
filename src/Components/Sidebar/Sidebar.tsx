@@ -45,7 +45,7 @@ const Sidebar = (props: Props) => {
       ref={refSiderBar}
       className={`${
         openSideBar ? "w-60" : "w-24"
-      } duration-300  h-screen bg-dark  pt-8 p-5 fixed  lg:translate-x-0 z-20 ${
+      } duration-300 h-screen bg-dark pt-8 p-5 fixed lg:translate-x-0 z-20 ${
         openSideMobile ? null : "-translate-x-60"
       }`}
     >
@@ -56,7 +56,7 @@ const Sidebar = (props: Props) => {
         onClick={() => dispatch(setSideBar(!openSideBar))}
       ></i>
 
-      <div className="flex gap-x-4 items-center">
+      <div className="flex gap-x-4 items-center mb-4">
         <i
           className={`fa fa-cog text-5xl text-white duration-500 ${
             !openSideBar && "rotate-[360deg]"
@@ -75,40 +75,42 @@ const Sidebar = (props: Props) => {
           onClick={() => dispatch(setSideBarMobile(false))}
         ></i>
       </div>
-      <ul className="pt-6">
-        {menu.map((menu, index: number) => {
-          return (
-            <li
-              className={`text-gray-300 text-sm flex items-center gap-x-4 cursor-pointer p-4 -ml-1  hover:bg-light-white rounded-md ${
-                menu.gap ? "mt-9" : "mt-2"
-              } ${index === 0 && "bg-light-white"}`}
-              key={index}
-            >
-              <img src={`./icon-menu/${menu.src}.png`} alt=""></img>
-              <span
-                className={`${
-                  !openSideBar && "scale-0 "
-                } origin-left duration-300 }`}
+      <div className="overflow-y-auto h-full">
+        <ul className="pt-6 ">
+          {menu.map((menu, index: number) => {
+            return (
+              <li
+                className={`text-gray-300 text-sm flex items-center gap-x-4 cursor-pointer p-4 -ml-1  hover:bg-light-white rounded-md ${
+                  menu.gap ? "mt-9" : "mt-2"
+                } ${index === 0 && "bg-light-white"}`}
+                key={index}
               >
-                {menu.title}
-              </span>
-            </li>
-          );
-        })}
-        <li
-          className={`text-gray-300 text-sm flex items-center gap-x-4 cursor-pointer p-4 -ml-1  hover:bg-light-white rounded-md 
+                <img src={`./icon-menu/${menu.src}.png`} alt=""></img>
+                <span
+                  className={`${
+                    !openSideBar && "scale-0 "
+                  } origin-left duration-300 }`}
+                >
+                  {menu.title}
+                </span>
+              </li>
+            );
+          })}
+          <li
+            className={`text-gray-300 text-sm flex items-center gap-x-4 cursor-pointer p-4 -ml-1 mb-8 hover:bg-light-white rounded-md 
                `}
-        >
-          <i className="fa fa-sign-out-alt text-2xl text-red-600"></i>
-          <span
-            className={`${
-              !openSideBar && "scale-0 "
-            }  text-red-600 origin-left duration-300`}
           >
-            Đăng xuất
-          </span>
-        </li>
-      </ul>
+            <i className="fa fa-sign-out-alt text-2xl text-red-600"></i>
+            <span
+              className={`${
+                !openSideBar && "scale-0 "
+              }  text-red-600 origin-left duration-300`}
+            >
+              Đăng xuất
+            </span>
+          </li>
+        </ul>
+      </div>
     </div>
   );
 };
