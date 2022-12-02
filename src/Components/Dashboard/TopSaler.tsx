@@ -38,7 +38,7 @@ const TopSaler = (props: Props) => {
   const CustomTooltip = ({ active, payload, label }: any) => {
     if (active && payload && payload.length) {
       return (
-        <div className="bg-white dark:bg-content-dark rounded-lg p-4 outline-none">
+        <div className="bg-white dark:bg-content-dark rounded-lg p-4 outline-none dark:border-boder-drop-modal-dark border">
           <p className=" text-green-500 outline-none">{`${label}`}</p>
           <p className=" text-yellow-500 outline-none">
             Danh số tháng {payload[0].value}.
