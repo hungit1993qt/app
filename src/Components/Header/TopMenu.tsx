@@ -60,7 +60,7 @@ const TopMenu = (props: Props) => {
   useOnClickOutside(refMenu, handleClickOutsideMenu);
   useOnClickOutside(refBell, handleClickOutsideBell); //
   const dispatch = useDispatch<AppDispatch>();
-  const { darkMode, openSideBar, openSideMobile } = useSelector(
+  const {  openSideBar, openSideMobile } = useSelector(
     (state: RootState) => state.auth
   );
   return (

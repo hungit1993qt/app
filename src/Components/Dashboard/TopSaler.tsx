@@ -5,25 +5,16 @@ import {
   YAxis,
   CartesianGrid,
   Tooltip,
-  Legend,
   ResponsiveContainer,
   Line,
   LineChart,
 } from "recharts";
-import { RootState } from "configStore";
-import { useEffect, useState, PureComponent } from "react";
-import { useSelector } from "react-redux";
+
 import { Brush } from "@mui/icons-material";
 import Option from "./Option";
 type Props = {};
 
 const TopSaler = (props: Props) => {
-  const [radius, setRadius] = useState("");
-  const { openSideBar } = useSelector((state: RootState) => state.auth);
-
-  useEffect(() => {
-    openSideBar ? setRadius("120") : setRadius("90");
-  }, [openSideBar]);
   const data = [
     {
       name: "Phương",
@@ -72,7 +63,7 @@ const TopSaler = (props: Props) => {
               <XAxis dataKey="name" stroke="#98a6ad" />
               <YAxis stroke="#98a6ad" />
               <Tooltip />
-          
+
               <Bar dataKey="pv" fill="#8884d8" />
               <Bar dataKey="uv" fill="#82ca9d" />
             </BarChart>

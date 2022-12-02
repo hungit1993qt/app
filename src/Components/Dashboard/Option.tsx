@@ -1,5 +1,5 @@
 import { Menu, Transition } from "@headlessui/react";
-import { useState, Fragment } from "react";
+import {  Fragment } from "react";
 type Props = {};
 
 const Option = (props: Props) => {

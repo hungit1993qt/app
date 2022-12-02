@@ -1,6 +1,4 @@
-import { Menu, Transition } from "@headlessui/react";
-// import { DotsVerticalIcon } from "@heroicons/react/outline";
-// import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/solid";
+
 import {
   add,
   eachDayOfInterval,
@@ -15,7 +13,7 @@ import {
   parseISO,
   startOfToday,
 } from "date-fns";
-import { Fragment, useState } from "react";
+import {  useState } from "react";
 import Option from "./Option";
 
 const meetings = [
