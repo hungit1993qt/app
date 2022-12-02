@@ -1,4 +1,3 @@
-
 import {
   BarChart,
   Bar,
@@ -6,14 +5,11 @@ import {
   YAxis,
   CartesianGrid,
   Tooltip,
- 
   ResponsiveContainer,
 } from "recharts";
 import Option from "./Option";
 
-
 const TotalSales = () => {
-  
   const data = [
     {
       name: "T1",
@@ -80,9 +76,11 @@ const TotalSales = () => {
   const CustomTooltip = ({ active, payload, label }: any) => {
     if (active && payload && payload.length) {
       return (
-        <div className="custom-tooltip bg-content-light dark:bg-content-dark rounded-lg p-4 outline-none">
-          <p className="label text-green-500">{`${label} : ${payload[0].value}`}</p>
-          <p className="desc text-yellow-500">Danh số tháng {label}.</p>
+        <div className="bg-content-light dark:bg-content-dark rounded-lg p-4 outline-none">
+          <p className=" text-green-500 outline-none">{`${label} : ${payload[0].value}`}</p>
+          <p className=" text-yellow-500 outline-none">
+            Danh số tháng {label}.
+          </p>
         </div>
       );
     }
@@ -97,7 +95,7 @@ const TotalSales = () => {
             Doanh Thu Theo Tháng
           </span>
           {/* <i className="fa fa-ellipsis-v cursor-pointer dark:text-white"></i> */}
-         <Option />
+          <Option />
         </div>
         <div className="h-60 z-0 mt-4 w-full  outline-none">
           <ResponsiveContainer width="100%" height="100%">
