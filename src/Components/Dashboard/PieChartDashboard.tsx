@@ -54,7 +54,7 @@ const PieChartDashboard = (props: Props) => {
           data={data}
           cx="50%"
           cy="50%"
-          labelLine={false}
+          labelLine={true}
           label={renderCustomizedLabel}
           outerRadius={radius}
           fill="#8884d8"

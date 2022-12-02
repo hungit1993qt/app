@@ -6,6 +6,7 @@ import {
   CartesianGrid,
   Tooltip,
   ResponsiveContainer,
+  Cell,
 } from "recharts";
 import Option from "./Option";
 
@@ -116,8 +117,9 @@ const TotalSales = () => {
               <Tooltip
                 content={<CustomTooltip />}
                 wrapperStyle={{ outline: "none" }}
+                cursor={{fill: 'transparent'}}
               />
-
+             
               <Bar dataKey="pv" barSize={30} fill="#8884d8" />
             </BarChart>
           </ResponsiveContainer>
