@@ -104,7 +104,7 @@ const Sidebar = (props: Props) => {
             );
           })}
           <li
-            className={`text-gray-300 text-sm flex items-center gap-x-4 mb-8 cursor-pointer px-4 py-3 hover:bg-light-white rounded-md 
+            className={`group text-gray-300 text-sm flex items-center gap-x-4 mb-8 cursor-pointer px-4 py-3 hover:bg-light-white rounded-md 
                `}
           >
             <i className="fa fa-sign-out-alt text-2xl text-red-600"></i>
@@ -115,6 +115,13 @@ const Sidebar = (props: Props) => {
             >
               Đăng xuất
             </span>
+            <span
+                  className={`${
+                    openSideBar && "hidden"
+                  } absolute left-48 font-bold drop-shadow-lg  border-0 text-gray-600 text-sm p-0 w-0 rounded-md flex whitespace-pre dark:text-white bg-content-light dark:bg-content-dark overflow-hidden group-hover:duration-300 group-hover:p-3 group-hover:border group-hover:left-24 group-hover:w-fit group-hover:text-red-500`}
+                >
+                  Đăng xuất
+                </span>
           </li>
         </ul>
       </div>
