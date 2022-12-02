@@ -81,7 +81,7 @@ const TopSaler = (props: Props) => {
               <Tooltip
                 content={<CustomTooltip />}
                 wrapperStyle={{ outline: "none" }}
-                cursor={{fill: 'transparent'}}
+                cursor={{fill: '#4b5563'}}
               />
 
               <Bar dataKey="pv" fill="#8884d8" />

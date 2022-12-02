@@ -12,9 +12,10 @@ module.exports = {
         colorBorder: "#e7ebf0",
         content: "#fafbfe",
         "drop-modal-dark": "#464f5b",
-        "boder-drop-modal-dark":"#444d58",
+        "boder-drop-modal-dark": "#444d58",
         box: "#fff",
         "descript-light": "#98a6ad",
+
         piecolor1: "#0088FE",
         piecolor2: "#00C49F",
         piecolor3: "#FFBB28",

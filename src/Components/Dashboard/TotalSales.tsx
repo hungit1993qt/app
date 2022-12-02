@@ -117,7 +117,7 @@ const TotalSales = () => {
               <Tooltip
                 content={<CustomTooltip />}
                 wrapperStyle={{ outline: "none" }}
-                cursor={{fill: 'transparent'}}
+                cursor={{fill: '#4b5563'}}
               />
              
               <Bar dataKey="pv" barSize={30} fill="#8884d8" />
