@@ -20,11 +20,11 @@ import { Fragment, useState } from "react";
 const meetings = [
   {
     id: 1,
-    name: "Leslie Alexander",
+    name: "Nguyễn Trần Hùng",
     imageUrl:
       "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-    startDatetime: "2022-05-11T13:00",
-    endDatetime: "2022-05-11T14:30",
+    startDatetime: "2022-12-02T13:00",
+    endDatetime: "2022-12-02T14:30",
   },
   {
     id: 2,
@@ -97,7 +97,7 @@ export default function Calendar() {
           <div className="md:pr-14">
             <div className="flex items-center">
               <h2 className="flex-auto uppercase font-bold dark:text-white text-xl">
-                {format(firstDayCurrentMonth, "MM/yyyy")}
+                tháng {format(firstDayCurrentMonth, "MM/yyyy")}
               </h2>
               <button
                 type="button"
@@ -184,7 +184,7 @@ export default function Calendar() {
             </div>
           </div>
           <section className="mt-12 md:mt-0 md:pl-14">
-            <h2 className="uppercase font-bold dark:text-white text-xl">
+            <h2 className="uppercase font-bold dark:text-white text-md">
               Lịch họp{" "}
               <time dateTime={format(selectedDay, "yyyy-MM-dd")}>
                 {format(selectedDay, "dd/MM/yyy")}

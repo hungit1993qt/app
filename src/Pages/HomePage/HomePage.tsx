@@ -23,7 +23,7 @@ const HomePage = () => {
         <Calendar />
       </div>
       <div className="font-semibold text-text-number flex content-start px-5 box-border flex-wrap xl:flex-nowrap bg-content-light dark:bg-content-dark ">
-        <Calendar />
+ 
       </div>
     </div>
   );
