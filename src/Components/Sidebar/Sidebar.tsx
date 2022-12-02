@@ -31,14 +31,14 @@ const Sidebar = (props: Props) => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
   const menu = [
-    { title: "Tổng quan", src: "Chart_fill" },
-    { title: "Tin nhắn", src: "Chat" },
-    { title: "Tài khoản", src: "User", gap: false },
-    { title: "Lịch họp", src: "Calendar" },
-    { title: "Tìm kiếm", src: "Search" },
-    { title: "Phân tích", src: "Chart" },
-    { title: "Quản Lý ", src: "Folder", gap: false },
-    { title: "Cài đặt", src: "Setting" },
+    { title: "Tổng Quan", src: "Chart_fill" },
+    { title: "Tin Nhắn", src: "Chat" },
+    { title: "Tài Khoản", src: "User", gap: false },
+    { title: "Lịch Họp", src: "Calendar" },
+    { title: "Tìm Kiếm", src: "Search" },
+    { title: "Phân Tích", src: "Chart" },
+    { title: "Quản Lý File ", src: "Folder", gap: false },
+    { title: "Cài Đặt", src: "Setting" },
   ];
   return (
     <div
