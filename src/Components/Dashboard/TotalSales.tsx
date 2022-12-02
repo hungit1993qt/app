@@ -80,7 +80,7 @@ const TotalSales = () => {
   const CustomTooltip = ({ active, payload, label }: any) => {
     if (active && payload && payload.length) {
       return (
-        <div className="custom-tooltip bg-content-light dark:bg-content-dark rounded-lg p-4 border">
+        <div className="custom-tooltip bg-content-light dark:bg-content-dark rounded-lg p-4">
           <p className="label text-green-500">{`${label} : ${payload[0].value}`}</p>
           <p className="desc text-yellow-500">Danh số tháng {label}.</p>
         </div>
@@ -91,7 +91,7 @@ const TotalSales = () => {
   };
   return (
     <div className="w-full p-2 ">
-      <div className="shadow box-border border p-4 bg-box dark:bg-dark h-full ">
+      <div className="shadow box-border p-4 bg-box dark:bg-dark h-full ">
         <div className="flex justify-between items-center ">
           <span className="uppercase font-bold dark:text-white text-sm">
             Doanh Thu Theo Tháng
