@@ -256,7 +256,9 @@ function Meeting({ meeting }: any) {
                   <a
                     href="#"
                     className={classNames(
-                      active ? "bg-gray-100 text-gray-900" : " text-descript-light",
+                      active
+                        ? " text-gray-500"
+                        : " text-descript-light dark:text-descript-light",
                       "block px-4 py-2 text-sm dark:text-white dark:hover:bg-gray-600"
                     )}
                   >
@@ -269,7 +271,7 @@ function Meeting({ meeting }: any) {
                   <a
                     href="#"
                     className={classNames(
-                      active ? "bg-gray-100 text-gray-900" : "text-descript-light",
+                      active ? " text-gray-500" : "text-descript-light dark:text-descript-light",
                       "block px-4 py-2 text-sm dark:text-white dark:hover:bg-gray-600"
                     )}
                   >
