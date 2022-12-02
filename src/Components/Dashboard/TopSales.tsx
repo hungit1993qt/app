@@ -29,7 +29,7 @@ const TopSales = (props: Props) => {
       <div className="shadow box-border border p-4 bg-box dark:bg-dark h-full">
         <div className="flex justify-between items-center ">
           <span className="uppercase font-bold dark:text-white text-sm">
-            total sales
+           xếp hạng kênh maketing
           </span>
           <i className="fa fa-ellipsis-v cursor-pointer dark:text-white"></i>
         </div>
@@ -46,7 +46,7 @@ const TopSales = (props: Props) => {
                 <i className={`fa fa-square ${colorpie[index]} mr-2`}></i>
                 {data.name}
               </span>
-              <span className="dark:text-white">{data.value}$</span>
+              <span className="dark:text-white">{data.value}</span>
             </div>
           );
         })}

@@ -96,8 +96,8 @@ export default function Calendar() {
         <div className="md:grid md:grid-cols-2 md:divide-x md:divide-gray-200">
           <div className="md:pr-14">
             <div className="flex items-center">
-              <h2 className="flex-auto uppercase font-bold dark:text-white text-sm0">
-                {format(firstDayCurrentMonth, "MMMM yyyy")}
+              <h2 className="flex-auto uppercase font-bold dark:text-white text-xl">
+                {format(firstDayCurrentMonth, "MM/yyyy")}
               </h2>
               <button
                 type="button"
@@ -119,13 +119,13 @@ export default function Calendar() {
               </button>
             </div>
             <div className="grid grid-cols-7 mt-10 text-xs leading-6 text-center dark:text-white text-gray-500 ">
-              <div>S</div>
-              <div>M</div>
-              <div>T</div>
-              <div>W</div>
-              <div>T</div>
-              <div>F</div>
-              <div>S</div>
+              <div>T2</div>
+              <div>T3</div>
+              <div>T4</div>
+              <div>T5</div>
+              <div>T6</div>
+              <div>T7</div>
+              <div>CN</div>
             </div>
             <div className="grid grid-cols-7 mt-2 text-sm ">
               {days.map((day, dayIdx) => (
@@ -184,10 +184,10 @@ export default function Calendar() {
             </div>
           </div>
           <section className="mt-12 md:mt-0 md:pl-14">
-            <h2 className="uppercase font-bold dark:text-white text-sm">
-              Schedule for{" "}
+            <h2 className="uppercase font-bold dark:text-white text-xl">
+              Lịch họp{" "}
               <time dateTime={format(selectedDay, "yyyy-MM-dd")}>
-                {format(selectedDay, "MMM dd, yyy")}
+                {format(selectedDay, "dd/MM/yyy")}
               </time>
             </h2>
             <ol className="mt-4 space-y-1 text-sm leading-6 text-gray-500">
@@ -197,7 +197,7 @@ export default function Calendar() {
                 ))
               ) : (
                 <p className="dark:text-descript-light">
-                  No meetings for today.
+                  Không có lịch hẹn hôm nay.
                 </p>
               )}
             </ol>
@@ -260,7 +260,7 @@ function Meeting({ meeting }: any) {
                       "block px-4 py-2 text-sm dark:text-white dark:hover:bg-gray-600"
                     )}
                   >
-                    Edit
+                    Sửa lịch
                   </a>
                 )}
               </Menu.Item>
@@ -273,7 +273,7 @@ function Meeting({ meeting }: any) {
                       "block px-4 py-2 text-sm dark:text-white dark:hover:bg-gray-600"
                     )}
                   >
-                    Cancel
+                    Thoát
                   </a>
                 )}
               </Menu.Item>

@@ -25,19 +25,19 @@ const TopSaler = (props: Props) => {
   }, [openSideBar]);
   const data = [
     {
-      name: "Mr.Nguyen",
+      name: "Phương",
       uv: 4000,
       pv: 2400,
       amt: 2400,
     },
     {
-      name: "Ms.Hoang",
+      name: "Nguyễn",
       uv: 2780,
       pv: 3908,
       amt: 2000,
     },
     {
-      name: "Ms.Quynh",
+      name: "Hùng",
       uv: 1890,
       pv: 4800,
       amt: 2181,
@@ -49,7 +49,7 @@ const TopSaler = (props: Props) => {
       <div className="shadow box-border border px-4 py-2 bg-box dark:bg-dark h-full">
         <div className="flex justify-between items-center ">
           <span className="uppercase font-bold dark:text-white text-sm mt-2">
-            total sales
+            xếp hạng cá nhân
           </span>
           <i className="fa fa-ellipsis-v cursor-pointer dark:text-white"></i>
         </div>
