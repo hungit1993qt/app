@@ -24,7 +24,7 @@ const Option = (props: Props) => {
           leaveFrom="transform opacity-100 scale-100"
           leaveTo="transform opacity-0 scale-95"
         >
-          <Menu.Items className="outline-none absolute right-2 z-10 top-4 bg-white dark:text-white dark:bg-drop-modal-dark rounded-md w-36 overflow-hidden">
+          <Menu.Items className="outline-none outline-transparent absolute right-2 z-10 top-4 bg-white dark:text-white dark:bg-drop-modal-dark rounded-md w-36 overflow-hidden">
             <div className="py-0">
               <Menu.Item>
                 {({ active }: any) => (
@@ -34,7 +34,7 @@ const Option = (props: Props) => {
                       active
                         ? " text-gray-500"
                         : " text-descript-light dark:text-descript-light",
-                      "block px-4 py-2 text-sm dark:text-white dark:hover:bg-gray-600 outline-none"
+                      "block px-4 py-2 text-sm dark:text-white dark:hover:bg-gray-600 outline-none outline-transparent"
                     )}
                   >
                     Xuất báo cáo
@@ -49,7 +49,7 @@ const Option = (props: Props) => {
                       active
                         ? " text-gray-500"
                         : "text-descript-light dark:text-descript-light",
-                      "block px-4 py-2 text-sm dark:text-white dark:hover:bg-gray-600 outline-none"
+                      "block px-4 py-2 text-sm dark:text-white dark:hover:bg-gray-600 outline-none outline-transparent"
                     )}
                   >
                     In báo cáo
