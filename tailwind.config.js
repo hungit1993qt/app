@@ -11,6 +11,8 @@ module.exports = {
         "light-white": "rgba(255,255,255,0.17)",
         colorBorder: "#e7ebf0",
         content: "#fafbfe",
+        "drop-modal-dark": "#464f5b",
+        "boder-drop-modal-dark":"#444d58",
         box: "#fff",
         "descript-light": "#98a6ad",
         piecolor1: "#0088FE",

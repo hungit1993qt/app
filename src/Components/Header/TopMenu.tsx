@@ -105,7 +105,7 @@ const TopMenu = (props: Props) => {
           <i className="fa fa-bell text-gray-500 dark:text-white text-3xl cursor-pointer"></i>
 
           <div
-            className={`bg-content-light dark:bg-content-dark dark:text-white  w-80 shadow-lg absolute top-11 right-1/2 translate-x-1/2 lg:right-0 px-1 duration-300 border-colorBorder border border-solid ${
+            className={`bg-content-light dark:bg-drop-modal-dark dark:text-white  w-80 shadow-lg absolute top-11 right-1/2 translate-x-1/2 lg:right-0 px-1 duration-300 border-colorBorder dark:border-boder-drop-modal-dark border border-solid ${
               dropBell ? "scale-1 translate-y-1" : "scale-0 -translate-y-5"
             } `}
           >
@@ -119,7 +119,7 @@ const TopMenu = (props: Props) => {
                   {data.map((datas, index) => {
                     return (
                       <tr key={index}>
-                        <td className="text-md cursor-pointer rounded hover:bg-blue-100 px-5 py-2  flex items-center">
+                        <td className="text-md dark:text-descript-light cursor-pointer rounded dark:hover:bg-gray-500 hover:bg-blue-100 px-5 py-2  flex items-center">
                           <img
                             src={`${datas.src}`}
                             alt=""
@@ -161,22 +161,22 @@ const TopMenu = (props: Props) => {
             </div>
           </div>
           <div
-            className={`bg-content-light dark:bg-content-dark dark:text-white w-32 shadow-lg absolute right-0 lg:right-0 p-3 top-14 mt-0 duration-300 border-colorBorder border border-solid ${
+            className={`bg-content-light dark:bg-drop-modal-dark dark:text-white shadow-lg absolute right-0 lg:right-0 top-14 mt-0 duration-300 border-colorBorder rounded-md dark:border-boder-drop-modal-dark border-solid ${
               dropMenu ? "scale-1 translate-y-1" : "scale-0 -translate-y-5"
             } `}
           >
             <ul className="">
-              <li className=" text-md cursor-pointer rounded hover:bg-blue-100 mt-0">
-                Hồ sơ
+              <li className="text-md cursor-pointer hover:bg-blue-100 mt-0 dark:hover:bg-gray-500 pl-4 pr-12 py-2 whitespace-nowrap dark:text-descript-light">
+                <i className="fa fa-user-circle mr-2"></i>Tài khoản
               </li>
-              <li className=" text-md cursor-pointer rounded hover:bg-blue-100 mt-2">
-                Ứng dụng 
+              <li className=" text-md cursor-pointer  hover:bg-blue-100 mt-2 dark:hover:bg-gray-500 pl-4 pr-12 py-2 whitespace-nowrap dark:text-descript-light">
+                <i className="fa fa-tablet-alt mr-2"></i>Ứng dụng
               </li>
-              <li className=" text-md cursor-pointer rounded hover:bg-blue-100 mt-2">
-                Cài đặt
+              <li className=" text-md cursor-pointer  hover:bg-blue-100 mt-2 dark:hover:bg-gray-500 pl-4 pr-12 py-2 whitespace-nowrap dark:text-descript-light">
+                <i className="fa fa-cog mr-2"></i> Cài đặt
               </li>
-              <li className=" text-md cursor-pointer rounded hover:bg-blue-100 mt-2">
-                Đăng xuất
+              <li className=" text-md cursor-pointer  hover:bg-blue-100 mt-2 dark:hover:bg-gray-500 pl-4 pr-12 py-2 whitespace-nowrap dark:text-descript-light">
+                <i className="fa fa-sign-out-alt mr-2"></i>Đăng xuất
               </li>
             </ul>
           </div>
