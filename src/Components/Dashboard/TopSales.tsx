@@ -14,10 +14,10 @@ const TopSales = (props: Props) => {
     openSideBar ? setRadius("110") : setRadius("80");
   }, [openSideBar]);
   const data = [
-    { name: "Liên kết qua kênh Trực tiếp", value: 400 },
-    { name: "Liên kết với người nổi tiếng", value: 600 },
-    { name: "Liên kết qua kênh Facebook", value: 900 },
-    { name: "Liên kết qua kênh E-mail", value: 400 },
+    { name: "Liên kết kênh Trực tiếp", value: 400 },
+    { name: "Liên kết người nổi tiếng", value: 600 },
+    { name: "Liên kết kênh Facebook", value: 900 },
+    { name: "Liên kết kênh E-mail", value: 400 },
   ];
   const colorpie = [
     "text-piecolor1",
