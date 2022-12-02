@@ -16,6 +16,7 @@ import {
   startOfToday,
 } from "date-fns";
 import { Fragment, useState } from "react";
+import Option from "./Option";
 
 const meetings = [
   {
@@ -231,58 +232,7 @@ function Meeting({ meeting }: any) {
           </time>
         </p>
       </div>
-      <Menu as="div" className="relative opacity-1 ">
-        <div>
-          <Menu.Button className="-m-2 flex items-center rounded-full p-1.5 text-gray-500 dark:text-white">
-            <span className="sr-only">Open options</span>
-
-            <i className="fa fa-ellipsis-v w-6 h-6"></i>
-          </Menu.Button>
-        </div>
-
-        <Transition
-          as={Fragment}
-          enter="transition ease-out duration-100"
-          enterFrom="transform opacity-0 scale-95"
-          enterTo="transform opacity-100 scale-100"
-          leave="transition ease-in duration-75"
-          leaveFrom="transform opacity-100 scale-100"
-          leaveTo="transform opacity-0 scale-95"
-        >
-          <Menu.Items className="absolute right-2 z-10 top-4 bg-white dark:text-white dark:bg-drop-modal-dark dark:border-boder-drop-modal-dark rounded-md shadow-lg w-36 border">
-            <div className="py-0">
-              <Menu.Item>
-                {({ active }: any) => (
-                  <a
-                    href="#"
-                    className={classNames(
-                      active
-                        ? " text-gray-500"
-                        : " text-descript-light dark:text-descript-light",
-                      "block px-4 py-2 text-sm dark:text-white dark:hover:bg-gray-600"
-                    )}
-                  >
-                    Sửa lịch
-                  </a>
-                )}
-              </Menu.Item>
-              <Menu.Item>
-                {({ active }: any) => (
-                  <a
-                    href="#"
-                    className={classNames(
-                      active ? " text-gray-500" : "text-descript-light dark:text-descript-light",
-                      "block px-4 py-2 text-sm dark:text-white dark:hover:bg-gray-600"
-                    )}
-                  >
-                    Xóa lịch
-                  </a>
-                )}
-              </Menu.Item>
-            </div>
-          </Menu.Items>
-        </Transition>
-      </Menu>
+      <Option />
     </li>
   );
 }
