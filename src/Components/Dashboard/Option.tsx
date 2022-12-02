@@ -8,14 +8,13 @@ const Option = (props: Props) => {
   }
   return (
     <>
-      <Menu as="div" className="relative opacity-1 ">
+      <Menu as="div" className="relative opacity-1 outline-none ">
         <div>
-          <Menu.Button className="flex items-center rounded-full text-gray-500 dark:text-white ">
+          <Menu.Button className="flex items-center rounded-full text-gray-500 dark:text-white outline-none">
             {/* <span className="sr-only">Open options</span> */}
             <i className="fa fa-ellipsis-v"></i>
           </Menu.Button>
         </div>
-
         <Transition
           as={Fragment}
           enter="transition ease-out duration-100"
@@ -25,7 +24,7 @@ const Option = (props: Props) => {
           leaveFrom="transform opacity-100 scale-100"
           leaveTo="transform opacity-0 scale-95"
         >
-          <Menu.Items className="absolute right-2 z-10 top-4 bg-white dark:text-white dark:bg-drop-modal-dark rounded-md w-36 overflow-hidden">
+          <Menu.Items className="outline-none absolute right-2 z-10 top-4 bg-white dark:text-white dark:bg-drop-modal-dark rounded-md w-36 overflow-hidden">
             <div className="py-0">
               <Menu.Item>
                 {({ active }: any) => (
@@ -35,7 +34,7 @@ const Option = (props: Props) => {
                       active
                         ? " text-gray-500"
                         : " text-descript-light dark:text-descript-light",
-                      "block px-4 py-2 text-sm dark:text-white dark:hover:bg-gray-600"
+                      "block px-4 py-2 text-sm dark:text-white dark:hover:bg-gray-600 outline-none"
                     )}
                   >
                     Xuất báo cáo
@@ -50,7 +49,7 @@ const Option = (props: Props) => {
                       active
                         ? " text-gray-500"
                         : "text-descript-light dark:text-descript-light",
-                      "block px-4 py-2 text-sm dark:text-white dark:hover:bg-gray-600"
+                      "block px-4 py-2 text-sm dark:text-white dark:hover:bg-gray-600 outline-none"
                     )}
                   >
                     In báo cáo
