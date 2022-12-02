@@ -113,7 +113,10 @@ const TotalSales = () => {
               <CartesianGrid strokeDasharray="3 3" />
               <XAxis dataKey="name" stroke="#98a6ad" />
               <YAxis stroke="#98a6ad" />
-              <Tooltip content={<CustomTooltip />} />
+              <Tooltip
+                content={<CustomTooltip />}
+                wrapperStyle={{ outline: "none" }}
+              />
 
               <Bar dataKey="pv" barSize={30} fill="#8884d8" />
             </BarChart>
