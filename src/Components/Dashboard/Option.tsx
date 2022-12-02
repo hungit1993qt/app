@@ -8,7 +8,7 @@ const Option = (props: Props) => {
   }
   return (
     <>
-      <Menu as="div" className="relative opacity-1 ">
+      <Menu as="div" className="relative opacity-1 border-0">
         <div>
           <Menu.Button className="flex items-center rounded-full text-gray-500 dark:text-white">
             <span className="sr-only">Open options</span>
