@@ -1,3 +1,4 @@
+import Calendar from "Components/Dashboard/Calendar";
 import TopSaler from "Components/Dashboard/TopSaler";
 import TopSales from "Components/Dashboard/TopSales";
 import TopSalesProducts from "Components/Dashboard/TopSalesProducts";
@@ -9,13 +10,19 @@ const HomePage = () => {
   return (
     <div
       className={`${openSideBar ? "lg:ml-60" : "lg:ml-24"} duration-300     
-       font-semibold text-text-number flex content-start  p-5 box-border flex-wrap xl:flex-nowrap bg-content-light dark:bg-content-dark mt-14`}
+       `}
     >
-      <TopSales />
+      <div className="font-semibold text-text-number flex content-start  px-5 box-border flex-wrap xl:flex-nowrap bg-content-light dark:bg-content-dark mt-14">
+     
+        <TopSales />
 
-      <TopSaler />
+        <TopSaler />
 
-      <TopSalesProducts />
+        <TopSalesProducts />
+      </div>
+      <div className="font-semibold text-text-number flex content-start px-5 box-border flex-wrap xl:flex-nowrap bg-content-light dark:bg-content-dark ">
+        <Calendar />
+      </div>
     </div>
   );
 };
