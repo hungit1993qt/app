@@ -8,9 +8,9 @@ const Option = (props: Props) => {
   }
   return (
     <>
-      <Menu as="div" className="relative opacity-1 border-0">
+      <Menu as="div" className="relative opacity-1 ">
         <div>
-          <Menu.Button className="flex border-0 items-center rounded-full text-gray-500 dark:text-white">
+          <Menu.Button className="flex items-center rounded-full text-gray-500 dark:text-white">
             <span className="sr-only">Open options</span>
             <i className="fa fa-ellipsis-v"></i>
           </Menu.Button>
@@ -25,7 +25,7 @@ const Option = (props: Props) => {
           leaveFrom="transform opacity-100 scale-100"
           leaveTo="transform opacity-0 scale-95"
         >
-          <Menu.Items className="absolute right-2 z-10 top-4 bg-white dark:text-white dark:bg-drop-modal-dark dark:border-boder-drop-modal-dark border-descript-light rounded-md shadow-lg w-36 ">
+          <Menu.Items className="absolute right-2 z-10 top-4 bg-white dark:text-white dark:bg-drop-modal-dark dark:border-boder-drop-modal-dark border-descript-light rounded-md shadow-lg w-36 border-0">
             <div className="py-0">
               <Menu.Item>
                 {({ active }: any) => (
