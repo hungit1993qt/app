@@ -2,6 +2,7 @@ import Calendar from "Components/Dashboard/Calendar";
 import TopSaler from "Components/Dashboard/TopSaler";
 import TopSales from "Components/Dashboard/TopSales";
 import TopSalesProducts from "Components/Dashboard/TopSalesProducts";
+import TotalSales from "Components/Dashboard/TotalSales";
 import { RootState } from "configStore";
 import { useSelector } from "react-redux";
 
@@ -23,7 +24,7 @@ const HomePage = () => {
         <Calendar />
       </div>
       <div className="font-semibold text-text-number flex content-start px-5 box-border flex-wrap xl:flex-nowrap bg-content-light dark:bg-content-dark ">
- 
+        <TotalSales />
       </div>
     </div>
   );

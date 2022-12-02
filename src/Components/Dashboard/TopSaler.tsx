@@ -70,7 +70,7 @@ const TopSaler = (props: Props) => {
               <XAxis dataKey="name" stroke="#98a6ad" />
               <YAxis stroke="#98a6ad" />
               <Tooltip />
-              <Legend />
+          
               <Bar dataKey="pv" fill="#8884d8" />
               <Bar dataKey="uv" fill="#82ca9d" />
             </BarChart>
