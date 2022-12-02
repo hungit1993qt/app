@@ -1,3 +1,4 @@
+
 import {
   BarChart,
   Bar,
@@ -8,7 +9,11 @@ import {
   Legend,
   ResponsiveContainer,
 } from "recharts";
+import Option from "./Option";
+
+
 const TotalSales = () => {
+  
   const data = [
     {
       name: "T1",
@@ -70,9 +75,8 @@ const TotalSales = () => {
 
       pv: 1300,
     },
-
   ];
-  
+
   const CustomTooltip = ({ active, payload, label }: any) => {
     if (active && payload && payload.length) {
       return (
@@ -92,7 +96,8 @@ const TotalSales = () => {
           <span className="uppercase font-bold dark:text-white text-sm">
             Doanh Thu Theo Tháng
           </span>
-          <i className="fa fa-ellipsis-v cursor-pointer dark:text-white"></i>
+          {/* <i className="fa fa-ellipsis-v cursor-pointer dark:text-white"></i> */}
+         <Option />
         </div>
         <div className="h-60 z-0 mt-4 w-full ">
           <ResponsiveContainer width="100%" height="100%">
@@ -109,9 +114,9 @@ const TotalSales = () => {
             >
               <CartesianGrid strokeDasharray="3 3" />
               <XAxis dataKey="name" stroke="#98a6ad" />
-              <YAxis stroke="#98a6ad"/>
+              <YAxis stroke="#98a6ad" />
               <Tooltip content={<CustomTooltip />} />
-             
+
               <Bar dataKey="pv" barSize={30} fill="#8884d8" />
             </BarChart>
           </ResponsiveContainer>

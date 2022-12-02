@@ -14,6 +14,7 @@ import { RootState } from "configStore";
 import { useEffect, useState, PureComponent } from "react";
 import { useSelector } from "react-redux";
 import { Brush } from "@mui/icons-material";
+import Option from "./Option";
 type Props = {};
 
 const TopSaler = (props: Props) => {
@@ -51,7 +52,8 @@ const TopSaler = (props: Props) => {
           <span className="uppercase font-bold dark:text-white text-sm mt-2">
             xếp hạng cá nhân
           </span>
-          <i className="fa fa-ellipsis-v cursor-pointer dark:text-white"></i>
+          {/* <i className="fa fa-ellipsis-v cursor-pointer dark:text-white"></i> */}
+          <Option />
         </div>
         <div className="h-60 z-0 mt-8 text-xs dark:text-white">
           <ResponsiveContainer width="100%" height="100%">

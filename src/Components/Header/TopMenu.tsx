@@ -1,6 +1,6 @@
 import { AppDispatch, RootState } from "configStore";
 import { useDispatch, useSelector } from "react-redux";
-import { setDarkModes, setSideBarMobile } from "Slices/auth";
+import {  setSideBarMobile } from "Slices/auth";
 import { useState, useRef } from "react";
 import { useOnClickOutside } from "usehooks-ts";
 import useDarkModes from "Hook/useDarkMode";

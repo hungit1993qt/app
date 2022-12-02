@@ -3,6 +3,7 @@ import { RootState } from "configStore";
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { ResponsiveContainer } from "recharts";
+import Option from "./Option";
 type Props = {};
 
 const TopSales = (props: Props) => {
@@ -31,7 +32,8 @@ const TopSales = (props: Props) => {
           <span className="uppercase font-bold dark:text-white text-sm">
             xếp hạng kênh maketing
           </span>
-          <i className="fa fa-ellipsis-v cursor-pointer dark:text-white"></i>
+          {/* <i className="fa fa-ellipsis-v cursor-pointer dark:text-white"></i> */}
+          <Option />
         </div>
         <div className="h-60 z-0 mt-4 ">
           <ResponsiveContainer width="100%" height="100%">
