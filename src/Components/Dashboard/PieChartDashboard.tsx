@@ -34,7 +34,17 @@ const renderCustomizedLabel = ({
     </text>
   );
 };
+const CustomTooltip = ({ active, payload, label }: any) => {
+  if (active && payload && payload.length) {
+    return (
+      <div className="bg-white dark:bg-content-dark rounded-lg p-4 outline-none">
+        <p className=" text-green-500 outline-none">{`${payload[0].value}`}</p>
+      </div>
+    );
+  }
 
+  return null;
+};
 const PieChartDashboard = (props: Props) => {
   const { data, radius } = props;
   return (
@@ -54,7 +64,10 @@ const PieChartDashboard = (props: Props) => {
             <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
           ))}
         </Pie>
-        <Tooltip />
+        <Tooltip
+          content={<CustomTooltip />}
+          wrapperStyle={{ outline: "none" }}
+        />
       </PieChart>
     </ResponsiveContainer>
   );

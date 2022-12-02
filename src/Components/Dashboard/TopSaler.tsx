@@ -35,7 +35,20 @@ const TopSaler = (props: Props) => {
       amt: 2181,
     },
   ];
+  const CustomTooltip = ({ active, payload, label }: any) => {
+    if (active && payload && payload.length) {
+      return (
+        <div className="bg-white dark:bg-content-dark rounded-lg p-4 outline-none">
+          <p className=" text-green-500 outline-none">{`${label}`}</p>
+          <p className=" text-yellow-500 outline-none">
+            Danh số tháng {payload[0].value}.
+          </p>
+        </div>
+      );
+    }
 
+    return null;
+  };
   return (
     <div className="xl:w-1/4 lg:w-1/2 w-full p-2 ">
       <div className="shadow box-border border px-4 py-2 bg-box dark:bg-dark h-full">
@@ -62,7 +75,10 @@ const TopSaler = (props: Props) => {
               <CartesianGrid strokeDasharray="3 3" />
               <XAxis dataKey="name" stroke="#98a6ad" />
               <YAxis stroke="#98a6ad" />
-              <Tooltip />
+              <Tooltip
+                content={<CustomTooltip />}
+                wrapperStyle={{ outline: "none" }}
+              />
 
               <Bar dataKey="pv" fill="#8884d8" />
               <Bar dataKey="uv" fill="#82ca9d" />
@@ -86,7 +102,10 @@ const TopSaler = (props: Props) => {
               <CartesianGrid strokeDasharray="3 3" />
               <XAxis dataKey="name" stroke="#98a6ad" />
               <YAxis stroke="#98a6ad" />
-              <Tooltip />
+              <Tooltip
+                content={<CustomTooltip />}
+                wrapperStyle={{ outline: "none" }}
+              />
               <Line
                 type="monotone"
                 dataKey="pv"
