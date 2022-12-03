@@ -1,4 +1,3 @@
-
 import {
   add,
   eachDayOfInterval,
@@ -13,7 +12,7 @@ import {
   parseISO,
   startOfToday,
 } from "date-fns";
-import {  useState } from "react";
+import { useState } from "react";
 import Option from "./Option";
 
 const meetings = [
@@ -212,24 +211,29 @@ function Meeting({ meeting }: any) {
   let endDateTime = parseISO(meeting.endDatetime);
 
   return (
-    <li className="flex items-center px-4 py-2 space-x-4 group border rounded-xl dark:hover:bg-gray-600 hover:bg-blue-100">
-      <img
-        src={meeting.imageUrl}
-        alt=""
-        className="flex-none w-10 h-10 rounded-full"
-      />
-      <div className="flex-auto">
-        <p className="text-gray-600 dark:text-white">{meeting.name}</p>
-        <p className="mt-0.5 dark:text-descript-light">
-          <time dateTime={meeting.startDatetime}>
-            {format(startDateTime, "h:mm a")}
-          </time>{" "}
-          -{" "}
-          <time dateTime={meeting.endDatetime}>
-            {format(endDateTime, "h:mm a")}
-          </time>
-        </p>
+    <li className="flex justify-between items-center px-4 py-2 space-x-4 group border rounded-xl dark:hover:bg-gray-600 hover:bg-blue-100">
+      <div className="flex flex-row items-center">
+        <img
+          src={meeting.imageUrl}
+          alt=""
+          className="flex-none w-10 h-10 rounded-full"
+        />
+        <div className="flex flex-col ml-2">
+          <p className="text-gray-600 dark:text-white">{meeting.name}</p>
+          <p className="mt-0.5 dark:text-descript-light">
+            <time dateTime={meeting.startDatetime}>
+              {format(startDateTime, "h:mm a")}
+            </time>{" "}
+            -{" "}
+            <time dateTime={meeting.endDatetime}>
+              {format(endDateTime, "h:mm a")}
+            </time>
+          </p>
+        </div>
+
+        {/* <div className="flex justify-end">sdasdasd</div> */}
       </div>
+
       <Option />
     </li>
   );
