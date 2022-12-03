@@ -52,7 +52,7 @@ const Sidebar = (props: Props) => {
       <i
         className={`${
           openSideBar ? "rotate-[180deg]" : ""
-        } fa fa-angle-right hidden lg:block absolute cursor-pointer bg-white text-base -right-3 top-5 w-7 border-2 border-dark-purple text-center rounded-full`}
+        } fa fa-angle-right hidden lg:block absolute cursor-pointer bg-white text-base -right-3 top-4 w-7 border-2 border-dark-purple text-center rounded-full`}
         onClick={() => dispatch(setSideBar(!openSideBar))}
       ></i>
 

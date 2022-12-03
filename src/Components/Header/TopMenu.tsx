@@ -67,7 +67,7 @@ const TopMenu = (props: Props) => {
     <div
       className={` ${
         openSideBar ? "lg:left-60" : "lg:left-24 "
-      } duration-300 lg:right-0 z-10 bg-white dark:bg-dark flex items-center justify-between lg:justify-between box-border lg:px-10 px-6 text-text-number fixed w-full lg:w-auto `}
+      } duration-300 lg:right-0 z-10 bg-white dark:bg-dark flex items-center justify-between lg:justify-between box-border lg:px-7 px-6 text-text-number fixed w-full lg:w-auto `}
     >
       <i
         className={`fa fa-align-justify lg:hidden block cursor-pointer z-0 ml-0 text-lg text-gray-500 dark:text-white
@@ -77,12 +77,12 @@ const TopMenu = (props: Props) => {
       <form className="hidden lg:block">
         <div className="flex items-center relative">
           <input
-            className="p-2 pl-8 rounded-l-lg bg-content-light dark:bg-content-dark border"
+            className="p-1 pl-8 rounded-l-lg bg-content-light dark:bg-content-dark border"
             placeholder="Tìm kiếm..."
             type="text"
           />
-          <i className="fa fa-search absolute top-3 left-2 text-gray-300"></i>
-          <button className=" bg-purple text-gray-50 rounded-r-lg p-2.5 text-md font-semibold">
+          <i className="fa fa-search absolute top-2.5 left-2 text-gray-300"></i>
+          <button className=" bg-purple text-gray-50 rounded-r-lg p-1.5 text-md font-semibold">
             Tìm kiếm
           </button>
         </div>

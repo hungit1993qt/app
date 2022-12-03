@@ -10,14 +10,14 @@ const HomePage = () => {
   const { openSideBar } = useSelector((state: RootState) => state.auth);
   return (
     <div
-      className={`${openSideBar ? "lg:ml-60" : "lg:ml-24"} duration-300     
+      className={`${openSideBar ? "lg:ml-60" : "lg:ml-24"} duration-300 bg-content-light dark:bg-content-dark   
        `}
     >
-      <div className="font-semibold text-text-number flex content-start  px-5 box-border flex-wrap xl:flex-nowrap bg-content-light dark:bg-content-dark mt-14">
+      <h1 className="mt-20 mb-4 px-8 font-bold text-text-number text-2xl capitalize">quản lý</h1>
+      <div className="font-semibold text-text-number flex content-start  px-5 box-border flex-wrap xl:flex-nowrap bg-content-light dark:bg-content-dark ">
+      
         <TopSales />
-
         <TopSaler />
-
         <TopSalesProducts />
       </div>
       <div className="font-semibold text-text-number flex content-start px-5 box-border flex-wrap xl:flex-nowrap bg-content-light dark:bg-content-dark ">
