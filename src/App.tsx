@@ -21,6 +21,7 @@ const Contact = lazy(() => import("Pages/Contact/Contact"));
 const Login = lazy(() => import("Pages/Login/Login"));
 const Register = lazy(() => import("Pages/Register/Register"));
 const About = lazy(() => import("Pages/About/About"));
+const FileManager = lazy(() => import("Pages/FileManager/FileManager"));
 const Checkout = lazy(() => import("Pages/Checkout/Checkout"));
 const AddMovie = lazy(() => import("Pages/AddMovie/AddMovie"));
 
@@ -36,6 +37,7 @@ function App() {
               <Route path="login" element={<Login />} />
               <Route path="register" element={<Register />} />
               <Route path="about" element={<About />} />
+              <Route path="quan-ly-file" element={<FileManager />} />
               <Route
                 path="checkout"
                 element={

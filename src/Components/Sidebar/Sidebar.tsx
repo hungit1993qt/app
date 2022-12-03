@@ -3,11 +3,12 @@ import { setSideBar, setSideBarMobile } from "Slices/auth";
 import { useDispatch, useSelector } from "react-redux";
 import { AppDispatch, RootState } from "configStore";
 import { useOnClickOutside } from "usehooks-ts";
+import { useNavigate } from "react-router-dom";
 type Props = {};
 
 const Sidebar = (props: Props) => {
   const refSiderBar = useRef(null);
-
+  const navigate = useNavigate();
   const dispatch = useDispatch<AppDispatch>();
   const { openSideBar, openSideMobile } = useSelector(
     (state: RootState) => state.auth
@@ -31,14 +32,14 @@ const Sidebar = (props: Props) => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
   const menu = [
-    { title: "Tổng Quan", src: "Chart_fill" },
-    { title: "Tin Nhắn", src: "Chat" },
-    { title: "Tài Khoản", src: "User", gap: false },
-    { title: "Lịch Họp", src: "Calendar" },
-    { title: "Tìm Kiếm", src: "Search" },
-    { title: "Phân Tích", src: "Chart" },
-    { title: "Quản Lý File ", src: "Folder", gap: false },
-    { title: "Cài Đặt", src: "Setting" },
+    { title: "Tổng Quan", url: "/", src: "Chart_fill" },
+    { title: "Tin Nhắn", url: "tin-nhan", src: "Chat" },
+    { title: "Tài Khoản", url: "tai-khoan", src: "User", gap: false },
+    { title: "Lịch Họp", url: "lich-hop", src: "Calendar" },
+    { title: "Tìm Kiếm", url: "tim-kiem", src: "Search" },
+    { title: "Phân Tích", url: "phan-tich", src: "Chart" },
+    { title: "Quản Lý File ", url: "quan-ly-file", src: "Folder", gap: false },
+    { title: "Cài Đặt", url: "cai-dat", src: "Setting" },
   ];
   return (
     <div
@@ -80,7 +81,8 @@ const Sidebar = (props: Props) => {
           {menu.map((menu, index: number) => {
             return (
               <li
-                className={`group text-gray-300 text-sm flex  items-center gap-x-4 cursor-pointer p-4 hover:bg-light-white rounded-md ${
+                onClick={() => navigate(menu.url)}
+                className={`group text-gray-300 text-sm flex items-center gap-x-4 cursor-pointer p-4 hover:bg-light-white rounded-md ${
                   menu.gap ? "mt-9" : "mt-2"
                 } ${index === 0 && "bg-light-white"}`}
                 key={index}
@@ -116,12 +118,12 @@ const Sidebar = (props: Props) => {
               Đăng xuất
             </span>
             <span
-                  className={`${
-                    openSideBar && "hidden"
-                  } absolute left-48 font-bold drop-shadow-lg  border-0 text-gray-600 text-sm p-0 w-0 rounded-md flex whitespace-pre bg-drop-modal-dark dark:bg-drop-modal-dark dark:border-boder-drop-modal-dark border-solid overflow-hidden group-hover:duration-300 group-hover:p-3 group-hover:border group-hover:left-24 group-hover:w-fit group-hover:text-red-500`}
-                >
-                  Đăng xuất
-                </span>
+              className={`${
+                openSideBar && "hidden"
+              } absolute left-48 font-bold drop-shadow-lg  border-0 text-gray-600 text-sm p-0 w-0 rounded-md flex whitespace-pre bg-drop-modal-dark dark:bg-drop-modal-dark dark:border-boder-drop-modal-dark border-solid overflow-hidden group-hover:duration-300 group-hover:p-3 group-hover:border group-hover:left-24 group-hover:w-fit group-hover:text-red-500`}
+            >
+              Đăng xuất
+            </span>
           </li>
         </ul>
       </div>
