@@ -36,7 +36,7 @@ module.exports = {
       // => @media (min-width: 768px) { ... }
       xl: "960px",
       // => @media (min-width: 960px) { ... }
-      "2xl": "1080px",
+      "2xl": "1280px",
       // => @media (min-width: 1080px) { ... }
     },
   },

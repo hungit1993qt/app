@@ -53,7 +53,7 @@ const QuickAccess = (props: Props) => {
         <div className="z-0 mt-4 flex flex-row flex-wrap">
           {data.map((data, index) => {
             return (
-              <div key={index} className="p-1 w-full lg:w-1/2 2xl:w-1/4">
+              <div key={index} className="p-1 w-full xl:w-1/2 2xl:w-1/4">
                 <div className="flex flex-row items-center p-2 gap-x-2 border ">
                   <i className={`${data.icon} p-2 rounded-sm dark:text-blue-400 bg-blue-100`}></i>
                   <div className="flex flex-col">

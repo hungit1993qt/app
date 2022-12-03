@@ -1,3 +1,5 @@
+import Option from "./Option";
+
 type Props = {};
 
 const Recent = (props: Props) => {
@@ -53,7 +55,7 @@ const Recent = (props: Props) => {
             truy cập gần đây
           </span>
           <div className="dark:text-white">
-            <i className="fa fa-download cursor-pointer ml-2"></i>
+            <Option />
           </div>
         </div>
         <div className="overflow-auto">

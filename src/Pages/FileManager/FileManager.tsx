@@ -13,12 +13,12 @@ const FileManager = () => {
       } duration-300 bg-content-light dark:bg-content-dark   
        `}
     >
-      <h1 className="mt-20 mb-4 px-8 font-bold text-text-number text-2xl capitalize">
+      <h1 className="mt-20 mb-4 px-8 font-bold text-text-number text-2xl capitalize dark:text-white">
         quản lý file
       </h1>
-      <div className="font-semibold text-text-number flex content-start px-5 box-border flex-wrap xl:flex-nowrap bg-content-light dark:bg-content-dark ">
+      <div className="font-semibold text-text-number flex content-start px-5 box-border flex-wrap lg:flex-nowrap bg-content-light dark:bg-content-dark ">
         <Folder />
-        <div className="flex flex-col lg:w-3/4 w-full">
+        <div className="flex flex-col lg:w-[full-w-60] w-full">
           <QuickAccess />
           <Recent />
         </div>

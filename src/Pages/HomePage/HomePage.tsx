@@ -16,7 +16,7 @@ const HomePage = () => {
       } duration-300 bg-content-light dark:bg-content-dark   
        `}
     >
-      <h1 className="mt-20 mb-4 px-8 font-bold text-text-number text-2xl capitalize">
+      <h1 className="mt-20 mb-4 px-8 font-bold text-text-number text-2xl capitalize dark:text-white">
         tổng quan
       </h1>
       <div className="font-semibold text-text-number flex content-start  px-5 box-border flex-wrap xl:flex-nowrap bg-content-light dark:bg-content-dark ">
