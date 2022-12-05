@@ -25,6 +25,7 @@ const FileManager = lazy(() => import("Pages/FileManager/FileManager"));
 const Checkout = lazy(() => import("Pages/Checkout/Checkout"));
 const AddMovie = lazy(() => import("Pages/AddMovie/AddMovie"));
 const CalendarToDo = lazy(() => import("Pages/CalendarToDo/CalendarToDo"));
+const Analysis = lazy(() => import("Pages/Analysis/Analysis"));
 
 function App() {
   return (
@@ -40,6 +41,7 @@ function App() {
               <Route path="about" element={<About />} />
               <Route path="quan-ly-file" element={<FileManager />} />
               <Route path="lich-tien-do" element={<CalendarToDo />} />
+              <Route path="phan-tich" element={<Analysis />} />
               <Route
                 path="checkout"
                 element={
