@@ -53,7 +53,7 @@ const Folder = (props: Props) => {
           <ul>
             {data.map((data, index) => {
               return (
-                <li className="text-base font-normal mb-6 cursor-pointer whitespace-nowrap">
+                <li key={index} className="text-base font-normal mb-6 cursor-pointer whitespace-nowrap">
                   <i className={`${data.icon} mr-4`}></i>
                   {data.title}
                 </li>
