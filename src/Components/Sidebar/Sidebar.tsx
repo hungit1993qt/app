@@ -35,7 +35,7 @@ const Sidebar = (props: Props) => {
     { title: "Tổng Quan", url: "/", src: "Chart_fill" },
     { title: "Tin Nhắn", url: "tin-nhan", src: "Chat" },
     { title: "Tài Khoản", url: "tai-khoan", src: "User", gap: false },
-    { title: "Lịch Họp", url: "lich-hop", src: "Calendar" },
+    { title: "Lịch & Tiến Độ", url: "lich-tien-do", src: "Calendar" },
     { title: "Tìm Kiếm", url: "tim-kiem", src: "Search" },
     { title: "Phân Tích", url: "phan-tich", src: "Chart" },
     { title: "Quản Lý File ", url: "quan-ly-file", src: "Folder", gap: false },
