@@ -71,7 +71,7 @@ const Sidebar = (props: Props) => {
           Quản lý
         </h1>
         <i
-          className={`fa fa-arrow-left lg:hidden block cursor-pointer text-white ml-5 text-2xl
+          className={`fa fa-arrow-left lg:hidden block cursor-pointer text-white ml-3 text-2xl
           `}
           onClick={() => dispatch(setSideBarMobile(false))}
         ></i>
