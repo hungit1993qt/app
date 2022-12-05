@@ -87,7 +87,7 @@ const TopMenu = (props: Props) => {
           </button>
         </div>
       </form>
-      <div className="flex items-center lg:gap-x-14 gap-x-6 sm:gap-x-10">
+      <div className="flex items-center w-full lg:w-auto lg:gap-x-14 gap-x-0 justify-between ml-4">
         <i className="fa fa-search text-gray-500 dark:text-white font-bold text-3xl lg:hidden block cursor-pointer"></i>
         <i
           className={`fa ${

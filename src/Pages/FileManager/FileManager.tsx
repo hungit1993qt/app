@@ -22,6 +22,8 @@ const FileManager = () => {
           <QuickAccess />
           <Recent />
         </div>
+        
+
       </div>
     </div>
   );

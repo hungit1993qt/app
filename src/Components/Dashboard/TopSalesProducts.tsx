@@ -50,7 +50,7 @@ const TopSalesProducts = (props: Props) => {
       <div className="shadow box-border border p-4 bg-box dark:bg-dark h-full">
         <div className="flex justify-between items-center ">
           <span className="uppercase font-bold dark:text-white text-sm">
-            xếp hạng sản phẩm bán chạy
+            sản phẩm bán chạy
           </span>
           <div className="dark:text-white">
             

@@ -30,7 +30,7 @@ const TopSales = (props: Props) => {
       <div className="shadow box-border border p-4 bg-box dark:bg-dark h-full">
         <div className="flex justify-between items-center ">
           <span className="uppercase font-bold dark:text-white text-sm">
-            xếp hạng kênh maketing
+            kênh maketing
           </span>
           {/* <i className="fa fa-ellipsis-v cursor-pointer dark:text-white"></i> */}
           <Option />
