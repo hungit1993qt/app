@@ -66,23 +66,22 @@ const LoginHistory = () => {
                     key={index}
                     className=" border-b hover:bg-blue-100 dark:hover:bg-gray-600  "
                   >
-
-                    <td className="text-sm py-4 px-1 whitespace-nowrap dark:text-white">
+                    <td className="text-xs py-2 px-1 whitespace-nowrap dark:text-white">
                       <span className="">{datas.name}</span>
-                      <p className=" font-normal  pt-2 text-descript-light whitespace-nowrap">
+                      <p className=" font-normal pt-1 text-descript-light whitespace-nowrap">
                         {datas.position}
                       </p>
                     </td>
-                    <td className="text-sm py-4 px-1 whitespace-nowrap dark:text-white">
+                    <td className="text-xs py-2 px-1 whitespace-nowrap dark:text-white">
                       <span className="">{ip}</span>
-                      <p className=" font-normal  pt-2 text-descript-light whitespace-nowrap">
+                      <p className=" font-normal  pt-1 text-descript-light whitespace-nowrap">
                         {datas.account}
                       </p>
                     </td>
 
-                    <td className="text-center text-sm py-4 px-1 whitespace-nowrap dark:text-white">
+                    <td className="text-center text-xs py-2 px-1 whitespace-nowrap dark:text-white">
                       <span className="">{datas.time}</span>
-                      <p className=" font-normal pt-2 text-descript-light whitespace-nowrap">
+                      <p className="pt-1 whitespace-nowrap">
                         {datas.date}
                       </p>
                     </td>
