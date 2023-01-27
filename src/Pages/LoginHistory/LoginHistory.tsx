@@ -66,10 +66,7 @@ const LoginHistory = () => {
                     key={index}
                     className=" border-b hover:bg-blue-100 dark:hover:bg-gray-600  "
                   >
-                    <td className="text-sm py-4 px-1 whitespace-nowrap dark:text-white  ">
-                      <span>{datas.account}</span>
 
-                    </td>
                     <td className="text-sm py-4 px-1 whitespace-nowrap dark:text-white">
                       <span className="">{datas.name}</span>
                       <p className=" font-normal  pt-2 text-descript-light whitespace-nowrap">
@@ -79,7 +76,7 @@ const LoginHistory = () => {
                     <td className="text-sm py-4 px-1 whitespace-nowrap dark:text-white">
                       <span className="">{ip}</span>
                       <p className=" font-normal  pt-2 text-descript-light whitespace-nowrap">
-                        Địa chỉ IP
+                        {datas.account}
                       </p>
                     </td>
 
