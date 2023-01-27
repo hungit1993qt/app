@@ -9,33 +9,33 @@ const LoginHistory = () => {
       name: "Nguyễn Trần Hùng",
       position: "Quản lý hệ thống",
       time: "10:00",
-      date:"07/01/2023"
+      date: "07/01/2023"
     },
     {
       account: "quanly1",
       name: "Nguyễn Thị Dung",
       position: "Quản lý nhân sự",
       time: "11:00",
-      date:"08/01/2023"
+      date: "08/01/2023"
     },
     {
       account: "quanly2",
       name: "Nguyễn Trần Thanh Vy",
       position: "Quản lý sản phẫm",
       time: "19:45",
-      date:"10/01/2023"
+      date: "10/01/2023"
     },
     {
       account: "quanly3",
       name: "Nguyễn Trần Việt Hưng",
       position: "Quản lý bán hàng",
       time: "12:55",
-      date:"11/01/2023"
+      date: "11/01/2023"
     },
   ];
   return (
-    <div className="xl:w-1/2 w-full p-2 h-60 ">
-      <div className="shadow box-border border overflow-auto p-4 bg-box dark:bg-dark h-full">
+    <div className="xl:w-1/2 w-full p-2 ">
+      <div className="shadow box-border border p-4 bg-box dark:bg-dark h-full">
         <div className="flex justify-between items-center ">
           <span className="uppercase font-bold dark:text-white text-sm">
             lịch sử đăng nhập
@@ -45,7 +45,7 @@ const LoginHistory = () => {
             <i className="fa fa-search cursor-pointer ml-2"></i>
           </div>
         </div>
-        <div className="overflow-auto">
+        <div className="h-60 overflow-auto">
           <table className="w-full mt-3 ">
             <tbody>
               {data.map((datas, index) => {
@@ -56,25 +56,25 @@ const LoginHistory = () => {
                   >
                     <td className="text-sm py-4 px-1 whitespace-nowrap dark:text-white  ">
                       <span>{datas.account}</span>
-                    
+
                     </td>
                     <td className="text-sm py-4 px-3 whitespace-nowrap dark:text-white">
                       <span className="">{datas.name}</span>
                       <p className=" font-normal  pt-2 text-descript-light whitespace-nowrap">
-                      {datas.position}
+                        {datas.position}
                       </p>
                     </td>
                     <td className="text-sm py-4 px-3 whitespace-nowrap dark:text-white">
                       <span className="">192.168.1.1</span>
                       <p className=" font-normal  pt-2 text-descript-light whitespace-nowrap">
-                      Địa chỉ IP
+                        Địa chỉ IP
                       </p>
                     </td>
-                   
+
                     <td className="text-center text-sm py-4 px-3 whitespace-nowrap dark:text-white">
                       <span className="">{datas.time}</span>
                       <p className=" font-normal pt-2 text-descript-light whitespace-nowrap">
-                      {datas.date}
+                        {datas.date}
                       </p>
                     </td>
                   </tr>
