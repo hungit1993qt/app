@@ -1,8 +1,20 @@
+import axios from "axios";
 import { RootState } from "configStore";
 import { useSelector } from "react-redux";
+import { useState, useEffect } from "react";
 
 const LoginHistory = () => {
   const { openSideBar } = useSelector((state: RootState) => state.auth);
+  const [ip, setIP] = useState('');
+  const getData = async () => {
+    const res = await axios.get('https://geolocation-db.com/json/')
+    console.log(res.data);
+    setIP(res.data.IPv4)
+  }
+  useEffect(() => {
+
+    getData()
+  }, [])
   const data = [
     {
       account: "admin",
@@ -65,7 +77,7 @@ const LoginHistory = () => {
                       </p>
                     </td>
                     <td className="text-sm py-4 px-1 whitespace-nowrap dark:text-white">
-                      <span className="">192.168.1.1</span>
+                      <span className="">{ip}</span>
                       <p className=" font-normal  pt-2 text-descript-light whitespace-nowrap">
                         Địa chỉ IP
                       </p>
