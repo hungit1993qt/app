@@ -1,4 +1,3 @@
-import Option from "./Option";
 type Props = {};
 
 const Folder = (props: Props) => {

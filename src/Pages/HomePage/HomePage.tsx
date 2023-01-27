@@ -5,6 +5,7 @@ import TopSalesProducts from "Components/Dashboard/TopSalesProducts";
 import TotalSales from "Components/Dashboard/TotalSales";
 import WidgetSystems from "Components/Dashboard/WidgetSystems";
 import { RootState } from "configStore";
+import LoginHistory from "Pages/LoginHistory/LoginHistory";
 import { useSelector } from "react-redux";
 
 const HomePage = () => {
@@ -21,6 +22,10 @@ const HomePage = () => {
       </h1>
       <div className="font-semibold text-text-number flex content-start  px-5 box-border flex-wrap xl:flex-nowrap bg-content-light dark:bg-content-dark ">
         <WidgetSystems />
+      </div>
+     
+      <div className="font-semibold text-text-number flex content-start  px-5 box-border flex-wrap xl:flex-nowrap bg-content-light dark:bg-content-dark ">
+       <LoginHistory />
       </div>
       <div className="font-semibold text-text-number flex content-start  px-5 box-border flex-wrap xl:flex-nowrap bg-content-light dark:bg-content-dark ">
         <TopSales />

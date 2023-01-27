@@ -40,9 +40,9 @@ const Todo = (props: Props) => {
                 <div className="flex flex-row items-center justify-between ">
                   <span
                     className={`text-xs p-1  text-white rounded-lg ${
-                      data.Priority == "Cao" && "bg-red-500"
-                    } ${data.Priority == "Bình thường" && "bg-gray-500"} ${
-                      data.Priority == "Thấp" && "bg-green-500"
+                      data.Priority === "Cao" && "bg-red-500"
+                    } ${data.Priority === "Bình thường" && "bg-gray-500"} ${
+                      data.Priority === "Thấp" && "bg-green-500"
                     }`}
                   >
                     {data.Priority}
