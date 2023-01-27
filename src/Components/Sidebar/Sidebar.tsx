@@ -76,7 +76,7 @@ const Sidebar = (props: Props) => {
           onClick={() => dispatch(setSideBarMobile(false))}
         ></i>
       </div>
-      <div className="overflow-y-auto h-full">
+      <div className="overflow-y-scroll h-full">
         <ul className="pt-6 ">
           {menu.map((menu, index: number) => {
             return (

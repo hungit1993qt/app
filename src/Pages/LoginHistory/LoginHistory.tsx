@@ -34,15 +34,15 @@ const LoginHistory = () => {
     },
   ];
   return (
-    <div className="xl:w-1/2  w-full p-2 ">
-      <div className="shadow box-border border p-4 bg-box dark:bg-dark h-full">
+    <div className="xl:w-1/2 w-full p-2 h-60 ">
+      <div className="shadow box-border border overflow-auto p-4 bg-box dark:bg-dark h-full">
         <div className="flex justify-between items-center ">
           <span className="uppercase font-bold dark:text-white text-sm">
             lịch sử đăng nhập
           </span>
           <div className="dark:text-white">
 
-            <i className="fa fa-download cursor-pointer ml-2"></i>
+            <i className="fa fa-search cursor-pointer ml-2"></i>
           </div>
         </div>
         <div className="overflow-auto">
