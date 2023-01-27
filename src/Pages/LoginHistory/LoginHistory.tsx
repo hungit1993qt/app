@@ -58,20 +58,20 @@ const LoginHistory = () => {
                       <span>{datas.account}</span>
 
                     </td>
-                    <td className="text-sm py-4 px-3 whitespace-nowrap dark:text-white">
+                    <td className="text-sm py-4 px-1 whitespace-nowrap dark:text-white">
                       <span className="">{datas.name}</span>
                       <p className=" font-normal  pt-2 text-descript-light whitespace-nowrap">
                         {datas.position}
                       </p>
                     </td>
-                    <td className="text-sm py-4 px-3 whitespace-nowrap dark:text-white">
+                    <td className="text-sm py-4 px-1 whitespace-nowrap dark:text-white">
                       <span className="">192.168.1.1</span>
                       <p className=" font-normal  pt-2 text-descript-light whitespace-nowrap">
                         Địa chỉ IP
                       </p>
                     </td>
 
-                    <td className="text-center text-sm py-4 px-3 whitespace-nowrap dark:text-white">
+                    <td className="text-center text-sm py-4 px-1 whitespace-nowrap dark:text-white">
                       <span className="">{datas.time}</span>
                       <p className=" font-normal pt-2 text-descript-light whitespace-nowrap">
                         {datas.date}
