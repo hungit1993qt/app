@@ -82,7 +82,7 @@ const TopMenu = (props: Props) => {
             type="text"
           />
           <i className="fa fa-search absolute top-2.5 left-2 text-gray-300"></i>
-          <button className=" bg-purple text-gray-50 rounded-r-lg p-1.5 text-md font-semibold">
+          <button className=" bg-purple text-gray-50 rounded-r-lg p-1.5 text-sm">
             Tìm kiếm
           </button>
         </div>

@@ -44,6 +44,21 @@ const LoginHistory = () => {
       time: "12:55 pm",
       date: "11/01/2023"
     },
+    {
+      account: "quanly4",
+      name: "Nguyễn Văn A",
+      position: "Quản lý kho",
+      time: "12:55 pm",
+      date: "11/01/2023"
+    },
+    {
+      account: "quanly5",
+      name: "Nguyễn Thị Loan",
+      position: "Quản lý cửa hàng",
+      time: "12:55 pm",
+      date: "11/01/2023"
+    },
+    
   ];
   return (
     <div className="xl:w-1/2 w-full p-2 ">
