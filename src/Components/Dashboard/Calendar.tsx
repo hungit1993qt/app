@@ -122,7 +122,7 @@ export default function Calendar() {
               >
                 <span className="sr-only">Next month</span>
 
-                <i className="fa fa-plus-circle w-5 h-5"></i>
+                <i className="fa fa-plus-circle w-5 h-5 text-green-500"></i>
               </button>
             </div>
             <div className="grid grid-cols-7 mt-10 text-xs leading-6 text-center dark:text-white text-gray-500 ">
