@@ -61,7 +61,7 @@ const LoginHistory = () => {
     
   ];
   return (
-    <div className="xl:w-1/2 w-full p-2 ">
+    <div className=" w-full p-2 ">
       <div className="shadow box-border border p-4 bg-box dark:bg-dark h-full">
         <div className="flex justify-between items-center ">
           <span className="uppercase font-bold dark:text-white text-sm">
@@ -72,14 +72,14 @@ const LoginHistory = () => {
             <i className="fa fa-search cursor-pointer ml-2"></i>
           </div>
         </div>
-        <div className="h-60 overflow-auto">
+        <div className="h-60 xl:h-40 overflow-auto">
           <table className="w-full mt-4 table-auto">
             <tbody>
               {data.map((datas, index) => {
                 return (
                   <tr
                     key={index}
-                    className=" border-b hover:bg-blue-100 dark:hover:bg-gray-600  "
+                    className=" border-b hover:bg-blue-100 dark:hover:bg-gray-600 text-center "
                   >
                     <td className="text-xs p-1 whitespace-nowrap dark:text-white">
                       <span className="">{index+1}</span>
