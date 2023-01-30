@@ -58,7 +58,7 @@ const LoginHistory = () => {
           </div>
         </div>
         <div className="h-60 overflow-auto">
-          <table className="w-full mt-3 ">
+          <table className="w-full mt-4 ">
             <tbody>
               {data.map((datas, index) => {
                 return (
