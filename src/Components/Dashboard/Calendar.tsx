@@ -92,7 +92,7 @@ export default function Calendar() {
       {/* <h1 className=" uppercase font-bold text-xl m-2">calendar</h1> */}
       <div className="shadow box-border border p-4 bg-box dark:bg-dark h-full">
         <div className="md:grid md:grid-cols-2 md:divide-x md:divide-gray-200">
-          <div className="md:pr-14">
+          <div className="md:pr-4">
             <div className="flex items-center">
               <h2 className="flex-auto uppercase font-bold dark:text-white text-xl">
                 tháng {format(firstDayCurrentMonth, "MM/yyyy")}
@@ -114,6 +114,15 @@ export default function Calendar() {
                 <span className="sr-only">Next month</span>
 
                 <i className="fa fa-arrow-right w-5 h-5"></i>
+              </button>
+              <button
+                
+                type="button"
+                className="-my-1.5 -mr-1.5 ml-2 flex flex-none items-center justify-center p-1.5 text-gray-400 hover:text-gray-500"
+              >
+                <span className="sr-only">Next month</span>
+
+                <i className="fa fa-plus-circle w-5 h-5"></i>
               </button>
             </div>
             <div className="grid grid-cols-7 mt-10 text-xs leading-6 text-center dark:text-white text-gray-500 ">
@@ -181,7 +190,7 @@ export default function Calendar() {
               ))}
             </div>
           </div>
-          <section className="mt-12 md:mt-0 md:pl-14">
+          <section className="mt-12 md:mt-0 md:pl-4">
             <h2 className="uppercase font-bold dark:text-white text-md">
               Lịch họp{" "}
               <time dateTime={format(selectedDay, "yyyy-MM-dd")}>

@@ -46,14 +46,14 @@ const Sidebar = (props: Props) => {
       ref={refSiderBar}
       className={`${
         openSideBar ? "w-60" : "w-24"
-      } duration-300 h-screen bg-dark pt-8 p-5 fixed lg:translate-x-0 z-20 ${
+      } duration-300 h-screen bg-dark pt-8 py-5 pl-5 pr-0 fixed lg:translate-x-0 z-20 ${
         openSideMobile ? null : "-translate-x-60"
       }`}
     >
       <i
         className={`${
           openSideBar ? "rotate-[180deg]" : ""
-        } fa fa-angle-right hidden lg:block absolute cursor-pointer bg-white text-base -right-3 top-4 w-7 border-2 border-dark-purple text-center rounded-full`}
+        } fa fa-angle-right hidden lg:block absolute cursor-pointer bg-white text-base -right-3 top-3 w-7 border-2 border-dark-purple text-center rounded-full`}
         onClick={() => dispatch(setSideBar(!openSideBar))}
       ></i>
 
@@ -77,7 +77,7 @@ const Sidebar = (props: Props) => {
         ></i>
       </div>
       <div className="overflow-y-scroll h-full">
-        <ul className="pt-6 ">
+        <ul className="pt-6 pr-5">
           {menu.map((menu, index: number) => {
             return (
               <li
@@ -87,7 +87,7 @@ const Sidebar = (props: Props) => {
                 } ${index === 0 && "bg-light-white"}`}
                 key={index}
               >
-                <img src={`./icon-menu/${menu.src}.png`} alt=""></img>
+                <img className="w-5" src={`./icon-menu/${menu.src}.png`} alt=""></img>
                 <span
                   className={`${
                     !openSideBar && "scale-0 "
