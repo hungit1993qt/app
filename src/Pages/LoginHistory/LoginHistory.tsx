@@ -20,28 +20,28 @@ const LoginHistory = () => {
       account: "admin",
       name: "Nguyễn Trần Hùng",
       position: "Quản lý hệ thống",
-      time: "10:00",
+      time: "10:00 am",
       date: "07/01/2023"
     },
     {
       account: "quanly1",
       name: "Nguyễn Thị Dung",
       position: "Quản lý nhân sự",
-      time: "11:00",
+      time: "11:00 am",
       date: "08/01/2023"
     },
     {
       account: "quanly2",
       name: "Nguyễn Trần Thanh Vy",
       position: "Quản lý sản phẫm",
-      time: "19:45",
+      time: "19:45 pm",
       date: "10/01/2023"
     },
     {
       account: "quanly3",
       name: "Nguyễn Trần Việt Hưng",
       position: "Quản lý bán hàng",
-      time: "12:55",
+      time: "12:55 pm",
       date: "11/01/2023"
     },
   ];
@@ -79,7 +79,7 @@ const LoginHistory = () => {
                     <td className="text-xs p-1 whitespace-nowrap dark:text-white">
                       <span className="">{ip}</span>
                       <p className=" font-normal  pt-1 text-descript-light whitespace-nowrap">
-                        {datas.account}-{datas.time}
+                        {datas.account} - {datas.time}
                       </p>
                     </td>
                   </tr>
