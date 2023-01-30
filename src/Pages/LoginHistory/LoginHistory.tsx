@@ -79,14 +79,7 @@ const LoginHistory = () => {
                     <td className="text-xs p-1 whitespace-nowrap dark:text-white">
                       <span className="">{ip}</span>
                       <p className=" font-normal  pt-1 text-descript-light whitespace-nowrap">
-                        Tk: {datas.account}
-                      </p>
-                    </td>
-
-                    <td className="text-center text-xs py-2 px-1 whitespace-nowrap dark:text-white">
-                      <span className="">{datas.time}</span>
-                      <p className="pt-1 whitespace-nowrap">
-                        {datas.date}
+                        {datas.account}-{datas.time}
                       </p>
                     </td>
                   </tr>

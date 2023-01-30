@@ -21,8 +21,8 @@ const meetings = [
     name: "Nguyễn Trần Hùng",
     imageUrl:
       "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-    startDatetime: "2022-12-02T13:00",
-    endDatetime: "2022-12-02T14:30",
+    startDatetime: "2023-01-30T13:00",
+    endDatetime: "2023-01-30T14:30",
   },
   {
     id: 2,
@@ -94,7 +94,7 @@ export default function Calendar() {
         <div className="md:grid md:grid-cols-2 md:divide-x md:divide-gray-200">
           <div className="md:pr-4">
             <div className="flex items-center">
-              <h2 className="flex-auto uppercase font-bold dark:text-white text-xl">
+              <h2 className="flex-auto uppercase font-bold dark:text-white text-md">
                 tháng {format(firstDayCurrentMonth, "MM/yyyy")}
               </h2>
               <button
